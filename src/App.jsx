@@ -6,7 +6,6 @@ const App = () => {
   return (
     <Routes>
       <Route path="*" element={<Home />} />
-      <h1>Sable Client Project</h1>
     </Routes>
   );
 };
