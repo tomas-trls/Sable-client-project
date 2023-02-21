@@ -5,7 +5,7 @@
 .login-form {
   margin: 5%;
   height: 100vh;
-  color: black;
+  color: $color-black;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -22,14 +22,14 @@
     font-style: normal;
     font-weight: 600;
     font-size: 32px;
-    color: #000000;
+    color: $color-black;
   }
   &__desc {
     font-family: $font-homepage;
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
-    color: #7b7b7b;
+    color: $login-text;
     margin-bottom: 38px;
     line-height: 160%;
   }
@@ -50,15 +50,15 @@
     font-style: normal;
     font-weight: 500;
     font-size: 12px;
-    color: #000000;
+    color: $color-black;
   }
   &__input {
     padding-left: 10px;
     margin-top: 2%;
     margin-bottom: 2%;
     height: 45px;
-    color: black;
-    border: 1px solid #e8e8e8;
+    color: $color-black;
+    border: 1px solid $login-background;
     border-radius: 4px;
   }
   &__image-container {
@@ -87,7 +87,7 @@
       justify-content: center;
       align-items: center;
       align-self: stretch;
-      background: rgba(217, 217, 217, 0.6);
+      background: $login-background;
       overflow: hidden;
       min-width: 30%;
     }
