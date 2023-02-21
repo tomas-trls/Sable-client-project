@@ -5,7 +5,7 @@ import { getAuth } from "firebase/auth";
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
-console.log(process.env.REACT_APP_FIREBASE_API);
+
 const firebaseConfig = {
   apiKey: "AIzaSyDaXnJm1KRBXqWbXStcX538G7hOKkexsNY",
   authDomain: "sable-client-project.firebaseapp.com",
@@ -16,8 +16,7 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-console.log(firebaseConfig);
+
 const app = initializeApp(firebaseConfig);
-console.log(app);
 export const auth = getAuth(app);
 export default app;
