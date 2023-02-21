@@ -8,9 +8,9 @@
   border-top-right-radius: 20px;
   background-color: #8aaae5;
 
-  &__logo {
+  &__logo-container {
     display: flex;
-    height: 15vh;
+    height: 20vh;
     justify-content: center;
     align-items: center;
   }
@@ -18,20 +18,22 @@
   &__menu-options {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    height: 30vh;
+    height: 40vh;
+    justify-content: space-evenly;
+    width: 20vw;
   }
   &__settings {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50vh;
+    height: 40vh;
   }
   &__line-break {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 5vh;
+    height: 0.25vh;
+    width: 16vw;
   }
 }
