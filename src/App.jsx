@@ -3,10 +3,10 @@ import Home from "./pages/Home/Home";
 import "./styles/main.scss";
 
 const App = () => {
-  return (
+  return (    
     <Routes>
-      <Route path="*" element={<Home />} />
-    </Routes>
+      <Route path="*" element={<Home />}/>  
+    </Routes> 
   );
 };
 
