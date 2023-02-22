@@ -13,6 +13,7 @@
   &__logo-container {
     display: flex;
     height: 20vh;
+    height: 20vh;
     justify-content: center;
     align-items: center;
   }
@@ -45,4 +46,11 @@
     padding-top: 2vh;
     padding-bottom: 1.5vh;
   }
+}
+.link {
+  color: $text-color;
+}
+.link-active {
+  color: $text-color;
+  background: $background-nav-select;
 }

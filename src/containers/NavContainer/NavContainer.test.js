@@ -1,10 +1,17 @@
 import { render, screen } from "@testing-library/react";
 import NavContainer from "./NavContainer";
 import NavItem from "../../components/NavItem/NavItem";
+import { BrowserRouter} from "react-router-dom";
+import userEvent from "@testing-library/user-event";
+import App from "../../App";
 
 it("should render the nav on the page", () => {
   //arrange
-  render(<NavContainer />);
+  render(
+    <BrowserRouter>
+      <NavContainer />
+    </BrowserRouter>
+  );
 
   //act
   const nav = screen.getByRole("navigation");
@@ -15,7 +22,11 @@ it("should render the nav on the page", () => {
 
 it("should render the correct image on the page", () => {
   // arrange
-  render(<NavContainer />);
+  render(
+    <BrowserRouter>
+      <NavContainer />
+    </BrowserRouter>
+  );
 
   // act
   const image = screen.getByRole("img", { name: /home/i });
@@ -26,7 +37,11 @@ it("should render the correct image on the page", () => {
 
 it("should render the correct item text on the page", () => {
   // arrange
-  render(<NavContainer />);
+  render(
+    <BrowserRouter>
+      <NavContainer />
+    </BrowserRouter>
+  );
 
   // act
   const text = screen.getByText(/home/i);
@@ -37,7 +52,11 @@ it("should render the correct item text on the page", () => {
 
 it("should display the corresponding image to the text", () => {
   // arrange
-  render(<NavContainer />);
+  render(
+    <BrowserRouter>
+      <NavContainer />
+    </BrowserRouter>
+  );
 
   // act
   const altText = screen.getByAltText(/home/i);
@@ -50,8 +69,16 @@ it("should display the corresponding image to the text", () => {
 
 it("should display all 5 items in the item container", () => {
   // arrange
-  render(<NavContainer />);
-  render(<NavItem />);
+  render(
+    <BrowserRouter>
+      <NavContainer />
+    </BrowserRouter>
+  );
+  render(
+    <BrowserRouter>
+      <NavItem />
+    </BrowserRouter>
+  );
 
   // act
   const itemContainer = screen.queryByRole("main");
@@ -61,34 +88,68 @@ it("should display all 5 items in the item container", () => {
 });
 
 it("should not have the settings item displayed in the main item container", () => {
-  render(<NavContainer />);
-  render(<NavItem />);
+  render(
+    <BrowserRouter>
+      <NavContainer />
+    </BrowserRouter>
+  );
+  render(
+    <BrowserRouter>
+      <NavItem />
+    </BrowserRouter>
+  );
   const itemContainer = screen.queryByRole("main");
   const settingsItem = screen.getByAltText(/settings/i);
   expect(settingsItem).not.toBe(itemContainer);
 });
 
 it("should show that their are multiple containers", () => {
-  render(<NavContainer />);
+  render(
+    <BrowserRouter>
+      <NavContainer />
+    </BrowserRouter>
+  );
   const navContainer = screen.queryByRole("navigation");
   expect(navContainer.children).toHaveLength(4);
 });
 
 it("should show the line break", () => {
-  render(<NavContainer />);
+  render(
+    <BrowserRouter>
+      <NavContainer />
+    </BrowserRouter>
+  );
   const lineBreak = screen.getByRole("img", { name: /divider line/i });
   expect(lineBreak).toBeInTheDocument();
 });
 
+it("should redirect and update dom", () => {
+  render(
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  );
+  userEvent.click(screen.getByText(/Home/));
+  expect(location.pathname).toEqual("/");
+});
+
 it("should render the logo in its own container", () => {
-  render(<NavContainer />);
+  render(
+    <BrowserRouter>
+      <NavContainer />
+    </BrowserRouter>
+  );
   const navContainer = screen.queryByRole("navigation").firstChild;
   const logo = screen.getByAltText(/company logo/i);
   expect(navContainer.firstChild).toBe(logo);
 });
 
 it("should render the logo", () => {
-  render(<NavContainer />);
+  render(
+    <BrowserRouter>
+      <NavContainer />
+    </BrowserRouter>
+  );
   const logo = screen.getByRole("img", {
     name: /company logo/i,
   });

@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import NavItem from "../../components/NavItem/NavItem";
 import "./NavContainer.scss";
 import HomeIcon from "../../assets/images/navbar-icons/home-icon.png";
@@ -17,11 +18,36 @@ const NavContainer = () => {
         <img className="nav-container__logo" src= {CompanyLogo} alt= "Company logo"/>
       </div>
       <main className="nav-container__menu-options">
-        <NavItem image={HomeIcon} itemText={"Home"} />
-        <NavItem image={BookIcon} itemText={"Book Appointment"} />
-        <NavItem image={StaffIcon} itemText={"Staff"} />
-        <NavItem image={ClientIcon} itemText={"Clients"} />
-        <NavItem image={ResourcesIcon} itemText={"Resources"} />
+        <NavLink
+          to="/"
+          className={({ isActive }) => (isActive ? "link-active" : "link")}
+        >
+          <NavItem image={HomeIcon} itemText={"Home"} />
+        </NavLink>
+        <NavLink
+          to="/booking"
+          className={({ isActive }) => (isActive ? "link-active" : "link")}
+        >
+          <NavItem image={BookIcon} itemText={"Book Appointment"} />
+        </NavLink>
+        <NavLink
+          to="/staff"
+          className={({ isActive }) => (isActive ? "link-active" : "link")}
+        >
+          <NavItem image={StaffIcon} itemText={"Staff"} />
+        </NavLink>
+        <NavLink
+          to="/client"
+          className={({ isActive }) => (isActive ? "link-active" : "link")}
+        >
+          <NavItem image={ClientIcon} itemText={"Clients"} />
+        </NavLink>
+        <NavLink
+          to="/resources"
+          className={({ isActive }) => (isActive ? "link-active" : "link")}
+        >
+          <NavItem image={ResourcesIcon} itemText={"Resources"} />
+        </NavLink>
       </main>
       <div className="nav-container__line-break-container">
         <img
@@ -31,7 +57,12 @@ const NavContainer = () => {
         />
       </div>
       <div className="nav-container__settings">
+      <NavLink
+          to="/settings"
+          className={({ isActive }) => (isActive ? "link-active" : "link")}
+        >
         <NavItem image={SettingsIcon} itemText={"Settings"} />
+        </NavLink>
       </div>
     </nav>
   );
