@@ -8,11 +8,14 @@ import ClientIcon from "../../assets/images/navbar-icons/clients-icon.png";
 import ResourcesIcon from "../../assets/images/navbar-icons/resources-icon.png";
 import LineBreak from "../../assets/images/functional-icons/calendar-divide-icon.png";
 import SettingsIcon from "../../assets/images/navbar-icons/settings-icon.png";
+import CompanyLogo from '../../assets/images/logo/logo-white.png'
 
 const NavContainer = () => {
   return (
     <nav className="nav-container">
-      <div className="nav-container__logo-container"></div>
+      <div className="nav-container__logo-container">
+        <img className="nav-container__logo" src= {CompanyLogo} alt= "Company logo"/>
+      </div>
       <main className="nav-container__menu-options">
         <NavItem image={HomeIcon} itemText={"Home"} />
         <NavItem image={BookIcon} itemText={"Book Appointment"} />
