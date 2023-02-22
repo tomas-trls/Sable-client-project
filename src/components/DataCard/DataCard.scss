@@ -1,0 +1,294 @@
+@use "../../styles/base/typography" as *;
+@use "../../styles/abstracts/variables" as *;
+
+.user-card {
+  display: grid;
+  background-color: $color-white;
+  border-radius: 8px;
+  margin: 15px auto;
+  width: 80%;
+  max-width: 916px;
+  height: 50px;
+  box-shadow: 0px 30px 40px rgba(114, 75, 203, 0.06);
+  align-items: center;
+  grid-template: 1fr / repeat(7, 1fr);
+  &__name {
+    font-family: $font-modern;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 10px;
+    color: $heading-text;
+    text-align: center;
+  }
+  &__email,
+  &__mobile-number,
+  &__job,
+  &__employed,
+  &__course-name {
+    text-align: center;
+    font-family: $font-modern;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    color: $page-text;
+  }
+
+  &__employed {
+    font-weight: 800;
+  }
+  &__image-container {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    &:hover {
+      filter: invert(65%) sepia(65%) saturate(434%) hue-rotate(190deg)
+        brightness(92%) contrast(95%);
+      cursor: pointer;
+      & > .user-card__circle {
+        transition: 800ms ease-in-out;
+
+        transform: translateX(22px);
+        border: 3px solid $color-black;
+      }
+    }
+  }
+  &__circle {
+    background-image: url(../../assets/images/functional-icons/rightarrow-black-icon.png);
+    background-repeat: no-repeat;
+    background-position: 55% 50%;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    border: 3px solid $color-white;
+  }
+  transition: 300ms ease-in-out;
+  &:hover {
+    transform: scale(1.02);
+  }
+}
+
+.resource-card {
+  display: grid;
+  grid-template: 1fr / repeat(7, 1fr);
+  background-color: $color-white;
+  border-radius: 8px;
+  margin: 15px auto;
+  width: 80%;
+  max-width: 916px;
+  height: 50px;
+  align-items: center;
+  box-shadow: 0px 30px 40px rgba(114, 75, 203, 0.06);
+  &__name {
+    text-align: center;
+    font-family: $font-modern;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 10px;
+    color: $heading-text;
+  }
+  &__quantity,
+  &__cost,
+  &__auto-purchase,
+  &__level {
+    text-align: center;
+    font-family: $font-modern;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    color: $page-text;
+  }
+  &__auto-purchase {
+    font-weight: 800;
+  }
+  &__image-container {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-column: 7/8;
+    height: 100%;
+    &:hover {
+      filter: invert(65%) sepia(65%) saturate(434%) hue-rotate(190deg)
+        brightness(92%) contrast(95%);
+      cursor: pointer;
+      & > .user-card__circle {
+        transition: 800ms ease-in-out;
+        transform: translateX(22px);
+        border: 3px solid $color-black;
+      }
+    }
+  }
+  &__circle {
+    background-image: url(../../assets/images/functional-icons/rightarrow-black-icon.png);
+    background-repeat: no-repeat;
+    background-position: 55% 50%;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    border: 3px solid $color-white;
+  }
+  transition: 300ms ease-in-out;
+  &:hover {
+    transform: scale(1.02);
+  }
+}
+
+.booking-card {
+  display: grid;
+  grid-template: 1fr / repeat(6, 1fr);
+  background-color: $color-white;
+  border-radius: 8px;
+  margin: 15px auto;
+  width: 80%;
+  max-width: 916px;
+  height: 50px;
+  align-items: center;
+  box-shadow: 0px 30px 40px rgba(114, 75, 203, 0.06);
+  gap: 25px;
+  &__name {
+    font-family: $font-modern;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 10px;
+    color: $heading-text;
+    text-align: center;
+    letter-spacing: 0.03em;
+  }
+  &__email,
+  &__mobile-number,
+  &__date,
+  &__time {
+    text-align: center;
+    font-family: $font-modern;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    color: $page-text;
+  }
+  &__time {
+    font-weight: 800;
+  }
+  &__image-container {
+    margin: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:hover {
+      filter: invert(65%) sepia(65%) saturate(434%) hue-rotate(190deg)
+        brightness(92%) contrast(95%);
+      cursor: pointer;
+      & > .user-card__circle {
+        transition: 800ms ease-in-out;
+        transform: translateX(22px);
+        border: 3px solid $color-black;
+      }
+    }
+  }
+  &__circle {
+    background-image: url(../../assets/images/functional-icons/rightarrow-black-icon.png);
+    background-repeat: no-repeat;
+    background-position: 55% 50%;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    border: 3px solid $color-white;
+  }
+  transition: 300ms ease-in-out;
+  &:hover {
+    transform: scale(1.02);
+  }
+}
+
+@media screen and (max-width: $desktop-breakpoint) {
+  .resource-card {
+    display: flex;
+    &__name {
+      padding-left: 15px;
+      align-self: center;
+      font-size: 20px;
+      text-align: left;
+      font-weight: 600;
+    }
+    &__quantity,
+    &__cost,
+    &__auto-purchase,
+    &__level {
+      display: none;
+    }
+    &__image-container {
+      flex-shrink: 0;
+      width: 30px;
+      margin-right: 10px;
+      height: 30px;
+      background-image: url(../../assets/images/functional-icons/rightarrow-grey-icon.png);
+      background-size: contain;
+    }
+    &__circle {
+      display: none;
+    }
+    transition: 0;
+  }
+  .user-card {
+    transition: 0;
+    display: flex;
+
+    &__name {
+      padding-left: 15px;
+      align-self: center;
+      font-size: 20px;
+      text-align: left;
+      font-weight: 600;
+    }
+    &__email,
+    &__mobile-number,
+    &__job,
+    &__employed,
+    &__course-name {
+      display: none;
+    }
+    &__image-container {
+      flex-shrink: 0;
+      width: 30px;
+      margin-right: 10px;
+      height: 30px;
+      background-image: url(../../assets/images/functional-icons/rightarrow-grey-icon.png);
+      background-size: contain;
+    }
+    &__circle {
+      display: none;
+    }
+  }
+
+  .booking-card {
+    display: flex;
+
+    &__name {
+      padding-left: 15px;
+      align-self: center;
+      font-size: 20px;
+      text-align: left;
+      font-weight: 600;
+    }
+    &__email,
+    &__mobile-number,
+    &__date,
+    &__time {
+      display: none;
+    }
+    &__image-container {
+      flex-shrink: 0;
+      width: 30px;
+      height: 30px;
+      margin-right: 10px;
+      background-image: url(../../assets/images/functional-icons/rightarrow-grey-icon.png);
+      background-size: contain;
+    }
+    &__circle {
+      display: none;
+    }
+    transition: 0;
+  }
+}
