@@ -5,7 +5,8 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
+  height: auto;
   width: 22vw;
   border-top-right-radius: 30px;
   background-color: $background-nav-light;
