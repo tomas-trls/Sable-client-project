@@ -7,17 +7,9 @@ import StaffImage from "../../assets/images/users/staff-picture.png";
 import DataCard from "../../components/DataCard/DataCard";
 import EmployeeOverviewCard from "../../components/EmployeeOverviewCard/EmployeeOverviewCard.jsx";
 import UserProfile from "../../components/UserProfileCard/UserProfileCard.jsx";
+import { bookingData } from "../../mockData";
 import "./StaffOverview.scss";
 const StaffOverview = () => {
-  const testObject = {
-    name: "Mark Rusell",
-    email: "mrussel@gmail.com",
-    mobileNumber: "+44012423789",
-    bookingDate: "09/05/2023",
-    bookingTime: "16:45",
-    cost: "£12.99",
-    courseName: "whatever",
-  };
   return (
     <div className="staff-overview">
       <h2 className="staff-overview__title">Overview</h2>
@@ -65,39 +57,15 @@ const StaffOverview = () => {
       </div>
       <div className="staff-overview__mobile-subheader">Staff 01 Bookings</div>
       <div className="staff-overview__booking-container">
-        <DataCard
-          cardType="booking"
-          cardObject={{
-            name: "Snorlax",
-            email: "snorlax@pokemon.com",
-            mobileNumber: 2423789,
-            bookingDate: "12/03/2023",
-            bookingTime: "12:30",
-            cost: "£12.99",
-            courseName: "whatever",
-          }}
-        />
-        <DataCard
-          cardType="booking"
-          cardObject={{
-            name: "Mark Rusell",
-            email: "mrussel@gmail.com",
-            mobileNumber: "+44012423789",
-            bookingDate: "09/05/2023",
-            bookingTime: "16:45",
-            cost: "£12.99",
-            courseName: "whatever",
-          }}
-        />
-        <DataCard cardType="booking" cardObject={testObject} />
-        <DataCard cardType="booking" cardObject={testObject} />
-        <DataCard cardType="booking" cardObject={testObject} />{" "}
-        <DataCard cardType="booking" cardObject={testObject} />{" "}
-        <DataCard cardType="booking" cardObject={testObject} />{" "}
-        <DataCard cardType="booking" cardObject={testObject} />{" "}
-        <DataCard cardType="booking" cardObject={testObject} />{" "}
-        <DataCard cardType="booking" cardObject={testObject} />{" "}
-        <DataCard cardType="booking" cardObject={testObject} />
+        <DataCard cardType="booking" cardObject={bookingData[0]} />
+        <DataCard cardType="booking" cardObject={bookingData[1]} />
+        <DataCard cardType="booking" cardObject={bookingData[2]} />
+        <DataCard cardType="booking" cardObject={bookingData[3]} />
+        <DataCard cardType="booking" cardObject={bookingData[4]} />
+        <DataCard cardType="booking" cardObject={bookingData[5]} />
+        <DataCard cardType="booking" cardObject={bookingData[6]} />
+        <DataCard cardType="booking" cardObject={bookingData[7]} />
+        <DataCard cardType="booking" cardObject={bookingData[8]} />
       </div>
     </div>
   );

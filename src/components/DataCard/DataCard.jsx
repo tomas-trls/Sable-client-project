@@ -8,18 +8,18 @@ const DataCard = (props) => {
     <div className="user-card">
       <h1 className="user-card__name">{cardObject.name}</h1>
       <p className="user-card__email">{cardObject.email}</p>
-      <p className="user-card__mobile-number">{cardObject.mobileNumber}</p>
-      {cardObject.isConsumer ? (
+      <p className="user-card__mobile">{cardObject.mobile}</p>
+      {cardObject.query === "consumer" ? (
         <p className="user-card__job">Consumer</p>
       ) : (
         <p className="user-card__job">Consultant</p>
       )}
-      {cardObject.isEmployed ? (
-        <p className="user-card__employed">YES</p>
+      {cardObject.rsvp ? (
+        <p className="user-card__rsvp">YES</p>
       ) : (
-        <p className="user-card__employed">NO</p>
+        <p className="user-card__rsvp">NO</p>
       )}
-      <p className="user-card__course-name">{cardObject.courseName}</p>
+      <p className="user-card__staff-name">{cardObject.staff}</p>
       <figure className="user-card__image-container">
         <span className="user-card__circle"></span>
       </figure>
@@ -30,7 +30,7 @@ const DataCard = (props) => {
     <div className="booking-card">
       <h1 className="booking-card__name">{cardObject.name}</h1>
       <p className="booking-card__email">{cardObject.email}</p>
-      <p className="booking-card__mobile-number">{cardObject.mobileNumber}</p>
+      <p className="booking-card__mobile">{cardObject.mobile}</p>
       <p className="booking-card__date">{cardObject.bookingDate}</p>
       <p className="booking-card__time">{cardObject.bookingTime}</p>
       <figure className="booking-card__image-container">

@@ -4,17 +4,10 @@ import gridIcon from "../../assets/images/functional-icons/gridview-icon.png";
 import listIcon from "../../assets/images/functional-icons/listview-icon.png";
 import sortIcon from "../../assets/images/functional-icons/sort-icon.png";
 import DataCard from "../../components/DataCard/DataCard";
+import { usersData } from "../../mockData";
 import "./ClientOverview.scss";
 const Client = () => {
   //Will replace with real data passed through props later
-  const studentTestObject = {
-    name: "Test",
-    email: "hello@test.com",
-    mobileNumber: "+44252423789",
-    isConsumer: true,
-    isEmployed: false,
-    courseName: "whatever",
-  };
 
   return (
     <div className="client-overview">
@@ -44,10 +37,10 @@ const Client = () => {
         <p className="client-overview__label">Staff Name</p>
       </div>
       <div className="client-overview__cards-container">
-        <DataCard cardType="student" cardObject={studentTestObject} />
-        <DataCard cardType="student" cardObject={studentTestObject} />
-        <DataCard cardType="student" cardObject={studentTestObject} />
-        <DataCard cardType="student" cardObject={studentTestObject} />
+        <DataCard cardType="student" cardObject={usersData[0]} />
+        <DataCard cardType="student" cardObject={usersData[1]} />
+        <DataCard cardType="student" cardObject={usersData[2]} />
+        <DataCard cardType="student" cardObject={usersData[3]} />
       </div>
     </div>
   );
