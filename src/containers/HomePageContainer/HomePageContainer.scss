@@ -1,0 +1,67 @@
+@use "../../styles/abstracts/variables" as *;
+
+.homepage-container {
+  min-height: 80vh;
+  height: auto;
+  background-color: $page-background-light;
+  display: grid;
+  margin: 3vh 5vw;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 5vh 5vw;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "new-appointment new-appointment staff-details staff-details client-details client-details"
+    ". resources resources settings settings .";
+  &__new-appointment {
+    grid-area: new-appointment;
+    justify-self: center;
+    align-self: center;
+  }
+  &__staff-details {
+    grid-area: staff-details;
+    justify-self: center;
+    align-self: center;
+  }
+  &__client-details {
+    grid-area: client-details;
+    justify-self: center;
+    align-self: center;
+  }
+  &__resources {
+    grid-area: resources;
+    justify-self: center;
+    align-self: center;
+  }
+  &__settings {
+    grid-area: settings;
+    justify-self: center;
+    align-self: center;
+  }
+  &__button-container {
+    display: none;
+  }
+}
+
+@media screen and (max-width: $tablet-breakpoint) {
+  .homepage-content {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 2vh;
+    flex-direction: column;
+    min-height: 76vh;
+  }
+  .homepage-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 60vh;
+    gap: 15px;
+    margin: 0;
+
+    &__button-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}

@@ -1,0 +1,32 @@
+[debug] [2023-02-20T11:36:14.558Z] ----------------------------------------------------------------------
+[debug] [2023-02-20T11:36:14.560Z] Command:       /home/tomas-trls/.nvm/versions/node/v16.15.1/bin/node /home/tomas-trls/.nvm/versions/node/v16.15.1/bin/firebase serve --only hosting
+[debug] [2023-02-20T11:36:14.560Z] CLI Version:   11.23.1
+[debug] [2023-02-20T11:36:14.561Z] Platform:      linux
+[debug] [2023-02-20T11:36:14.561Z] Node Version:  v16.15.1
+[debug] [2023-02-20T11:36:14.561Z] Time:          Mon Feb 20 2023 11:36:14 GMT+0000 (Greenwich Mean Time)
+[debug] [2023-02-20T11:36:14.562Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-02-20T11:36:14.646Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-02-20T11:36:14.646Z] > authorizing via signed-in user (tomasttru25@gmail.com)
+[debug] [2023-02-20T11:36:14.646Z] [iam] checking project sable-client-project for permissions ["firebase.projects.get"]
+[debug] [2023-02-20T11:36:14.648Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/sable-client-project:testIamPermissions [none]
+[debug] [2023-02-20T11:36:14.648Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/sable-client-project:testIamPermissions x-goog-quota-user=projects/sable-client-project
+[debug] [2023-02-20T11:36:14.648Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/sable-client-project:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2023-02-20T11:36:15.342Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/sable-client-project:testIamPermissions 200
+[debug] [2023-02-20T11:36:15.342Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/sable-client-project:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2023-02-20T11:36:15.343Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/sable-client-project [none]
+[debug] [2023-02-20T11:36:15.639Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/sable-client-project 200
+[debug] [2023-02-20T11:36:15.639Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/sable-client-project {"projectId":"sable-client-project","projectNumber":"956077400948","displayName":"sable-client-project","name":"projects/sable-client-project","resources":{"hostingSite":"sable-client-project"},"state":"ACTIVE","etag":"1_fd41bcaa-b4c9-419c-b207-180522d791ad"}
+[debug] [2023-02-20T11:36:15.642Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/sable-client-project/sites 
+[debug] [2023-02-20T11:36:16.699Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/sable-client-project/sites 200
+[debug] [2023-02-20T11:36:16.699Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/sable-client-project/sites {"sites":[{"name":"projects/sable-client-project/sites/sable-client-project","defaultUrl":"https://sable-client-project.web.app","appId":"1:956077400948:web:acd3e798220cd00c5b8221","type":"DEFAULT_SITE"}]}
+[debug] [2023-02-20T11:36:16.699Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/sable-client-project/webApps/1:956077400948:web:acd3e798220cd00c5b8221/config [none]
+[debug] [2023-02-20T11:36:17.559Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/sable-client-project/webApps/1:956077400948:web:acd3e798220cd00c5b8221/config 200
+[debug] [2023-02-20T11:36:17.559Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/sable-client-project/webApps/1:956077400948:web:acd3e798220cd00c5b8221/config {"projectId":"sable-client-project","appId":"1:956077400948:web:acd3e798220cd00c5b8221","storageBucket":"sable-client-project.appspot.com","apiKey":"AIzaSyDaXnJm1KRBXqWbXStcX538G7hOKkexsNY","authDomain":"sable-client-project.firebaseapp.com","messagingSenderId":"956077400948"}
+[debug] [2023-02-20T11:36:17.564Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/sable-client-project [none]
+[debug] [2023-02-20T11:36:17.817Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/sable-client-project 200
+[debug] [2023-02-20T11:36:17.817Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/sable-client-project {"projectId":"sable-client-project","projectNumber":"956077400948","displayName":"sable-client-project","name":"projects/sable-client-project","resources":{"hostingSite":"sable-client-project"},"state":"ACTIVE","etag":"1_fd41bcaa-b4c9-419c-b207-180522d791ad"}
+[debug] [2023-02-20T11:36:17.817Z] Specified "public" directory "build" does not exist; Deploy to Hosting site "sable-client-project" may fail or be empty.
+[info] i  hosting[sable-client-project]: Serving hosting files from: build {"metadata":{"emulator":{"name":"hosting"},"message":"Serving hosting files from: \u001b[1mbuild\u001b[22m"}}
+[info] ✔  hosting[sable-client-project]: Local server: http://localhost:5000 {"metadata":{"emulator":{"name":"hosting"},"message":"Local server: \u001b[4m\u001b[1mhttp://localhost:5000\u001b[22m\u001b[24m"}}
+[info] i  hosting: 127.0.0.1 - - [20/Feb/2023:11:36:29 +0000] "GET / HTTP/1.1" 404 139 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [20/Feb/2023:11:36:29 +0000] \"GET / HTTP/1.1\" 404 139 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36\""}}

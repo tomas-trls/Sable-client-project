@@ -1,0 +1,148 @@
+@use "../../styles/abstracts/variables.scss" as *;
+@use "../../styles/base/typography.scss" as *;
+//@import '../../assets/images/functional-icons/downarrow-grey-icon.png'
+
+//mobile view style
+.heading-only,
+.heading-button {
+  background-color: $background-header-light;
+  height: 210px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  &__logo {
+    width: 35%;
+  }
+  &__heading {
+    padding: 0 20px;
+    font-size: 2.6rem;
+    font-family: $font-modern;
+    color: $color-white;
+  }
+}
+.heading-button-dropdown {
+  background-color: $background-header-light;
+  &__main {
+    height: 210px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  &__heading {
+    padding: 0 20px;
+    font-size: 2.6rem;
+    font-family: $font-modern;
+    color: $color-white;
+  }
+  &__logo {
+    width: 35%;
+  }
+  &__dropdown {
+    display: none;
+  }
+}
+.header-button {
+  display: none;
+}
+
+//desktop view style
+@media screen and (min-width: 768px) {
+  .heading-only {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 105px;
+    width: 100%;
+    max-height: 165px;
+    background-color: $color-white;
+
+    &__heading {
+      color: $heading-text;
+      font-family: $font-modern;
+      font-weight: 700;
+      font-size: 2rem;
+    }
+    &__logo {
+      display: none;
+    }
+  }
+
+  .heading-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-height: 165px;
+    padding: 0 105px;
+    background-color: $color-white;
+    &__heading {
+      color: $heading-text;
+      font-family: $font-modern;
+      font-weight: 700;
+      font-size: 2rem;
+    }
+    &__logo {
+      display: none;
+    }
+  }
+  .heading-button-dropdown {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-height: 165px;
+    padding: 0 105px;
+    background-color: $color-white;
+    &__main {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      padding-top: 20px;
+    }
+    &__heading {
+      color: $heading-text;
+      font-family: $font-modern;
+      font-weight: 700;
+      font-size: 2rem;
+    }
+    &__dropdown {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-end;
+      color: $heading-text;
+      padding: 0px 15px;
+    }
+    &__logo {
+      display: none;
+    }
+  }
+  #dropdown {
+    color: $heading-text;
+    font-size: 1rem;
+    font-family: $font-modern;
+    font-weight: 700;
+    border: none;
+    width: 120px;
+    padding: 8px 8px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    background-image: url('../../assets/images/functional-icons/downarrow-grey-icon.png');
+    background-position: 98% center;
+    background-repeat: no-repeat;
+    outline: none;
+  }
+  .option {
+    color: $heading-text;
+  }
+  .header-button {
+    display: flex;
+  }
+}

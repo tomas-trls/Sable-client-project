@@ -1,0 +1,39 @@
+@use "../../styles/abstracts/variables" as *;
+
+
+.new-appointment{
+    background-color: white;
+}
+
+
+.header{
+    top: 0px;
+    position: relative;
+    height: 13.125rem;
+}
+
+
+.info-container{
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (min-width: 768px) {
+    .new-appointment{
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        row-gap: 0px;
+        flex-wrap: wrap;
+        background-color: $page-background-light;
+    }
+    .header{
+        height: 21vh;
+        width: 78vw;
+    }
+    .info-container{
+        justify-content: center;
+        align-items: center;
+    }
+}
