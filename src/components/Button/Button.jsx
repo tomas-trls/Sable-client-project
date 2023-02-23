@@ -1,5 +1,6 @@
-import React from "react";
-import "./Button.scss";
+import React from 'react'
+import "./Button.scss"
+import Plus from "../../assets/images/functional-icons/plus-icon.png";
 
 const Button = (props) => {
   const {
@@ -26,16 +27,15 @@ const Button = (props) => {
 
   buttonName += " " + buttonStyle;
 
-  return (
-    <button
-      className={buttonName}
-      onClick={handleClick}
-      onSubmit={handleSubmit}
-    >
-      <span className={plus}>+</span>
-      {buttonText}
-    </button>
-  );
-};
+ return (
+   <button
+    className= {buttonName} 
+    onClick= {handleClick}
+    onSubmit= {handleSubmit}>
+    <span className={plus}><img src={Plus} alt="" /></span>
+    {buttonText}
+   </button>
+  )
+}
 
 export default Button;

@@ -1,0 +1,66 @@
+@use "../../styles/abstracts/variables" as *;
+
+.input-field-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: white;
+  width: 100%;
+  margin: 1.25rem;
+  margin-top: 2rem;
+
+  &__buttons {
+    margin-top: 0px;
+    display: none;
+    gap: 1.25rem;
+  }
+  &__calendar {
+    display: none;
+    margin-top: 3vh;
+    margin-right: 5vw;
+    //width: 23vw;
+    height: 38.5vh;
+  }
+  &__submit {
+    margin-left: 1.25rem;
+    margin-right: 1.25rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .input-field-container {
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: 4vh;
+    padding-top: 2vh;
+    margin-bottom: 0;
+    gap: 1.5vh;
+    height: 70vh;
+    width: 68vw;
+    align-items: center;
+    background-color: $page-background-light;
+    border-radius: 7px;
+
+    &__staff-dropdown {
+      width: 28.5vw;
+    }
+    &__time-dropdown {
+      width: 16.5vw;
+      margin-right: 10vw;
+    }
+    &__date-dropdown {
+      display: none;
+    }
+    &__submit {
+      display: none;
+    }
+    &__buttons {
+      display: flex;
+      margin-top: 3vh;
+      gap: 1vw;
+    }
+    &__calendar {
+      display: flex;
+    }
+  }
+}

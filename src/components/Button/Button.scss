@@ -1,13 +1,13 @@
 @use "../../styles/base/typography" as *;
 @use "../../styles/abstracts/variables" as *;
-//default button
+
 .button {
   background-color: $button-enabled;
   box-shadow: 0px 20px 40px rgba(114, 75, 203, 0.2);
   border-radius: 7px;
   border-color: transparent;
-  width: 165px;
-  height: 50px;
+  width: 9.063rem;
+  height: 2.688rem;
   font-size: 16px;
   font-weight: 600;
   display: flex;
@@ -16,99 +16,145 @@
   color: $color-white;
   font-family: $font-modern;
 }
-//go,save,cancel, and the apply are default width and height
 
-//Logn page button
 .isLogin {
-  height: 46px;
+  height: 2.875rem;
   width: 100%;
   border-radius: 4px;
-  box-shadow: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   font-size: 12px;
   font-weight: 500;
 }
-//all the button in the headers on each page ( save , create , edit etc.)
-.isHeader {
-  height: 50px;
-  width: 130px;
+
+.isMobileDefault{
+  width:100%;
+  height: 4.125rem;
+  border-radius: 5px;
+  box-shadow: none;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.isMobilePopup{
+  width: 8.25rem; 
+  height: 2.375rem;
+  border-radius: 5.54167px;
+  font-size: 14px;
+  font-weight: 700;
 }
 
 .noPlus {
   display: none;
 }
-//add plus to the button
+
 .isPlus {
   position: relative;
   color: $color-white;
-  right: 16%;
+  right: 10%;
   font-size: 25px;
-}
-//Request Resource pop-up - Home button
-.isRequestComplete {
-  width: 132px;
-  height: 38px;
-  font-size: 14px;
-  border-radius: 5.5px;
-  font-weight: 700;
-  box-shadow: none;
-}
-//Edit/Request Resorce, Save button
-.isResourceSave {
-  width: 167.89px;
-  height: 58.4px;
-}
-// add client upload image button
-.isUpload {
-  background: $button-upload;
-  width: 145px;
-  height: 39px;
-  font-size: 12px;
-  color: $color-black;
-  box-shadow: none;
-}
-// cancel buttons. booking pages, nav bar page , staff page, client page.
-.isCancel {
-  &--grey {
-    background-color: rgba(124, 118, 138, 0.25);
-    box-shadow: none;
-    font-weight: 700;
-  }
-  &--purple {
-    background: $color-white;
-    border: 1px solid $button-purple;
-    color: $button-purple;
-    box-shadow: none;
-    font-weight: 700;
-  }
-}
-// delite client page pop-up buttons
-.isDelete {
-  &--cancel {
-    border: 0.804878px solid $button-logout;
-    color: $button-logout;
-    font-size: 11.27px;
-    width: 132px;
-    height: 38px;
-    border-radius: 5.6px;
-    background-color: $color-white;
-    box-shadow: none;
-  }
-  &--confirm {
-    background: $button-logout;
-    font-size: 14px;
-    width: 132px;
-    height: 38px;
-    border-radius: 5.6px;
-    box-shadow: none;
-  }
-}
-//Turns any button purple
-.isPurple {
-  background-color: $button-purple;
+  bottom: 0.125rem;
 }
 
-//save button disable
-.inputIncomplete {
-  background: rgba(229, 197, 138, 0.3);
-  box-shadow: none;
+.isLogout{
+  background-color: #EE6161;
+}
+
+.isLogoutPopup{
+  &--logout{
+    width:8.25rem;
+    height:2.375rem;
+    background:#EE6161;
+    box-shadow:0px 20px 40px rgba(114, 75, 203, 0.2);
+    border-radius: 7px;
+  }
+  &--back{
+    width:8.25rem;
+    height:2.375rem;
+    box-shadow:0px 20px 40px rgba(114, 75, 203, 0.2);
+    border-radius: 7px;
+  }
+}
+
+@media screen and (min-width: 768px){
+  .isLogin{
+    box-shadow: none;
+  }
+  .button{
+    box-shadow: 0px 20px 40px rgba(114, 75, 203, 0.2);
+    width: 13.8vw;
+    height: 6.2vh;
+  }
+
+  .isHeader {
+    height: 3.125rem;
+    width: 8.125rem;
+  }
+
+  .isRequestComplete {
+    width: 8.25rem;
+    height: 2.375rem;
+    font-size: 14px;
+    border-radius: 5.5px;
+    font-weight: 700;
+    box-shadow: none;
+  }
+
+  .isResourceSave {
+    width: 10.493rem;
+    height: 3.65rem;
+  }
+
+  .isUpload {
+    background: $button-upload;
+    width: 9.063rem;
+    height: 2.438rem;
+    font-size: 12px;
+    color: $color-black;
+    box-shadow: none;
+  }
+
+  .isCancel {
+    &--grey {
+      background-color: rgba(124, 118, 138, 0.25);
+      box-shadow: none;
+      font-weight: 700;
+    }
+    &--purple {
+      background: $color-white;
+      border: 1px solid $button-purple;
+      color: $button-purple;
+      box-shadow: none;
+      font-weight: 700;
+    }
+  }
+
+  .isDelete {
+    &--cancel {
+      border: 0.804878px solid $button-logout;
+      color: $button-logout;
+      font-size: 14px;
+      width: 8.25rem;
+      height: 2.375rem;
+      border-radius: 5.6px;
+      background-color: $color-white;
+      box-shadow: none;
+    }
+    &--confirm {
+      background: $button-logout;
+      font-size: 14px;
+      width: 8.25rem;
+      height:2.375rem;
+      border-radius: 5.6px;
+      box-shadow: none;
+    }
+  }
+
+  .isPurple {
+    background-color: $button-purple;
+  }
+
+  .inputIncomplete {
+    background: rgba(229, 197, 138, 0.3);
+    box-shadow: none;
+  }
 }
