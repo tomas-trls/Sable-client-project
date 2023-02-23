@@ -1,6 +1,6 @@
 import React from "react";
-import Button from "../Button/Button";
 import Logo from "../../assets/images/logo/logo-white.png";
+import Button from "../Button/Button";
 import "./PageHeader.scss";
 
 const PageHeader = ({ headerType, heading, text, optionsArr }) => {
@@ -15,7 +15,10 @@ const PageHeader = ({ headerType, heading, text, optionsArr }) => {
     <div className="heading-button">
       <img src={Logo} alt="logo" className="heading-button__logo" />
       <h1 className="heading-button__heading">{heading}</h1>
-      <div className="header-button"> <Button  buttonText={text} /></div>
+      <div className="header-button">
+        {" "}
+        <Button buttonText={text} />
+      </div>
     </div>
   );
 
@@ -30,18 +33,15 @@ const PageHeader = ({ headerType, heading, text, optionsArr }) => {
     return (
       <div className="heading-button-dropdown">
         <div className="heading-button-dropdown__main">
-          <img
-            src={Logo}
-            alt="logo"
-            className="heading-button-dropdown__logo"
-          />
+          <img src={Logo} alt="logo" className="heading-button-dropdown__logo" />
           <h1 className="heading-button-dropdown__heading">{heading}</h1>
-         <div className="header-button"> <Button  buttonText={text} /></div>
+          <div className="header-button">
+            {" "}
+            <Button buttonText={text} />
+          </div>
         </div>
         <div className="heading-button-dropdown__dropdown">
-          <select id="dropdown">
-            {optionsJSX}
-          </select>
+          <select id="dropdown">{optionsJSX}</select>
         </div>
       </div>
     );

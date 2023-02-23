@@ -35,7 +35,7 @@ const DataCard = (props) => {
       <p className="booking-card__time">{cardObject.bookingTime}</p>
       <figure className="booking-card__image-container">
         {" "}
-        <span className="user-card__circle"></span>
+        <span className="booking-card__circle"></span>
       </figure>
     </div>
   );
@@ -52,7 +52,7 @@ const DataCard = (props) => {
       )}
       <p className="resource-card__level">{cardObject.autoPurchaseLevel}</p>
       <figure className="resource-card__image-container">
-        <span className="user-card__circle"></span>
+        <span className="resource-card__circle"></span>
       </figure>
     </div>
   );

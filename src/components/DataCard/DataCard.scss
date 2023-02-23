@@ -42,13 +42,15 @@
     justify-content: center;
     align-items: center;
     height: 100%;
+    & > .user-card__circle {
+      transition: all 800ms ease-in-out;
+    }
     &:hover {
       filter: invert(65%) sepia(65%) saturate(434%) hue-rotate(190deg)
         brightness(92%) contrast(95%);
       cursor: pointer;
       & > .user-card__circle {
         transition: 800ms ease-in-out;
-
         transform: translateX(22px);
         border: 3px solid $color-black;
       }
@@ -109,11 +111,14 @@
     justify-content: center;
     grid-column: 7/8;
     height: 100%;
+    & > .resource-card__circle {
+      transition: all 800ms ease-in-out;
+    }
     &:hover {
       filter: invert(65%) sepia(65%) saturate(434%) hue-rotate(190deg)
         brightness(92%) contrast(95%);
       cursor: pointer;
-      & > .user-card__circle {
+      & > .resource-card__circle {
         transition: 800ms ease-in-out;
         transform: translateX(22px);
         border: 3px solid $color-black;
@@ -147,6 +152,7 @@
   align-items: center;
   box-shadow: 0px 30px 40px rgba(114, 75, 203, 0.06);
   gap: 25px;
+
   &__name {
     font-family: $font-modern;
     font-style: normal;
@@ -176,12 +182,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    & > .booking-card__circle {
+      transition: all 800ms ease-in-out;
+    }
+
     &:hover {
       filter: invert(65%) sepia(65%) saturate(434%) hue-rotate(190deg)
         brightness(92%) contrast(95%);
+      transition: all 800ms ease-in-out;
       cursor: pointer;
-      & > .user-card__circle {
-        transition: 800ms ease-in-out;
+      & > .booking-card__circle {
         transform: translateX(22px);
         border: 3px solid $color-black;
       }
@@ -195,6 +205,7 @@
     width: 30px;
     height: 30px;
     border: 3px solid $color-white;
+    transition: 800ms ease-in-out;
   }
   transition: 300ms ease-in-out;
   &:hover {
@@ -202,8 +213,9 @@
   }
 }
 
-@media screen and (max-width: $desktop-breakpoint) {
+@media screen and (max-width: $tablet-breakpoint) {
   .resource-card {
+    transition: 0;
     display: flex;
     &__name {
       padding-left: 15px;
@@ -229,8 +241,8 @@
     &__circle {
       display: none;
     }
-    transition: 0;
   }
+
   .user-card {
     transition: 0;
     display: flex;
@@ -264,7 +276,7 @@
 
   .booking-card {
     display: flex;
-
+    transition: 0;
     &__name {
       padding-left: 15px;
       align-self: center;
@@ -279,6 +291,7 @@
       display: none;
     }
     &__image-container {
+      transition: 0;
       flex-shrink: 0;
       width: 30px;
       height: 30px;
@@ -289,6 +302,5 @@
     &__circle {
       display: none;
     }
-    transition: 0;
   }
 }

@@ -3,15 +3,19 @@
 
 .employee-overview-card {
   width: 295px;
+  min-height: 307px;
   height: auto;
   display: flex;
   flex-direction: column;
+  background-color: $color-white;
   box-shadow: 0px 30px 40px rgba(114, 75, 203, 0.06);
 
   font-family: $font-modern;
   gap: 1px;
 
   &__top {
+    border-bottom: 1px solid $light-border;
+
     background-color: white;
     border-top-right-radius: 7px;
     border-top-left-radius: 7px;

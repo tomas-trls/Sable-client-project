@@ -3,7 +3,8 @@
 .card-staff {
   background-color: white;
   width: 270px;
-  height: 307px;
+  min-height: 307px;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
