@@ -4,12 +4,14 @@ import Button from "../Button/Button";
 
 const HomepageCard = ({ heading }) => {
   return (
-    <div className="homepage-card">
+    <main className="homepage-card">
       <h2 className="homepage-card__heading">{heading}</h2>
       <div className="homepage-card__button">
         <Button buttonText={"Go"} />
       </div>
-    </div>
+      <div className="homepage-card__arrow">
+      </div>
+    </main>
   );
 };
 

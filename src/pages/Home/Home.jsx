@@ -1,23 +1,15 @@
 import Layout from "../../components/Layout/Layout";
-import PageHeader from "../../components/PageHeader/PageHeader";
 import NavContainer from "../../containers/NavContainer/NavContainer";
 import "../Home/Home.scss";
-
+import HomePageContainer from "../../containers/HomePageContainer/HomePageContainer";
+import PageHeader from "../../components/PageHeader/PageHeader.jsx";
 const Home = () => {
   return (
-    <div className="app-container">
+    <div className="home-container">
       <NavContainer />
       <Layout>
-        <PageHeader headerType="headingOnly" heading="Home" />
-        <h1>Page Heading</h1>
-        <h2>Section Heading</h2>
-        <h3>Panel Heading</h3>
-        <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non error
-          dolor in nostrum minima odio a fuga saepe soluta adipisci perspiciatis
-          maxime tempora, temporibus beatae voluptas repellat rerum.
-          Dignissimos, necessitatibus.
-        </p>
+        <PageHeader heading="Home" headerType="headingOnly" />
+        <HomePageContainer />
       </Layout>
     </div>
   );

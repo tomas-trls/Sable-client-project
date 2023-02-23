@@ -14,7 +14,6 @@
   &__logo-container {
     display: flex;
     height: 20vh;
-    height: 20vh;
     justify-content: center;
     align-items: center;
   }
@@ -54,4 +53,10 @@
 .link-active {
   color: $text-color;
   background: $background-nav-select;
+}
+
+@media screen and (max-width: $tablet-breakpoint) {
+  .nav-container {
+    display: none;
+  }
 }

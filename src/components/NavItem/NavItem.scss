@@ -43,7 +43,7 @@
   opacity: 50%;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1023px) {
+@media screen and (min-width: $tablet-breakpoint) and (max-width:1023px) {
   .nav-item__text {
     font-size: 0.4rem !important;
   }
@@ -53,7 +53,7 @@
   }
 }
 
-@media screen and (min-width: 1024px) and (max-width: 1439px) {
+@media screen and (min-width:$desktop-breakpoint) and (max-width:1439px) {
   .nav-item__text {
     font-size: 0.5rem !important;
   }
@@ -63,7 +63,7 @@
   }
 }
 
-@media screen and (min-width: 2560px) {
+@media screen and (min-width:$extra-large-desktop-breakpoint) {
   .nav-item__text {
     font-size: 1rem !important;
   }

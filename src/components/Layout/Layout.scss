@@ -1,8 +1,14 @@
 @use "../../styles/abstracts/variables" as *;
 
 .layout {
-
-  height: 100vh;
+  min-height: 100vh;
+  height:auto;
   width: 80vw;
-  background-color: $background-color;
+  background-color:$page-background-light
+}
+
+@media screen and (max-width: $tablet-breakpoint) {
+  .layout {
+    width:100vw;
+  }
 }

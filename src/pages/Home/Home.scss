@@ -1,4 +1,9 @@
-.app-container{
-    display:flex;
-    flex-direction: row;
+@use "../../styles/abstracts/variables" as *;
+
+.home-container {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+  height: auto;
+  background-color: $page-background-light;
 }
