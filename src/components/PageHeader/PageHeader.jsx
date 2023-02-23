@@ -15,7 +15,7 @@ const PageHeader = ({ headerType, heading, text, optionsArr }) => {
     <div className="heading-button">
       <img src={Logo} alt="logo" className="heading-button__logo" />
       <h1 className="heading-button__heading">{heading}</h1>
-      <Button buttonText={text} />
+      <div className="header-button"> <Button  buttonText={text} /></div>
     </div>
   );
 
@@ -36,7 +36,7 @@ const PageHeader = ({ headerType, heading, text, optionsArr }) => {
             className="heading-button-dropdown__logo"
           />
           <h1 className="heading-button-dropdown__heading">{heading}</h1>
-          <Button buttonText={text} />
+         <div className="header-button"> <Button  buttonText={text} /></div>
         </div>
         <div className="heading-button-dropdown__dropdown">
           <select id="dropdown">

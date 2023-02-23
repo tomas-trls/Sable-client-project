@@ -6,7 +6,6 @@
 .heading-only,
 .heading-button {
   background-color: $background-header-light;
-  width: 420px;
   height: 210px;
   display: flex;
   flex-direction: column;
@@ -15,7 +14,6 @@
   gap: 10px;
   &__logo {
     width: 35%;
-    margin-right: 45px;
   }
   &__heading {
     padding: 0 20px;
@@ -27,7 +25,6 @@
 .heading-button-dropdown {
   background-color: $background-header-light;
   &__main {
-    width: 420px;
     height: 210px;
     display: flex;
     flex-direction: column;
@@ -43,13 +40,12 @@
   }
   &__logo {
     width: 35%;
-    margin-right: 95px;
   }
   &__dropdown {
     display: none;
   }
 }
-.button {
+.header-button {
   display: none;
 }
 
@@ -146,7 +142,7 @@
   .option {
     color: $heading-text;
   }
-  .button {
+  .header-button {
     display: flex;
   }
 }
