@@ -14,7 +14,7 @@ const StaffOverview = () => {
     <div className="staff-overview">
       <h2 className="staff-overview__title">Overview</h2>
       <div className="staff-overview__card-container">
-        <UserProfile image={StaffImage} name={"John Doe"} role={"MAN"} />
+        <UserProfile image={StaffImage} name={"Staff 01"} role={"Staff"} />
         <EmployeeOverviewCard
           startDate={"10/10/2022"}
           courseCompletion={"20/04/2024"}
@@ -38,13 +38,26 @@ const StaffOverview = () => {
             alt="Grid view icon"
           />
         </div>
-        <input className="staff-overview__searchbar" type="text" name="" id="" />
+        <input
+          className="staff-overview__searchbar"
+          type="text"
+          name=""
+          id=""
+        />
         <div className="staff-overview__sort">
-          <img className="staff-overview__icon" src={SortIcon} alt="sort icon" />
+          <img
+            className="staff-overview__icon"
+            src={SortIcon}
+            alt="sort icon"
+          />
           <p className="staff-overview__subheading">Sort</p>
         </div>
         <div className="staff-overview__filter">
-          <img className="staff-overview__icon" src={FilterIcon} alt="filter icon" />
+          <img
+            className="staff-overview__icon"
+            src={FilterIcon}
+            alt="filter icon"
+          />
           <p className="staff-overview__subheading">Filter</p>
         </div>
       </div>
