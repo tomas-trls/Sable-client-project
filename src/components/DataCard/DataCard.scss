@@ -217,6 +217,7 @@
   .resource-card {
     transition: 0;
     display: flex;
+    height: 68px;
     &__name {
       padding-left: 15px;
       align-self: center;
@@ -245,6 +246,7 @@
 
   .user-card {
     transition: 0;
+    height: 68px;
     display: flex;
 
     &__name {
@@ -275,6 +277,7 @@
   }
 
   .booking-card {
+    height: 68px;
     display: flex;
     transition: 0;
     &__name {

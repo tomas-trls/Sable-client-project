@@ -1,4 +1,5 @@
 import { Route, Routes } from "react-router-dom";
+import Client from "./pages/Client/Client";
 import Home from "./pages/Home/Home";
 import Login from "./pages/Login/Login.jsx";
 import NewAppointment from "./pages/NewAppointment/NewAppointment";
@@ -13,6 +14,7 @@ const App = () => {
       <Route path="/login" element={<Login />} />
       <Route path="/booking" element = {<NewAppointment/>} />
       <Route path="/staff" element={<Staff />} />
+      <Route path="/client" element={<Client />} />
     </Routes>
   );
 };

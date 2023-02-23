@@ -1,0 +1,127 @@
+@use "../../styles/base/typography" as *;
+@use "../../styles/abstracts/variables" as *;
+
+.client-overview {
+  background-color: $data-page-background;
+  height: 100%;
+  min-height: 80vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  &__header {
+    display: flex;
+  }
+  &__filters {
+    padding: 0 10%;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 63px;
+
+    &--label {
+      margin: 0;
+      font-family: $font-modern;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 1rem;
+      line-height: 15px;
+      display: flex;
+      align-items: center;
+      letter-spacing: 0.03em;
+      color: $heading-text;
+      width: auto;
+      height: 32px;
+    }
+
+    &--search,
+    &--display,
+    &--sort,
+    &--filter {
+      height: 32px;
+      width: auto;
+      display: flex;
+      align-items: center;
+      & > p {
+        font-family: $font-modern;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 15px;
+        /* identical to box height */
+        text-align: center;
+        letter-spacing: 0.03em;
+        color: $page-text;
+      }
+    }
+
+    &--search {
+      height: 32px;
+      width: 172px;
+      background-image: url("../../assets/images/functional-icons/search-icon.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: 95% 50%;
+      background-color: $search-bar-background;
+      border: none;
+      color: $page-sub-text;
+      padding-left: 10px;
+    }
+
+    &--display {
+      display: flex;
+      justify-content: space-between;
+      width: 40px;
+    }
+  }
+  &__label-container {
+    display: grid;
+    max-width: 916px;
+    margin: 15px auto;
+    width: 80%;
+    grid-template: 1fr / repeat(7, 1fr);
+    justify-items: center;
+    position: relative;
+    top: 19px;
+    background-color: $data-page-background;
+    z-index: 3;
+  }
+  &__label {
+    width: auto;
+    font-family: $font-modern;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 8px;
+    line-height: 12px;
+    /* identical to box height */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.03em;
+
+    color: $page-sub-text;
+  }
+  &__cards-container {
+    overflow-y: scroll;
+    height: auto;
+    max-height: 700px;
+    &:nth-child(1) {
+      margin: 0;
+    }
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
+
+@media only screen and (max-width: $tablet-breakpoint) {
+  .client-overview {
+    &__filters {
+      display: none;
+    }
+    &__label-container {
+      display: none;
+    }
+  }
+}

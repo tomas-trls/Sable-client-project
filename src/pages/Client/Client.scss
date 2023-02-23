@@ -1,0 +1,54 @@
+@use "../../styles/base/typography" as *;
+@use "../../styles/abstracts/variables" as *;
+
+.client-page {
+  display: flex;
+
+  &__content {
+    min-height: 100vh;
+    height: auto;
+    width: 100%;
+    background-color: $color-white;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__header {
+    height: 200px;
+    margin: 0 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__title {
+    width: auto;
+    color: $color-black;
+  }
+
+  &__button {
+    display: none;
+  }
+  &__footer {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: $tablet-breakpoint) {
+  .client-page {
+    &__button {
+      margin-bottom: 5%;
+      display: flex;
+      background-color: #fffbfb;
+      align-items: center;
+      justify-content: center;
+    }
+    &__footer {
+      display: flex;
+      height: 100px;
+      background-color: #fffbfb;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
