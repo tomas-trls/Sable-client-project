@@ -11,7 +11,7 @@
   height: 50px;
   box-shadow: 0px 30px 40px rgba(114, 75, 203, 0.06);
   align-items: center;
-  grid-template: 1fr / repeat(7, 1fr);
+  grid-template: 1fr / repeat(7, calc(100% / 7));
   &__name {
     font-family: $font-modern;
     font-style: normal;
@@ -21,10 +21,10 @@
     text-align: center;
   }
   &__email,
-  &__mobile-number,
+  &__mobile,
   &__job,
-  &__employed,
-  &__course-name {
+  &__rsvp,
+  &__staff-name {
     text-align: center;
     font-family: $font-modern;
     font-style: normal;
@@ -33,7 +33,7 @@
     color: $page-text;
   }
 
-  &__employed {
+  &__rsvp {
     font-weight: 800;
   }
   &__image-container {
@@ -73,7 +73,7 @@
 
 .resource-card {
   display: grid;
-  grid-template: 1fr / repeat(7, 1fr);
+  grid-template: 1fr / repeat(7, calc(100% / 7));
   background-color: $color-white;
   border-radius: 8px;
   margin: 15px auto;
@@ -142,7 +142,7 @@
 
 .booking-card {
   display: grid;
-  grid-template: 1fr / repeat(6, 1fr);
+  grid-template: 1fr / repeat(6, calc(100% / 6));
   background-color: $color-white;
   border-radius: 8px;
   margin: 15px auto;
@@ -151,7 +151,6 @@
   height: 50px;
   align-items: center;
   box-shadow: 0px 30px 40px rgba(114, 75, 203, 0.06);
-  gap: 25px;
 
   &__name {
     font-family: $font-modern;
@@ -163,7 +162,7 @@
     letter-spacing: 0.03em;
   }
   &__email,
-  &__mobile-number,
+  &__mobile,
   &__date,
   &__time {
     text-align: center;
@@ -257,10 +256,10 @@
       font-weight: 600;
     }
     &__email,
-    &__mobile-number,
+    &__mobile,
     &__job,
-    &__employed,
-    &__course-name {
+    &__rsvp,
+    &__staff-name {
       display: none;
     }
     &__image-container {
@@ -288,7 +287,7 @@
       font-weight: 600;
     }
     &__email,
-    &__mobile-number,
+    &__mobile,
     &__date,
     &__time {
       display: none;

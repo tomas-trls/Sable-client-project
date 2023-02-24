@@ -129,7 +129,9 @@ it("should redirect and update dom", () => {
       <App />
     </BrowserRouter>
   );
-  userEvent.click(screen.getByText(/Home/));
+  userEvent.click(screen.getByRole('link', {
+    name: /home home/i
+  }));
   expect(location.pathname).toEqual("/");
 });
 
