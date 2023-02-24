@@ -9,13 +9,7 @@ const StaffResourcesContainer = () => {
     <div>
         <StaffResources staffName={"Staff 01"} renderLabels={true}/>
         <StaffResources staffName={"Staff 02"} />
-        <StaffResources staffName={"Staff 03"} />
-        <StaffResources staffName={"Staff 01"} />
-        <StaffResources staffName={"Staff 02"} />
-        <StaffResources staffName={"Staff 03"} />
-        <StaffResources staffName={"Staff 01"} />
-        <StaffResources staffName={"Staff 02"} />
-        <StaffResources staffName={"Staff 03"}/>
+  
     </div>
   )
 }

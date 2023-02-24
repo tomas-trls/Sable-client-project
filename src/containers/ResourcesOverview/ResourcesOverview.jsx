@@ -48,7 +48,7 @@ const ResourcesOverview = () => {
         </div>
       </div>
       <StaffResourcesContainer/>
-      
+
     </div>
   )
 }
