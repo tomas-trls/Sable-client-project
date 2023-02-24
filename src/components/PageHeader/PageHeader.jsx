@@ -17,7 +17,7 @@ const PageHeader = ({ headerType, heading, text, optionsArr }) => {
       <h1 className="heading-button__heading">{heading}</h1>
       <div className="header-button">
         {" "}
-        <Button buttonText={text} />
+        <Button buttonText={text}/>
       </div>
     </div>
   );
