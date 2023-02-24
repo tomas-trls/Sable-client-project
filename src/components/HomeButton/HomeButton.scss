@@ -1,0 +1,28 @@
+@use "../../styles/abstracts/variables" as *;
+@use "../../styles/base/typography" as *;
+
+.homebutton-container {
+  display: none;
+}
+
+@media screen and (max-width: $tablet-breakpoint) {
+  .homebutton-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    background-color: $color-white;
+    &__content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: 1vh;
+    }
+    &__text {
+      font-family: $font-mobilehome;
+      color: $color-black;
+      font-size: small;
+    }
+  }
+}
