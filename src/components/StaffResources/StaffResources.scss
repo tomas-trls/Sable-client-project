@@ -1,0 +1,28 @@
+@use "../../styles/abstracts/variables" as *;
+@use "../../styles/base/typography" as *;
+
+
+.staff-resources{
+    margin-bottom: 25px;
+    font-family: $font-modern;
+    
+    &__staff-member{
+        font-size: 14px;
+        font-weight: 400;
+        color: #95ACCB;
+        margin: 0 10%;
+         
+    }
+
+    &__labels{
+        position: relative;
+        top: 19px;
+        margin: 15px auto;
+        margin-top: 0;
+        width: 80%;
+        display: grid;
+        grid-template: 1fr / repeat(7, 1fr);
+        text-align: center;
+        gap: 25px;
+    }
+}
