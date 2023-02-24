@@ -14,8 +14,10 @@ const Staff = () => {
         <div className="staff-page__container">
           <PageHeader
             heading="Staff"
-            text="Edit"
             headerType="headingButtonDropdown"
+            text= "Edit"
+            buttonStyle= "isHeader"
+            isPlus= {true}
             optionsArr={["Staff 01", "Staff 02", "Staff 03"]}
           />
           <StaffOverview />

@@ -11,7 +11,9 @@ const Client = () => {
     <div className="client-page">
       <NavContainer />
       <main className="client-page__content">
-        <PageHeader heading="Client" text="Edit" headerType="headingButton" />
+        <PageHeader heading="Client" text="Create" headerType="headingButton"
+            buttonStyle= "isHeader"
+            isPlus= {true} />
         <ClientOverview />
         <div className="client-page__button">
           <Button
