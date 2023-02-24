@@ -6,10 +6,9 @@ const StaffResourcesContainer = () => {
  
 
   return (
-    <div>
+    <div className='staff-resource-container'>
         <StaffResources staffName={"Staff 01"} renderLabels={true}/>
         <StaffResources staffName={"Staff 02"} />
-  
     </div>
   )
 }

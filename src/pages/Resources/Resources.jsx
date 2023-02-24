@@ -5,6 +5,7 @@ import ResourcesOverview from '../../containers/ResourcesOverview/ResourcesOverv
 import './Resources.scss'
 const Resource = () => {
   return (
+    <>
     <div className='resources-page'>
       <NavContainer/>
       <main className='resources-page__main-content'>
@@ -18,6 +19,7 @@ const Resource = () => {
           <ResourcesOverview/>
       </main>
     </div>
+    </>
   )
 }
 

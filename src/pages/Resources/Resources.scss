@@ -1,14 +1,17 @@
 .resources-page{
     display: flex;
+    height: 100vh;
+    width: 100vw;
     &__main-content{
-      
-        min-height: 100vh;
-        height: auto;
-        width: 100%;
+        width: 78vw;
+        height: 100%;
+        background-color: rgba(167, 167, 167, 0.06);
+    
         display: flex;
         flex-direction: column;
-          
-        
+    }
+    &__header{
+        width: 100%;
     }
     
 }
