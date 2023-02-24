@@ -10,9 +10,9 @@ import "./styles/base/_typography.scss";
 const App = () => {
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/login" element={<Login />} />
-      <Route path="/booking" element = {<NewAppointment/>} />
+      <Route path="/" element={<Login />} />
+      <Route path="/home" element={<Home />} />
+      <Route path="/booking" element={<NewAppointment />} />
       <Route path="/staff" element={<Staff />} />
       <Route path="/client" element={<Client />} />
     </Routes>

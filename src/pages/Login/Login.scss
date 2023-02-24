@@ -60,17 +60,88 @@
     color: $color-black;
     border: 1px solid $login-background;
     border-radius: 4px;
+
+    &:nth-of-type(2) {
+      margin-bottom: 40px;
+    }
   }
   &__image-container {
     display: none;
   }
   #validation {
     &--success {
-      color: lime;
+      font-family: $font-mobilehome;
+      font-size: 0.8rem;
+      position: absolute;
+      width: 700px;
+      height: 50px;
+      left: 10px;
+      bottom: 10px;
+      background-color: #dff8ed;
+      color: #0fdb7f;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+      animation: pop 500ms ease-in-out;
     }
 
     &--error {
-      color: red;
+      font-family: $font-mobilehome;
+      font-size: 0.8rem;
+      position: absolute;
+      max-width: 750px;
+      width: 80%;
+      left: 11%;
+      top: 125px;
+      background-color: #f8d7da;
+      color: #fd1015;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      animation: pop 800ms ease-out;
+      animation-fill-mode: forwards;
+      min-height: 50px;
+      padding: 8px;
+    }
+
+    @keyframes pop {
+      0% {
+        display: block;
+        top: 100px;
+        opacity: 1;
+      }
+      25% {
+        opacity: 1;
+      }
+      90% {
+        opacity: 1;
+      }
+    }
+  }
+  .cross {
+    flex-shrink: 0;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    font-weight: 800;
+    color: $color-black;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    &-image {
+      transform: rotateZ(45deg);
+      filter: invert(100%);
+      height: 100%;
+      width: 100%;
+      object-fit: contain;
+      padding: 1px;
     }
   }
 }
@@ -100,7 +171,7 @@
     &__image {
       position: relative;
       left: 100px;
-      filter: blur(10px);
+      filter: blur(30px);
       object-fit: contain;
       padding: 50px;
     }
@@ -109,8 +180,15 @@
       margin: 25px;
       flex-shrink: 2;
     }
+
     &__input-container {
       margin: 0 10%;
+    }
+    #validation {
+      &--error {
+        width: 42%;
+        left: 29%;
+      }
     }
   }
 }
