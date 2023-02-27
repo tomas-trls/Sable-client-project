@@ -1,0 +1,94 @@
+@use "../../styles/abstracts/variables" as *;
+@use "../../styles/base/typography" as *;
+
+.resources-overview {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  &__title {
+    width: auto;
+    color: $page-sub-heading;
+    margin: 0 10%;
+    font-size: 1rem;
+  }
+  &__card-container {
+    margin: 10px 10% 38px;
+    display: flex;
+    gap: 27px;
+  }
+
+  &__filters {
+    margin-top: 59px;
+    display: flex;
+    width: 98%;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__searchbar {
+    background-image: url("../../assets/images/functional-icons/search-icon.png");
+    background-repeat: no-repeat;
+    background-position: 95% 50%;
+    height: 32px;
+    width: 172px;
+    background-color: $search-bar-background;
+    border: none;
+  }
+
+  &__icon {
+    margin: 0 10px 0 0;
+  }
+  &__subheading {
+    color: $page-sub-heading;
+  }
+  &__sort,
+  &__filter,
+  &__display--icons {
+    display: flex;
+    width: auto;
+    align-items: center;
+    justify-content: center;
+  }
+  &__filter {
+    margin-right: 8.5%;
+  }
+  &__booking-container {
+    overflow-y: scroll;
+    height: auto;
+    max-height: 415px;
+  }
+  &__booking-container::-webkit-scrollbar {
+    display: none;
+  }
+  &__booking-container--labels {
+    position: relative;
+    top: 19px;
+    margin: 15px auto;
+    width: 80%;
+    max-width: 916px;
+    display: grid;
+    grid-template: 1fr / repeat(6, 1fr);
+    text-align: center;
+    gap: 25px;
+  }
+  &__mobile-subheader {
+    display: none;
+  }
+}
+
+@media screen and (max-width: $tablet-breakpoint) {
+  .resources-overview {
+    &__sort,
+    &__filter,
+    &__display--icons,
+    &__searchbar {
+      display: none;
+    }
+
+    &__title {
+      font-size: 20px;
+      font-weight: 600;
+    }
+  }
+}

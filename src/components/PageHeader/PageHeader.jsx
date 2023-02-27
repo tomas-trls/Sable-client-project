@@ -16,7 +16,7 @@ const PageHeader = ({ headerType, heading, text, buttonStyle, isPlus, isInputInc
       <img src={Logo} alt="logo" className="heading-button__logo" />
       <h1 className="heading-button__heading">{heading}</h1>
       <div className="header-button">
-        <Button buttonText={text} buttonStyle={buttonStyle} isPlus={isPlus} isInputIncomplete={isInputIncomplete} />
+        <Button buttonText={text} buttonStyle={buttonStyle} isPlus={isPlus} isInputIncomplete={isInputIncomplete}/>
       </div>
     </div>
   );

@@ -641,3 +641,4 @@ export const bookingData = [
     cost: "£200",
   },
 ];
+
