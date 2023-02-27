@@ -5,12 +5,16 @@ import listview from "../../assets/images/functional-icons/listview-icon.png";
 import SortIcon from "../../assets/images/functional-icons/sort-icon.png";
 import "./ResourcesOverview.scss";
 import StaffResourcesContainer from '../StaffResourcesContainer/StaffResourcesContainer';
-
-const ResourcesOverview = () => {
-
+import StaffResources from '../../components/StaffResources/StaffResources';
+import {resourceData} from "../../mockData.js"
+const ResourcesOverview = ({isAdmin}) => {
+  let resourceDataCopy =[...resourceData]
   return (
+    
     <div className='resources-overview'>
+   
         <div className="resources-overview__filters">
+          {!isAdmin &&  <>
         <h2 className="resources-overview__title">Health Products</h2>
         <div className="resources-overview__display--icons">
           <img
@@ -46,10 +50,22 @@ const ResourcesOverview = () => {
           />
           <p className="resources-overview__subheading">Filter</p>
         </div>
+        </>
+      }
+      {isAdmin && 
+        <>
+             <h2 className="resources-overview__title">Admin</h2>     
+        </>
+      }
       </div>
-      <StaffResourcesContainer/>
+          
+      {
+        isAdmin ? <><StaffResources cardsArray={resourceDataCopy}/></> : <StaffResourcesContainer/>
 
+      }
+      
     </div>
+    
   )
 }
 

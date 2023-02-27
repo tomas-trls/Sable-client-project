@@ -16,7 +16,8 @@ const Resource = () => {
           headerType="headingButton"
           />
           </div>
-          <ResourcesOverview/>
+          <ResourcesOverview isAdmin={false}/>
+          <ResourcesOverview isAdmin={true}/>
       </main>
     </div>
     </>
