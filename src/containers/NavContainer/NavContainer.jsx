@@ -1,25 +1,25 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import LineBreak from "../../assets/images/functional-icons/calendar-divide-icon.png";
+import CompanyLogo from "../../assets/images/logo/logo-white.png";
+import BookIcon from "../../assets/images/navbar-icons/bookings-icon.png";
+import ClientIcon from "../../assets/images/navbar-icons/clients-icon.png";
+import HomeIcon from "../../assets/images/navbar-icons/home-icon.png";
+import ResourcesIcon from "../../assets/images/navbar-icons/resources-icon.png";
+import SettingsIcon from "../../assets/images/navbar-icons/settings-icon.png";
+import StaffIcon from "../../assets/images/navbar-icons/staff-icon.png";
 import NavItem from "../../components/NavItem/NavItem";
 import "./NavContainer.scss";
-import HomeIcon from "../../assets/images/navbar-icons/home-icon.png";
-import BookIcon from "../../assets/images/navbar-icons/bookings-icon.png";
-import StaffIcon from "../../assets/images/navbar-icons/staff-icon.png";
-import ClientIcon from "../../assets/images/navbar-icons/clients-icon.png";
-import ResourcesIcon from "../../assets/images/navbar-icons/resources-icon.png";
-import LineBreak from "../../assets/images/functional-icons/calendar-divide-icon.png";
-import SettingsIcon from "../../assets/images/navbar-icons/settings-icon.png";
-import CompanyLogo from '../../assets/images/logo/logo-white.png'
 
 const NavContainer = () => {
   return (
     <nav className="nav-container">
       <div className="nav-container__logo-container">
-        <img className="nav-container__logo" src= {CompanyLogo} alt= "Company logo"/>
+        <img className="nav-container__logo" src={CompanyLogo} alt="Company logo" />
       </div>
       <main className="nav-container__menu-options">
         <NavLink
-          to="/"
+          to="/home"
           className={({ isActive }) => (isActive ? "link-active" : "link")}
         >
           <NavItem image={HomeIcon} itemText={"Home"} />
@@ -57,11 +57,11 @@ const NavContainer = () => {
         />
       </div>
       <div className="nav-container__settings">
-      <NavLink
+        <NavLink
           to="/settings"
           className={({ isActive }) => (isActive ? "link-active" : "link")}
         >
-        <NavItem image={SettingsIcon} itemText={"Settings"} />
+          <NavItem image={SettingsIcon} itemText={"Settings"} />
         </NavLink>
       </div>
     </nav>

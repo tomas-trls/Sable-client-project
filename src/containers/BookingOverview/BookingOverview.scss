@@ -1,0 +1,193 @@
+@use "../../styles/abstracts/variables" as *;
+@use "../../styles/base/typography" as *;
+
+.input-field-container {
+  display: block;
+  gap: 1rem;
+  background-color: $color-white;
+  width: 90%;
+  margin: 16px 0;
+  &__buttons {
+    margin-top: 0px;
+    display: none;
+    gap: 1.25rem;
+  }
+  &__calendar {
+    display: none;
+  }
+  &__submit {
+    margin: 20px 1.25rem 0px;
+  }
+
+  &__date-picker {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    margin: 5px 0 10px;
+    &--label {
+      font-family: $font-modern;
+      font-weight: 600;
+      font-size: 14px;
+      margin: 5px 0 10px;
+    }
+    .react-date-picker {
+      width: 100%;
+      height: 3.063rem;
+      &__wrapper {
+        border: 1px solid #e2e8f0;
+        justify-content: space-between;
+      }
+      &__inputGroup {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        max-width: 500px;
+        &__input {
+          text-align: center;
+          width: auto !important;
+        }
+        * {
+          font-size: 1.2rem;
+        }
+      }
+    }
+    & * {
+      color: $color-black;
+    }
+  }
+
+  .react-calendar {
+    background-color: $color-white;
+    & * {
+      color: black;
+      font-family: $font-calendar;
+    }
+
+    &
+      *:not(.react-calendar__navigation):not(.react-calendar__month-view__weekdays):not(.react-calendar__tile) {
+      height: 100%;
+    }
+
+    &__tile {
+      transition: 300ms ease-in;
+      &--active {
+        background-color: $background-nav-light;
+        & > * {
+          color: $color-white;
+        }
+        &:enabled:hover {
+          font-size: 1.2rem;
+          font-weight: 800;
+          background-color: $background-nav-light;
+          & > * {
+            color: $color-white;
+          }
+        }
+        &:enabled:focus {
+          background-color: $background-nav-light;
+        }
+        & > * {
+          color: $color-white;
+        }
+      }
+
+      &:enabled:hover {
+        font-size: 1.2rem;
+        font-weight: 800;
+      }
+      &--now {
+        &:hover {
+          background-color: $button-enabled;
+          font-size: 1.2rem;
+          font-weight: 800;
+        }
+        background-color: rgba(221, 133, 51, 0.637);
+        transition: 300ms ease-in;
+        & * {
+          font-size: 1.2rem;
+          font-weight: 800;
+          color: $color-white;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $tablet-breakpoint) {
+  .input-field-container {
+    display: grid;
+    background-color: $page-background-light;
+    grid-template-areas:
+      "firstName calendar"
+      "lastName calendar"
+      "email calendar"
+      "mobile time"
+      "staff time"
+      "button button";
+    &__calendar {
+      display: block;
+      grid-area: calendar;
+      justify-self: center;
+    }
+    &__firstName {
+      grid-area: firstName;
+    }
+
+    &__lastName {
+      grid-area: lastName;
+    }
+
+    &__email {
+      grid-area: email;
+    }
+
+    &__mobile {
+      grid-area: mobile;
+      margin-bottom: 44px;
+    }
+
+    .react-calendar {
+      display: block;
+    }
+    &__date-picker {
+      display: none;
+    }
+    &__staff-dropdown {
+      grid-area: staff;
+      width: 28.5vw;
+    }
+    &__time-dropdown {
+      justify-self: center;
+      grid-area: time;
+      width: 16.5vw;
+    }
+    &__date-dropdown {
+      display: none;
+    }
+    &__submit {
+      display: none;
+    }
+    &__buttons {
+      grid-area: button;
+      display: flex;
+      margin-top: 3vh;
+      gap: 1vw;
+    }
+    .react-calendar {
+      background-color: transparent;
+      border: none;
+      max-width: 420px;
+      width: 100%;
+      height: 360px;
+      display: flex;
+      flex-direction: column;
+      margin: 10px 0 100px;
+      &__navigation {
+        margin: 0;
+        padding-bottom: 1em;
+        border-bottom: 1px solid $blank-client-image;
+      }
+    }
+  }
+}

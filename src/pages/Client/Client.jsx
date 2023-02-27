@@ -1,17 +1,19 @@
 import React from "react";
-import home from "../../assets/images/functional-icons/black-home-icon.png";
 import Button from "../../components/Button/Button";
 import PageHeader from "../../components/PageHeader/PageHeader";
 import ClientOverview from "../../containers/ClientOverview/ClientOverview";
 import NavContainer from "../../containers/NavContainer/NavContainer";
+import HomeButton from "../../components/HomeButton/HomeButton"
+
 import "./Client.scss";
 const Client = () => {
   return (
     <div className="client-page">
       <NavContainer />
       <main className="client-page__content">
-        <PageHeader heading="Client" text="Edit" headerType="headingButton" />
-
+        <PageHeader heading="Client" text="Create" headerType="headingButton"
+            buttonStyle= "isHeader"
+            isPlus= {true} />
         <ClientOverview />
         <div className="client-page__button">
           <Button
@@ -21,7 +23,7 @@ const Client = () => {
           />
         </div>
         <footer className="client-page__footer">
-          <img src={home} alt="home page image" />
+          <HomeButton/>
         </footer>
       </main>
     </div>

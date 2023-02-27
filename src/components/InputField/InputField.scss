@@ -1,42 +1,42 @@
 @use "../../styles/base/reset" as *;
 @use "../../styles/base/typography" as *;
-@use "../../styles/abstracts/variables" as*;
+@use "../../styles/abstracts/variables" as *;
 
-.input-field{
-    display: flex;
-    flex-direction: column;
+.input-field {
+  display: flex;
+  flex-direction: column;
+  font-family: $font-modern;
+  font-size: 0.875rem;
+  gap: 1.1vh;
+
+  &__label {
+    font-weight: 600;
+    color: $color-black;
     font-family: $font-modern;
-    font-size: 0.875rem;
-    gap: 1.1vh;
+  }
 
-    &__label{
-        font-weight: 600;
-        color: black;
+  &__input {
+    height: 3.063rem;
+    width: 100%;
+    border: 1px solid #e2e8f0;
+    border-radius: 7px;
+    padding-left: 0.5rem;
+    color: black;
+    background-color: white;
+
+    &::placeholder {
+      color: #95accb;
+      font-weight: 400;
     }
-
-    &__input{
-        height: 3.063rem;
-        width: 100%;
-        border: 1px solid #E2E8F0;
-        border-radius: 7px;
-        padding-left: 0.5rem;
-        color: black;
-        background-color: white;
-
-
-        &::placeholder{
-            color: #95ACCB;
-            font-weight: 400;
-        }
-    }
+  }
 }
 
-@media screen and (min-width: 768px) {
-    .input-field{
-        &__input{
-            height: 5.7vh;
-            width: 28.5vw;
-            background-color: $page-background-light;
-        }
+@media screen and (min-width: $tablet-breakpoint) {
+  .input-field {
+    &__input {
+      height: 5.7vh;
+      width: 28.5vw;
+      background-color: $page-background-light;
     }
+  }
 }

@@ -1,12 +1,23 @@
 import React from "react";
 import "./UserProfileCard.scss";
+import Button from "../Button/Button";
 
-const UserProfileCard = ({ image, name, role }) => {
+const UserProfileCard = ({ image, name, role, text }) => {
   return (
-    <div className="card-staff">
-      <img src={image} alt="staff-picture" className="card-staff__image"></img>
-      <h1 className="card-staff__name">{name}</h1>
-      <h2 className="card-staff__role">{role}</h2>
+    <div className="card-container">
+      <div className="card-container__image-container">
+        <img
+          src={image}
+          alt="user-image"
+          className="card-container__image-container--image"
+        ></img>
+      </div>
+
+      <div className="card-container__info-container">
+        <h1 className="card-container__info-container--name">{name}</h1>
+        <h2 className="card-container__info-container--role">{role}</h2>
+        <Button buttonText={text} />
+      </div>
     </div>
   );
 };

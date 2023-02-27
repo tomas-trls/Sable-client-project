@@ -1,9 +1,9 @@
 import { render, screen } from "@testing-library/react";
-import NavContainer from "./NavContainer";
-import NavItem from "../../components/NavItem/NavItem";
-import { BrowserRouter} from "react-router-dom";
 import userEvent from "@testing-library/user-event";
+import { BrowserRouter } from "react-router-dom";
 import App from "../../App";
+import NavItem from "../../components/NavItem/NavItem";
+import NavContainer from "./NavContainer";
 
 it("should render the nav on the page", () => {
   //arrange
@@ -129,7 +129,7 @@ it("should redirect and update dom", () => {
       <App />
     </BrowserRouter>
   );
-  userEvent.click(screen.getByText(/Home/));
+  userEvent.click(screen.getByText(/Welcome back/));
   expect(location.pathname).toEqual("/");
 });
 

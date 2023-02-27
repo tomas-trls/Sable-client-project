@@ -1,0 +1,69 @@
+@use "../../styles/abstracts/variables" as *;
+@use "../../styles/base/typography" as *;
+
+.staff-resources {
+  margin-bottom: 25px;
+  font-family: $font-modern;
+
+  &__staff-member {
+    width: auto;
+    font-size: 14px;
+    font-weight: 400;
+    color: #95accb;
+    margin: 0 10%;
+  }
+
+  &__labels {
+    position: relative;
+    top: 19px;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 0;
+    width: 100%;
+    display: grid;
+    grid-template: 1fr / repeat(9, 1fr);
+    text-align: center;
+    gap: 25px;
+    padding-left: 1%;
+  }
+
+  &__cards {
+    max-height: 200px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    margin-left: 10%;
+    margin-right: 10%;
+    scrollbar-color: red;
+  }
+
+  &__cards::-webkit-scrollbar {
+    width: 10px;
+    left: -120px;
+  }
+  &__cards::-webkit-scrollbar-track {
+    background: rgba(167, 167, 167, 0.06);
+  }
+  &__cards::-webkit-scrollbar-thumb {
+    background: gray;
+    border-radius: 3px;
+  }
+}
+
+@media screen and (max-width: $tablet-breakpoint) {
+  .staff-resources {
+    &__labels {
+      display: none;
+    }
+
+    &__staff-member {
+      font-size: 20px;
+      font-weight: 400;
+      margin-top: 20px;
+    }
+
+    &__cards {
+      max-height: none;
+      display: none;
+    }
+  }
+}
