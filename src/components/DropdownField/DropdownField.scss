@@ -2,45 +2,45 @@
 @use "../../styles/base/typography" as *;
 @use "../../styles/abstracts/variables" as *;
 
-.dropdown-field{
-    display: flex;
-    flex-direction: column;
+.dropdown-field {
+  display: flex;
+  flex-direction: column;
+  font-family: $font-modern;
+  font-size: 0.875rem;
+  gap: 1.1vh;
+
+  &__label {
+    font-weight: 600;
+    color: $color-black;
     font-family: $font-modern;
-    font-size: 0.875rem;
-    gap: 1.1vh;
+  }
 
-    &__label{
-        font-weight: 600;
-        color: black;
+  &__input {
+    height: 3.063rem;
+    width: 100%;
+    border: 1px solid #e2e8f0;
+    border-radius: 7px;
+    padding-left: 0.5rem;
+    color: black;
+    background-image: url("../../assets/images/functional-icons/downarrow-icon.png");
+    background-repeat: no-repeat;
+    appearance: none;
+    background-position: right 1rem center;
+    background-color: white;
+
+    &::placeholder {
+      color: #95accb;
+      font-weight: 400;
+      padding-right: 0.625rem;
     }
-
-    &__input{
-        height: 3.063rem;
-        width: 100%;
-        border: 1px solid #E2E8F0;
-        border-radius: 7px;
-        padding-left: 0.5rem;
-        color: black;
-        background-image: url("../../assets/images/functional-icons/downarrow-icon.png") ;
-        background-repeat: no-repeat;
-        appearance: none;
-        background-position: right 1rem center;
-        background-color: white;
-
-        &::placeholder{
-            color: #95ACCB;
-            font-weight: 400;
-            padding-right: 0.625rem;
-        }
-    }
+  }
 }
 
-
-@media screen and (min-width: 768px) {
-    .dropdown-field{    
-        &__input{
-            background-color: $page-background-light;
-            height: 5.7vh;
-        }
+@media screen and (min-width: $tablet-breakpoint) {
+  .dropdown-field {
+    &__input {
+      background-color: $page-background-light;
+      height: 5.7vh;
     }
+  }
 }

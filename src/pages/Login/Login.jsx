@@ -29,15 +29,19 @@ const Login = () => {
         const errorMessage = error.message;
         if (errorMessage.includes("invalid-email")) {
           setError(
-            `Oops! 😱 a problem has occurred while submitting your data (auth/invalid-email)`
+            `Oops! 😱 a problem has occurred while submitting your data (auth/invalid-email).`
           );
         } else if (errorMessage.includes("wrong-password")) {
           setError(
-            `Oops! 😱 a problem has occurred while submitting your data (auth/wrong-password)`
+            `Oops! 😱 a problem has occurred while submitting your data (auth/wrong-password).`
+          );
+        } else if (errorMessage.includes("user-not-found")) {
+          setError(
+            `Oops! 😱 a problem has occurred while submitting your data (auth/user-not-found).`
           );
         } else {
           setError(
-            `Oops! 😱 a problem has occurred while submitting your data (auth/internal error)`
+            `Oops! 😱 a problem has occurred while submitting your data (${errorMessage})`
           );
         }
       });

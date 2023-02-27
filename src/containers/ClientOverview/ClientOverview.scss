@@ -80,10 +80,9 @@
     margin: 15px auto;
     width: 80%;
     grid-template: 1fr / repeat(7, 1fr);
-    justify-items: center;
+    text-align: center;
     position: relative;
     top: 19px;
-    background-color: $data-page-background;
     z-index: 3;
   }
   &__label {

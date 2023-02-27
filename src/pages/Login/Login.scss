@@ -94,7 +94,7 @@
       max-width: 750px;
       width: 80%;
       left: 11%;
-      top: 125px;
+      top: 150px;
       background-color: #f8d7da;
       color: #fd1015;
       display: flex;
@@ -102,22 +102,20 @@
       justify-content: space-around;
       border-radius: 8px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      animation: pop 800ms ease-out;
+      animation: pop 300ms ease-in-out;
       animation-fill-mode: forwards;
       min-height: 50px;
       padding: 8px;
     }
 
     @keyframes pop {
-      0% {
+      from {
         display: block;
         top: 100px;
         opacity: 1;
       }
-      25% {
-        opacity: 1;
-      }
-      90% {
+      to {
+        top: 150px;
         opacity: 1;
       }
     }
