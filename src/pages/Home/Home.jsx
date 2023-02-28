@@ -7,7 +7,7 @@ import "../Home/Home.scss";
 const Home = () => {
   return (
     <div className="home-container">
-      <NavContainer /> 
+      <NavContainer />
       <Layout>
         <PageHeader heading="Home" headerType="headingOnly" />
         <HomePageContainer />
