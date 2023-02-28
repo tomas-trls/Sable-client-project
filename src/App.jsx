@@ -4,6 +4,7 @@ import Home from "./pages/Home/Home";
 import Login from "./pages/Login/Login.jsx";
 import Resources from "./pages/Resources/Resources.jsx";
 import NewAppointment from "./pages/NewAppointment/NewAppointment";
+import Settings from "./pages/Settings/Settings";
 import Staff from "./pages/Staff/Staff.jsx";
 import EditResource from "./pages/EditResource/EditResource";
 import RequestResource from "./pages/RequestResource/RequestResource";
@@ -21,6 +22,7 @@ const App = () => {
       <Route path="/resources" element={<Resources/>}/>
       <Route path="/resources/edit" element={<EditResource />} />
       <Route path="/resources/request" element={<RequestResource />} />
+      <Route path="/settings" element={<Settings />} />
     </Routes>
   );
 };
