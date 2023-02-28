@@ -9,10 +9,9 @@ import { auth } from "../../firebase";
 
 import "./Login.scss";
 
-const Login = () => {
+const Login = ({ user, setUser }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [user, setUser] = useState("");
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
 
@@ -54,8 +53,8 @@ const Login = () => {
       <form className="login-page__form login-form__input-container">
         <h1 className="login-form__title">Welcome back</h1>
         <p className="login-form__desc">
-          Feugiat magna viverra pellentesque habitant. Libero id amet nisl, tellus
-          cras eleifend et in.
+          Feugiat magna viverra pellentesque habitant. Libero id amet nisl,
+          tellus cras eleifend et in.
         </p>
         <label htmlFor="email-input" className="login-form__label">
           Email Address
@@ -112,7 +111,11 @@ const Login = () => {
                 setError("");
               }}
             >
-              <img className="cross-image" src={plus} alt="an icon of a cross" />
+              <img
+                className="cross-image"
+                src={plus}
+                alt="an icon of a cross"
+              />
             </button>
           </div>
         )
