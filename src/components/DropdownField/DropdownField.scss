@@ -16,22 +16,25 @@
   }
 
   &__input {
+    font-family: $font-modern;
     height: 3.063rem;
     width: 100%;
-    border: 1px solid #e2e8f0;
+    border: 1px solid $light-border;
     border-radius: 7px;
     padding-left: 0.5rem;
-    color: black;
+    color: $page-text;
     background-image: url("../../assets/images/functional-icons/downarrow-icon.png");
     background-repeat: no-repeat;
     appearance: none;
     background-position: right 1rem center;
-    background-color: white;
+    background-color: $color-white;
 
     &::placeholder {
-      color: #95accb;
+      color: $page-text;
       font-weight: 400;
       padding-right: 0.625rem;
+      font-family: $font-modern;
+      background-color: $color-white;
     }
   }
 }
@@ -39,7 +42,7 @@
 @media screen and (min-width: $tablet-breakpoint) {
   .dropdown-field {
     &__input {
-      background-color: $page-background-light;
+      background-color: $color-white;
       height: 5.7vh;
     }
   }

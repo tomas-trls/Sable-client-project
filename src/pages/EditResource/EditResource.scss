@@ -1,0 +1,16 @@
+@use "../../styles/abstracts/variables" as *;
+
+.edit-resource-container {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+  height: auto;
+  background-color: $page-background-light;
+}
+
+@media screen and (min-width: $tablet-breakpoint) {
+  .edit-resource-container__form {
+    margin-top: 5%;
+    margin-left: 10%;
+  }
+}
