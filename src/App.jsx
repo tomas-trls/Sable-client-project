@@ -5,6 +5,7 @@ import Login from "./pages/Login/Login.jsx";
 import Resources from "./pages/Resources/Resources.jsx"
 import NewAppointment from "./pages/NewAppointment/NewAppointment";
 import Staff from "./pages/Staff/Staff.jsx";
+import AddClient from "./pages/AddClient/AddClient";
 import "./styles/base/_reset.scss";
 import "./styles/base/_typography.scss";
 
@@ -17,6 +18,7 @@ const App = () => {
       <Route path="/staff" element={<Staff />} />
       <Route path="/client" element={<Client />} />
       <Route path="/resources" element={<Resources />} />
+      <Route path="/client/add-client" element={<AddClient/>} />
     </Routes>
   );
 };
