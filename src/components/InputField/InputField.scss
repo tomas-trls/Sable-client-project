@@ -6,9 +6,8 @@
   display: flex;
   flex-direction: column;
   font-family: $font-modern;
-  font-size: 0.875rem;
+  font-size: 0.9rem;
   gap: 1.1vh;
-
   &__label {
     font-weight: 600;
     color: $color-black;
@@ -16,27 +15,29 @@
   }
 
   &__input {
-    height: 3.063rem;
+    height: 50px;
     width: 100%;
-    border: 1px solid #e2e8f0;
+    border: 1px solid $light-border;
     border-radius: 7px;
     padding-left: 0.5rem;
-    color: black;
-    background-color: white;
+    color: $color-black;
+    background-color: $color-white;
+    font-family: $font-modern;
 
     &::placeholder {
-      color: #95accb;
-      font-weight: 400;
+      color: $page-text;
+      font-family: $font-modern;
     }
-  }
-}
 
-@media screen and (min-width: $tablet-breakpoint) {
-  .input-field {
-    &__input {
-      height: 5.7vh;
-      width: 28.5vw;
-      background-color: $page-background-light;
+    @media screen and (min-width: $tablet-breakpoint) {
+      .input-field {
+        &__input {
+          height: 5.7vh;
+          width: 28.5vw;
+          background-color: $page-background-light;
+          font-family: $font-modern;
+        }
+      }
     }
   }
 }

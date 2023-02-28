@@ -1,6 +1,6 @@
 import React from "react";
 import "./DataCard.scss";
-
+import mockData from "../../data/mockData";
 const DataCard = (props) => {
   const { cardObject, cardType } = props;
 
@@ -26,19 +26,34 @@ const DataCard = (props) => {
     </div>
   );
 
-  const bookingCardJSX = () => (
-    <div className="booking-card">
-      <h1 className="booking-card__name">{cardObject.name}</h1>
-      <p className="booking-card__email">{cardObject.email}</p>
-      <p className="booking-card__mobile">{cardObject.mobile}</p>
-      <p className="booking-card__date">{cardObject.bookingDate}</p>
-      <p className="booking-card__time">{cardObject.bookingTime}</p>
-      <figure className="booking-card__image-container">
-        {" "}
-        <span className="booking-card__circle"></span>
-      </figure>
-    </div>
-  );
+  const bookingCardJSX = () => {
+    let names = cardObject.client.split(" ");
+
+    const getClientDetails = (nameToSearch) => {
+      const filteredObject = mockData.clients.filter(
+        (client) =>
+          client.firstName == nameToSearch[0] &&
+          client.lastName == nameToSearch[1]
+      );
+      return filteredObject;
+    };
+
+    const currentClient = getClientDetails(names);
+
+    return (
+      <div className="booking-card">
+        <h1 className="booking-card__name">{cardObject.client}</h1>
+        <p className="booking-card__email">{currentClient[0].email}</p>
+        <p className="booking-card__mobile">{currentClient[0].mobile}</p>
+        <p className="booking-card__date">{cardObject.bookingDate}</p>
+        <p className="booking-card__time">{cardObject.bookingTime}</p>
+        <figure className="booking-card__image-container">
+          {" "}
+          <span className="booking-card__circle"></span>
+        </figure>
+      </div>
+    );
+  };
 
   const resourceCardJSX = () => (
     <div className="resource-card">

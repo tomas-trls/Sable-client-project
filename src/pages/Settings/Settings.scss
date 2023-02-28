@@ -1,0 +1,53 @@
+@use "../../styles/abstracts/variables" as *;
+
+.settings-container {
+  display: flex;
+  flex-direction: row;
+  background-color: $page-background-light;
+}
+.settings-page__content {
+  display: flex;
+  flex-direction: column;
+  padding-top: 4.5vh;
+  padding-left: 9vw;
+  justify-content: space-between;
+  min-height: 50vh;
+  width: 42vw;
+}
+.settings-page__button-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  .button {
+    width: 75%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .settings-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: $login-background;
+  }
+  .settings-page__content {
+    min-height: 70vh;
+    width: 100vw;
+    padding: 0;
+
+  }
+  .settings-page__button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5vh 0;
+    box-shadow: 0px 20px 40px rgba(97, 65, 65, 0.07);
+    .button {
+      width: 35%;
+      height: 4vh;
+    }
+  }
+
+}
