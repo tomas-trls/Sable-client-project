@@ -1,0 +1,23 @@
+@use "../../styles/abstracts/variables" as *;
+@use "../../styles/base/typography" as *;
+
+.client-form {
+    display: flex;
+    font-family: $font-modern;
+    &__image-container{
+        border: 2px solid $light-border;
+        border-radius: 7px;
+        height: 190px;
+        width: 350px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__image-text{
+        font-family: $font-modern;
+        font-size: 0.875rem;
+        font-family: $font-modern;
+        font-weight: 600;
+        color: $page-sub-heading;
+    }
+}
