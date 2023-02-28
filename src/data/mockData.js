@@ -204,7 +204,7 @@ export const mockData = {
       startDate: "01.01.2020",
       contractEndDate: "01.01.2025",
       manager: "George",
-      image: "https://unsplash.com/photos/mEZ3PoFGs_k",
+      image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
     },
     {
       name: "David",
@@ -559,14 +559,14 @@ export const mockData = {
       bookingDate: "05/03/2023",
       bookingTime: "15:00",
       confirmed: true,
-      Staff: "Mariana",
+      staff: "Mariana",
     },
     {
       client: "Mark Wilson",
       bookingDate: "08/03/2023",
       bookingTime: "11:00",
       confirmed: false,
-      Staff: "David",
+      staff: "David",
     },
     {
       client: "Bryan Kim",
@@ -580,7 +580,7 @@ export const mockData = {
       bookingDate: "10/03/2023",
       bookingTime: "14:00",
       confirmed: false,
-      Staff: "David",
+      staff: "David",
     },
     {
       client: "Jason Lee",
@@ -601,7 +601,7 @@ export const mockData = {
       bookingDate: "02/03/2023",
       bookingTime: "14:30",
       confirmed: true,
-      Staff: "Marianna",
+      staff: "Marianna",
     },
   ],
 };

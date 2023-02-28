@@ -3,7 +3,8 @@
 
 .card-container {
   width: 270px;
-  height: 310px;
+  min-height: 310px;
+  height: auto;
   background-color: $color-white;
   display: flex;
   flex-direction: column;
@@ -14,8 +15,16 @@
   margin: 20px;
 
   &__image-container {
-    height: 50%;
+    margin-top: 10px;
+    height: 300px;
     padding: 20px;
+
+    &--image{
+      height: 100%;
+      width: 100%;
+      aspect-ratio: 1;
+      border-radius: 50%;
+    }
   }
   &__info-container {
     display: flex;

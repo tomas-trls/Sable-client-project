@@ -22,7 +22,7 @@ const EmployeeOverviewCard = ({
             Employee Start Date:
           </p>
           <p className="employee-overview-card__left--course">
-            Course Completion:
+            Contract End:
           </p>
           <p className="employee-overview-card__left--manager">Manager:</p>
         </div>

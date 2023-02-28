@@ -3,7 +3,16 @@ import Logo from "../../assets/images/logo/logo-white.png";
 import Button from "../Button/Button";
 import "./PageHeader.scss";
 
-const PageHeader = ({ headerType, heading, text, buttonStyle, isPlus, isInputIncomplete, optionsArr }) => {
+const PageHeader = ({
+  headerType,
+  heading,
+  text,
+  buttonStyle,
+  isPlus,
+  isInputIncomplete,
+  optionsArr,
+  handleOnChange,
+}) => {
   const HeadingOnlyJSX = () => (
     <div className="heading-only">
       <img src={Logo} alt="logo" className="heading-only__logo" />
@@ -16,7 +25,12 @@ const PageHeader = ({ headerType, heading, text, buttonStyle, isPlus, isInputInc
       <img src={Logo} alt="logo" className="heading-button__logo" />
       <h1 className="heading-button__heading">{heading}</h1>
       <div className="header-button">
-        <Button buttonText={text} buttonStyle={buttonStyle} isPlus={isPlus} isInputIncomplete={isInputIncomplete}/>
+        <Button
+          buttonText={text}
+          buttonStyle={buttonStyle}
+          isPlus={isPlus}
+          isInputIncomplete={isInputIncomplete}
+        />
       </div>
     </div>
   );
@@ -32,14 +46,25 @@ const PageHeader = ({ headerType, heading, text, buttonStyle, isPlus, isInputInc
     return (
       <div className="heading-button-dropdown">
         <div className="heading-button-dropdown__main">
-          <img src={Logo} alt="logo" className="heading-button-dropdown__logo" />
+          <img
+            src={Logo}
+            alt="logo"
+            className="heading-button-dropdown__logo"
+          />
           <h1 className="heading-button-dropdown__heading">{heading}</h1>
           <div className="header-button">
-          <Button buttonText={text} buttonStyle={buttonStyle} isPlus={isPlus} isInputIncomplete={isInputIncomplete} />
+            <Button
+              buttonText={text}
+              buttonStyle={buttonStyle}
+              isPlus={isPlus}
+              isInputIncomplete={isInputIncomplete}
+            />
           </div>
         </div>
         <div className="heading-button-dropdown__dropdown">
-          <select id="dropdown">{optionsJSX}</select>
+          <select onChange={handleOnChange} id="dropdown">
+            {optionsJSX}
+          </select>
         </div>
       </div>
     );
