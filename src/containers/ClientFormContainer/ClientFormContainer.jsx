@@ -24,7 +24,7 @@ const ClientFormContainer = (handleDropdown) => {
              />
             
         </div>
-        <div className='client-form__input-container'>
+        <div className='client-form__thumbnail-container'>
             <h2 className='client-form__image-text'>Client Thumbnail</h2> 
             <div className='client-form__image-container'>
                 <img src = {Thumbnail} alt = "thumbnail" className='client-form__image'/>

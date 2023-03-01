@@ -31,7 +31,6 @@ const App = () => {
           <Route path="/resources/edit" element={<EditResource />} />
           <Route path="/resources/request" element={<RequestResource />} />
           <Route path="/settings" element={<Settings/>} />
-          <Route path="/resources" element={<Resources />} />
           {/* <Route path="/client/add-client" element={<AddClient/>} /> */}
       </Routes>
       ) : null}
