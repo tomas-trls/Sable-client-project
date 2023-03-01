@@ -1,9 +1,11 @@
 import React from 'react'
 import InputField from '../../components/InputField/InputField'
+import DropdownField from '../../components/DropdownField/DropdownField'
 import './ClientFormContainer.scss'
 import Thumbnail from '../../assets/images/functional-icons/thumbnail-icon.png'
 
-const ClientFormContainer = () => {
+const ClientFormContainer = (handleDropdown) => {
+
   return (
     <form className='client-form'>
         <div className='client-form__input-container'>
@@ -12,6 +14,8 @@ const ClientFormContainer = () => {
             <InputField label = "Date Of Birth" id="date-birth"/>
             <InputField label = "Email Address" id="email" />
             <InputField label = "Mobile Number" id="number"/>
+            <DropdownField id="employed" label="Employed Post Course:" handleInput={handleDropdown} />
+            
         </div>
         <div className='client-form__input-container'>
             <h2 className='client-form__image-text'>Client Thumbnail</h2> 
