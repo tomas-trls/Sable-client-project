@@ -66,3 +66,18 @@
     cursor: pointer;
   }
 }
+@media screen and (max-width: 767px) {
+  .card-container{
+    &__info-container{
+      height: auto;
+
+      &--role{
+        display: none;
+    }
+    }
+    
+    &__button{
+      display: none;
+    }
+  }
+}

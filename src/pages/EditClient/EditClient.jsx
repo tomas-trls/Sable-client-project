@@ -1,22 +1,22 @@
 import React from "react";
-import "./AddClient.scss";
+import "./EditClient.scss";
 import PageHeader from "../../components/PageHeader/PageHeader";
 import NavContainer from "../../containers/NavContainer/NavContainer";
 import Layout from "../../components/Layout/Layout";
 import ClientFormContainer from "../../containers/ClientFormContainer/ClientFormContainer";
 import HomeButton from "../../components/HomeButton/HomeButton";
 
-const AddClient = () => {
+const EditClient = () => {
   return (
-    <div className="add-client">
+    <div className="edit-client">
       <NavContainer />
       <Layout>
         <PageHeader
-          heading="Add Client"
+          heading="Edit Client"
           headerType="headingButton"
           text="Save"
         />
-        <ClientFormContainer isEditClient={false} />
+        <ClientFormContainer isEditClient={true} />
         <div>
           <HomeButton />
         </div>
@@ -25,4 +25,4 @@ const AddClient = () => {
   );
 };
 
-export default AddClient;
+export default EditClient;
