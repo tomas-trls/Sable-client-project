@@ -4,11 +4,15 @@ import DropdownField from '../../components/DropdownField/DropdownField'
 import './ClientFormContainer.scss'
 import Thumbnail from '../../assets/images/functional-icons/thumbnail-icon.png'
 import Button from '../../components/Button/Button'
+import UserProfileCard from '../../components/UserProfileCard/UserProfileCard'
+import defaultUser from '../../assets/images/users/Ellipse.png'
 
 const ClientFormContainer = (handleDropdown) => {
-
   return (
     <form className='client-form'>
+        <div className='client-form__mobile-thumbnail'>
+            <UserProfileCard image={defaultUser} name = "Client 01"/>
+        </div>
         <section className='client-form__input-container'>
             <InputField label = "First Name" id="first-name"/>
             <InputField label = "Last Name" id="last-name"/>
@@ -42,7 +46,10 @@ const ClientFormContainer = (handleDropdown) => {
               <Button buttonText="Cancel" buttonStyle = "isCancel--purple"/>
               <Button buttonText="Save"/> 
             </div>
-            <a  className='text' href='#'>delete</a>
+                <a className='client-form__text' href='#'>Delete User</a>
+            </div>
+            <div className='client-form__mobile-button'>
+                <Button buttonText="Submit" buttonStyle = "isMobileDefault"/>
             </div>
         </section>
     </form>

@@ -10,9 +10,7 @@
     box-shadow: 0px 30px 30px rgba(114, 75, 203, 0.06);
     border-radius: 7px;
     width: 66vw;
-    height: 71vh;
     height: 75%;
-    border: 2px solid black;
     margin-left: 8%;
     padding: 3.5%;
     padding-top: 1.5%;
@@ -52,11 +50,52 @@
     &__form-buttons{
         display: flex;
         justify-content: space-around;
-        gap: 10%;
-        
+        gap: 10%; 
+    }
+    &__text{
+        color: $delete-user-text;
+        font-size: 10px;
+        display: none;
+    }
+
+    &__mobile-thumbnail{
+        display: none;
+    }
+
+    &__mobile-button{
+        display: none;
     }
 }
-.text{
-    color: red;
-    font-size: 10px;
+
+@media screen and (max-width: 767px) {
+    .client-form{
+        background-color: $page-background-light;
+        width: 90%;
+        height: auto;
+        margin: 4%;
+        padding: 0;
+        flex-direction: column;
+
+        &__mobile-thumbnail{
+            display: flex;
+            justify-content: center;
+        }
+
+        &__input-container{
+            width: 100%;
+            gap: 2vh;
+        }
+        &__right-container{
+            gap: 2vh;
+            width: 100%
+        }
+
+        &__form-buttons{
+            display: none;
+        }
+        &__mobile-button{
+            display: flex;
+        }
+    }
+    
 }
