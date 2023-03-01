@@ -6,7 +6,7 @@ import "../Settings/Settings.scss";
 import Button from "../../components/Button/Button";
 import HomeButton from "../../components/HomeButton/HomeButton";
 
-const Settings = () => {
+const Settings = ({setUser}) => {
   return (
     <div className="settings-container">
       <NavContainer />
@@ -19,6 +19,7 @@ const Settings = () => {
               className="settings-page__button"
               buttonText="Log out"
               buttonStyle="isLogout"
+              handleClick={setUser}
             />
           </div>
         </div>
