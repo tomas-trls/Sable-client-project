@@ -1,5 +1,6 @@
 import { Route, Routes, useNavigate } from "react-router-dom";
 import { useState } from "react";
+import * as React from 'react';
 import Client from "./pages/Client/Client";
 import Home from "./pages/Home/Home";
 import Login from "./pages/Login/Login.jsx";
@@ -11,6 +12,7 @@ import EditResource from "./pages/EditResource/EditResource";
 import RequestResource from "./pages/RequestResource/RequestResource";
 import "./styles/base/_reset.scss";
 import "./styles/base/_typography.scss";
+import Error from "./pages/Error/Error";
 
 const App = () => {
   const [user, setUser] = useState();
@@ -36,7 +38,16 @@ const App = () => {
           <Route path="/resources/request" element={<RequestResource />} />
           <Route path="/settings" element={<Settings setUser={logOut}/>} />
         </Routes>
-      ) : null}
+      ) : <Routes>
+      <Route path="/home" element={<Error page={"home"}/>} />
+      <Route path="/booking" element={<Error page={"booking"}/>} />
+      <Route path="/staff" element={<Error page={"staff"}/>} />
+      <Route path="/client" element={<Error page={"client"}/>} />
+      <Route path="/resources" element={<Error page={"resources"}/>} />
+      <Route path="/resources/edit" element={<Error page={"resources"}/>} />
+      <Route path="/resources/request" element={<Error page={"resources"}/>} />
+      <Route path="/settings" element={<Error page={"settings"}/>} />
+    </Routes>}
     </>
   );
 };

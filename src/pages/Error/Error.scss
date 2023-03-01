@@ -1,0 +1,36 @@
+@use "../../styles/abstracts/variables" as *;
+@use "../../styles//base//typography" as *;
+@import "https://fonts.googleapis.com/css?family=VT323";
+
+.error-page {
+  height: 100vh;
+  background-color: $color-blue;
+  color: $color-light-grey;
+  font-family: normal #{20px}/ 1.25rem $font-modern;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__container {
+    margin: auto;
+  }
+
+  &__main {
+    &__neg {
+      text-align: center;
+      color: $color-blue;
+    }
+
+    &__bg {
+      background: $color-grey;
+    }
+    &__title {
+      margin-bottom: 50px;
+    }
+    &__nav {
+      margin-top: 35px;
+      text-align: center;
+    }
+  }
+}
