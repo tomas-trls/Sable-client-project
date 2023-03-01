@@ -75,7 +75,21 @@
         margin: 4%;
         padding: 0;
         flex-direction: column;
-
+        box-shadow: none;
+        gap: 2.5vh;
+        margin-bottom: 13vh;
+        &__image-container{
+            border: none;
+            height: auto;
+        }
+        &__thumbnail-mobile{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid $light-border;
+            height: 25vh;
+        }
         &__mobile-thumbnail{
             display: flex;
             justify-content: center;

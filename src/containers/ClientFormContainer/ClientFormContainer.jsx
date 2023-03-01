@@ -14,7 +14,7 @@ const ClientFormContainer = (handleDropdown) => {
             <UserProfileCard image={defaultUser} name = "Client 01"/>
         </div>
         <section className='client-form__input-container'>
-            <InputField label = "First Name" id="first-name"/>
+            <InputField label = "First Name" id="first-name" readOnly={"Jina"}/>
             <InputField label = "Last Name" id="last-name"/>
             <InputField label = "Date Of Birth" id="date-birth"/>
             <InputField label = "Email Address" id="email" />
@@ -32,12 +32,16 @@ const ClientFormContainer = (handleDropdown) => {
         <section className='client-form__right-container'>
             <div className='client-form__thumbnail-container'>
             <h2 className='client-form__image-text'>Client Thumbnail</h2> 
-            <div className='client-form__image-container'>
-                <img src = {Thumbnail} alt = "thumbnail" className='client-form__image'/>
+
+            <div className='client-form__thumbnail-mobile'>
+                <div className='client-form__image-container'>
+                    <img src = {Thumbnail} alt = "thumbnail" className='client-form__image'/>
+                </div>
+                <div className='client-form__upload-button'>
+                    <Button buttonStyle="isUpload" buttonText= "Upload"/>
+                </div>
             </div>
-            <div className='client-form__upload-button'>
-            <Button buttonStyle="isUpload" buttonText= "Upload"/>
-            </div>
+            
             </div>
             <InputField label = "Employer" id="employer"/>
             <InputField label = "Role" id="role"/>
