@@ -14,7 +14,14 @@ const ClientFormContainer = (handleDropdown) => {
             <InputField label = "Date Of Birth" id="date-birth"/>
             <InputField label = "Email Address" id="email" />
             <InputField label = "Mobile Number" id="number"/>
-            <DropdownField id="employed" label="Employed Post Course:" handleInput={handleDropdown} />
+            <DropdownField id="employed" label="Employed Post Course:" handleInput={handleDropdown}
+            optionsJSX = {
+                    <>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                    </>
+                }
+             />
             
         </div>
         <div className='client-form__input-container'>

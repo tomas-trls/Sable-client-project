@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import { useState } from "react";
-import Client from "./pages/Client/Client";
+//import Client from "./pages/Client/Client";
 import Home from "./pages/Home/Home";
 import Login from "./pages/Login/Login.jsx";
 import Resources from "./pages/Resources/Resources.jsx";
@@ -26,14 +26,14 @@ const App = () => {
           <Route path="/home" element={<Home />} />
           <Route path="/booking" element={<NewAppointment />} />
           <Route path="/staff" element={<Staff />} />
-          <Route path="/client" element={<Client />} />
+          <Route path="/client" element={<AddClient />} />
           <Route path="/resources" element={<Resources />} />
           <Route path="/resources/edit" element={<EditResource />} />
           <Route path="/resources/request" element={<RequestResource />} />
           <Route path="/settings" element={<Settings/>} />
           <Route path="/resources" element={<Resources />} />
-      <Route path="/client/add-client" element={<AddClient/>} />
-    </Routes>
+          {/* <Route path="/client/add-client" element={<AddClient/>} /> */}
+      </Routes>
       ) : null}
     </>
   );
