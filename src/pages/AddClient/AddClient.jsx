@@ -11,7 +11,7 @@ const AddClient = () => {
     <NavContainer /> 
     <Layout>
       <PageHeader heading="Add Client" headerType="headingButton" text="Save"/>
-      <ClientFormContainer/>
+      <ClientFormContainer isEditClient={true}/>
     </Layout>
     </div>
   )
