@@ -2,40 +2,61 @@
 @use "../../styles/base/typography" as *;
 
 .client-form {
-    margin: 40px;
+    margin: 3vh;
     display: flex;
-    gap: 100px;
+    gap: 10%;
     font-family: $font-modern;
     background-color: $color-white;
     box-shadow: 0px 30px 30px rgba(114, 75, 203, 0.06);
     border-radius: 7px;
     width: 66vw;
-    height: 70vh;
+    height: 71vh;
+    height: 75%;
     border: 2px solid black;
     margin-left: 8%;
-    padding: 40px;
-    padding: 5%;
-    //padding-top: 30px;
+    padding: 3.5%;
+    padding-top: 1.5%;
+    
     &__image-container{
         border: 2px solid $light-border;
         border-radius: 7px;
-        height: 190px;
-        width: 350px;
+        height: 20vh;
+        width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
     }
     &__image-text{
         font-family: $font-modern;
-        font-size: 0.875rem;
+        font-size: 0.8rem;
         font-family: $font-modern;
         font-weight: 600;
         color: $page-sub-heading;
+        margin-top: 0;
     }
     &__input-container{
         width: 40%;
         display: flex;
         flex-direction: column;
-        gap: 14px;
+        gap: 2.5%;
     }
+    &__upload-button{
+        padding-top: 3%;
+    }
+    &__right-container{
+        display: flex;
+        flex-direction: column;
+        gap: 4%;
+        width: 40%
+    }
+    &__form-buttons{
+        display: flex;
+        justify-content: space-around;
+        gap: 10%;
+        
+    }
+}
+.text{
+    color: red;
+    font-size: 10px;
 }
