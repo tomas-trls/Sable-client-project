@@ -1,6 +1,6 @@
 @use "../abstracts/variables" as *;
 
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Jost:wght@700&family=Lato:ital@1&family=Mulish:wght@600&family=Poppins:wght@400;500;600;700&family=Space+Mono:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Jost:wght@700&family=Lato:wght@100;300;400;700;900&family=Mulish:wght@600&family=Poppins:wght@400;500;600;700&family=Space+Mono:wght@700&display=swap");
 
 $font-homepage: "Inter", sans-serif;
 $font-mobilehome: "Jost", sans-serif;
@@ -14,8 +14,8 @@ $font-sortfilter: "Mulish", sans-serif;
 // we can manipulate the :root element's font-size at different breakpoints to scale up the font-size application-wide
 
 * {
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans",
+    Arial, sans-serif;
   color: $text-color;
 }
 

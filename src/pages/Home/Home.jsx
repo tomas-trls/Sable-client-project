@@ -1,13 +1,12 @@
 import Layout from "../../components/Layout/Layout";
-import PageHeader from "../../components/PageHeader/PageHeader.jsx";
-import HomePageContainer from "../../containers/HomePageContainer/HomePageContainer";
 import NavContainer from "../../containers/NavContainer/NavContainer";
 import "../Home/Home.scss";
-
+import HomePageContainer from "../../containers/HomePageContainer/HomePageContainer";
+import PageHeader from "../../components/PageHeader/PageHeader.jsx";
 const Home = () => {
   return (
     <div className="home-container">
-      <NavContainer /> 
+      <NavContainer />
       <Layout>
         <PageHeader heading="Home" headerType="headingOnly" />
         <HomePageContainer />
@@ -17,3 +16,4 @@ const Home = () => {
 };
 
 export default Home;
+

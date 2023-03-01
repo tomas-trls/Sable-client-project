@@ -2,7 +2,6 @@
 @use "../../styles/base/typography" as *;
 
 .resources-overview {
-  height: 80vh;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -20,7 +19,7 @@
   }
 
   &__filters {
-    margin-top: 59px; 
+    margin-top: 59px;
     display: flex;
     width: 98%;
     justify-content: space-between;
@@ -75,5 +74,21 @@
   }
   &__mobile-subheader {
     display: none;
+  }
+}
+
+@media screen and (max-width: $tablet-breakpoint) {
+  .resources-overview {
+    &__sort,
+    &__filter,
+    &__display--icons,
+    &__searchbar {
+      display: none;
+    }
+
+    &__title {
+      font-size: 20px;
+      font-weight: 600;
+    }
   }
 }

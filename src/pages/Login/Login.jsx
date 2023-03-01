@@ -9,10 +9,9 @@ import { auth } from "../../firebase";
 
 import "./Login.scss";
 
-const Login = () => {
+const Login = ({ user, setUser }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [user, setUser] = useState("");
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
 
@@ -29,15 +28,19 @@ const Login = () => {
         const errorMessage = error.message;
         if (errorMessage.includes("invalid-email")) {
           setError(
-            `Oops! 😱 a problem has occurred while submitting your data (auth/invalid-email)`
+            `Oops! 😱 a problem has occurred while submitting your data (auth/invalid-email).`
           );
         } else if (errorMessage.includes("wrong-password")) {
           setError(
-            `Oops! 😱 a problem has occurred while submitting your data (auth/wrong-password)`
+            `Oops! 😱 a problem has occurred while submitting your data (auth/wrong-password).`
+          );
+        } else if (errorMessage.includes("user-not-found")) {
+          setError(
+            `Oops! 😱 a problem has occurred while submitting your data (auth/user-not-found).`
           );
         } else {
           setError(
-            `Oops! 😱 a problem has occurred while submitting your data (auth/internal error)`
+            `Oops! 😱 a problem has occurred while submitting your data (${errorMessage})`
           );
         }
       });
@@ -50,8 +53,8 @@ const Login = () => {
       <form className="login-page__form login-form__input-container">
         <h1 className="login-form__title">Welcome back</h1>
         <p className="login-form__desc">
-          Feugiat magna viverra pellentesque habitant. Libero id amet nisl, tellus
-          cras eleifend et in.
+          Feugiat magna viverra pellentesque habitant. Libero id amet nisl,
+          tellus cras eleifend et in.
         </p>
         <label htmlFor="email-input" className="login-form__label">
           Email Address
@@ -108,7 +111,11 @@ const Login = () => {
                 setError("");
               }}
             >
-              <img className="cross-image" src={plus} alt="an icon of a cross" />
+              <img
+                className="cross-image"
+                src={plus}
+                alt="an icon of a cross"
+              />
             </button>
           </div>
         )
