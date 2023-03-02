@@ -1,37 +1,37 @@
 export const mockData = {
   resources: [
-    { name: "syringe", costPerUnit: "£12.99" },
-    { name: "laser", costPerUnit: "£25" },
-    { name: "Dental Floss", costPerUnit: "£5.50" },
-    { name: "Mouthwash", costPerUnit: "£8.99" },
-    { name: "Toothbrush", costPerUnit: "£4.25" },
-    { name: "Surgical Gloves", costPerUnit: "£45.99" },
-    { name: "Scalpel", costPerUnit: "£22.75" },
-    { name: "Dental Mirror", costPerUnit: "£7.50" },
-    { name: "X-Ray Machine", costPerUnit: "£2500" },
-    { name: "Filling Material", costPerUnit: "£175.25" },
-    { name: "Dental Drill", costPerUnit: "£285" },
-    { name: "Anaesthesia", costPerUnit: "£75.99" },
-    { name: "Toothpaste", costPerUnit: "£6.25" },
-    { name: "Implants", costPerUnit: "£1200" },
-    { name: "Sutures", costPerUnit: "£12.99" },
-    { name: "Surgical Mask", costPerUnit: "£15.50" },
-    { name: "Sterilization Machine", costPerUnit: "£1500" },
-    { name: "Orthodontic Pliers", costPerUnit: "£90.75" },
-    { name: "Dental Light", costPerUnit: "£125" },
-    { name: "Rubber Dam", costPerUnit: "£28.99" },
-    { name: "Periodontal Probe", costPerUnit: "£24.50" },
-    { name: "Cavity Liner", costPerUnit: "£42.25" },
+    { name: "syringe", costPerUnit: "£12.99", quantity: "300",autoPurchaseLevel: "500", isAutoPurchase: true, category: "Admin", },
+    { name: "laser", costPerUnit: "£25",  quantity: "520",autoPurchaseLevel: "500", isAutoPurchase: false, category: "Health", },
+    { name: "Dental Floss", costPerUnit: "£5.50",  quantity: "560",autoPurchaseLevel: "500", isAutoPurchase: true, category: "Health", },
+    { name: "Mouthwash", costPerUnit: "£8.99" , quantity: "500",autoPurchaseLevel: "500", isAutoPurchase: true, category: "Health",},
+    { name: "Toothbrush", costPerUnit: "£4.25", quantity: "50" ,autoPurchaseLevel: "500", isAutoPurchase: true, category: "Admin",},
+    { name: "Surgical Gloves", costPerUnit: "£45.99" , quantity: "4300",autoPurchaseLevel: "500", isAutoPurchase: true, category: "Health",},
+    { name: "Scalpel", costPerUnit: "£22.75" , quantity: "60",autoPurchaseLevel: "500", isAutoPurchase: true, category: "Admin",},
+    { name: "Dental Mirror", costPerUnit: "£7.50" , quantity: "321",autoPurchaseLevel: "500", isAutoPurchase: true, category: "Admin",},
+    { name: "X-Ray Machine", costPerUnit: "£2500", quantity: "222",autoPurchaseLevel: "500", isAutoPurchase: true, category: "Admin",},
+    { name: "Filling Material", costPerUnit: "£175.25", quantity: "2600" ,autoPurchaseLevel: "500", isAutoPurchase: true, category: "Health",},
+    { name: "Dental Drill", costPerUnit: "£285", quantity: "980",autoPurchaseLevel: "500", isAutoPurchase: true, category: "Health",},
+    { name: "Anaesthesia", costPerUnit: "£75.99", quantity: "830",autoPurchaseLevel: "500", isAutoPurchase: true,category: "Admin",},
+    { name: "Toothpaste", costPerUnit: "£6.25" , quantity: "70",autoPurchaseLevel: "500", isAutoPurchase: false ,category: "Health",},
+    { name: "Implants", costPerUnit: "£1200", quantity: "210",autoPurchaseLevel: "500", isAutoPurchase: true, category: "Admin",},
+    { name: "Sutures", costPerUnit: "£12.99" , quantity: "40",autoPurchaseLevel: "500", isAutoPurchase: true,category: "Health",},
+    { name: "Surgical Mask", costPerUnit: "£15.50" , quantity: "500",autoPurchaseLevel: "500", isAutoPurchase: true,category: "Admin",},
+    { name: "Sterilization Machine", costPerUnit: "£1500", quantity: "970",autoPurchaseLevel: "500" ,isAutoPurchase: true,category: "Health",},
+    { name: "Orthodontic Pliers", costPerUnit: "£90.75" , quantity: "5430",autoPurchaseLevel: "500",isAutoPurchase: true,category: "Admin",},
+    { name: "Dental Light", costPerUnit: "£125" , quantity: "123",autoPurchaseLevel: "500",isAutoPurchase: false, category: "Health",},
+    { name: "Rubber Dam", costPerUnit: "£28.99" , quantity: "312",autoPurchaseLevel: "500",isAutoPurchase: true,category: "Admin",},
+    { name: "Periodontal Probe", costPerUnit: "£24.50" , quantity: "532",autoPurchaseLevel: "500",isAutoPurchase: true,category: "Health",},
+    { name: "Cavity Liner", costPerUnit: "£42.25" , quantity: "560",autoPurchaseLevel: "500",isAutoPurchase: false,category: "Health",},
   ],
 
   resourcesRequest: [
     {
-      category: "health",
+      category: "Health",
       staffMember: "Marianna",
       resources: "Mouthwash",
       autoPurchase: "yes",
       autoPurchaseLevel: "210",
-      quantityRemaining: "860",
+   
     },
     {
       category: "Admin",
@@ -39,23 +39,23 @@ export const mockData = {
       resources: "Implants",
       autoPurchase: "no",
       autoPurchaseLevel: "413",
-      quantityRemaining: "385",
+     
     },
     {
-      category: "health",
+      category: "Health",
       staffMember: "David",
       resources: "Dental Mirror",
       autoPurchase: "no",
       autoPurchaseLevel: "378",
-      quantityRemaining: "726",
+
     },
     {
-      category: "health",
+      category: "Health",
       staffMember: "Julia",
       resources: "Sutures",
       autoPurchase: "no",
       autoPurchaseLevel: "219",
-      quantityRemaining: "342",
+   
     },
     {
       category: "Admin",
@@ -63,15 +63,15 @@ export const mockData = {
       resources: "Sterilization Machine",
       autoPurchase: "yes",
       autoPurchaseLevel: "27",
-      quantityRemaining: "489",
+ 
     },
     {
-      category: "health",
+      category: "Health",
       staffMember: "Roberto",
       resources: "Dental Light",
       autoPurchase: "yes",
       autoPurchaseLevel: "171",
-      quantityRemaining: "876",
+
     },
     {
       category: "Admin",
@@ -79,15 +79,15 @@ export const mockData = {
       resources: "Surgical Gloves",
       autoPurchase: "yes",
       autoPurchaseLevel: "359",
-      quantityRemaining: "438",
+
     },
     {
-      category: "health",
+      category: "Health",
       staffMember: "Simon",
       resources: "Periodontal Probe",
       autoPurchase: "yes",
       autoPurchaseLevel: "40",
-      quantityRemaining: "104",
+
     },
     {
       category: "Admin",
@@ -95,15 +95,15 @@ export const mockData = {
       resources: "X-Ray Machine",
       autoPurchase: "no",
       autoPurchaseLevel: "490",
-      quantityRemaining: "819",
+
     },
     {
-      category: "health",
+      category: "Health",
       staffMember: "Carla",
       resources: "Dental Drill",
       autoPurchase: "no",
       autoPurchaseLevel: "37",
-      quantityRemaining: "194",
+
     },
     {
       category: "Admin",
@@ -111,15 +111,15 @@ export const mockData = {
       resources: "Orthodontic Pliers",
       autoPurchase: "yes",
       autoPurchaseLevel: "468",
-      quantityRemaining: "534",
+ 
     },
     {
-      category: "health",
+      category: "Health",
       staffMember: "Stefania",
       resources: "Filling Material",
       autoPurchase: "no",
       autoPurchaseLevel: "283",
-      quantityRemaining: "631",
+
     },
     {
       category: "Admin",
@@ -127,15 +127,15 @@ export const mockData = {
       resources: "Rubber Dam",
       autoPurchase: "yes",
       autoPurchaseLevel: "16",
-      quantityRemaining: "469",
+
     },
     {
-      category: "health",
+      category: "Health",
       staffMember: "Simon",
       resources: "Anaesthesia",
       autoPurchase: "no",
       autoPurchaseLevel: "325",
-      quantityRemaining: "444",
+
     },
     {
       category: "Admin",
@@ -143,15 +143,15 @@ export const mockData = {
       resources: "Cavity Liner",
       autoPurchase: "no",
       autoPurchaseLevel: "145",
-      quantityRemaining: "121",
+
     },
     {
-      category: "health",
+      category: "Health",
       staffMember: "Simon",
       resources: "Toothpaste",
       autoPurchase: "yes",
       autoPurchaseLevel: "127",
-      quantityRemaining: "920",
+  
     },
     {
       category: "Admin",
@@ -159,15 +159,15 @@ export const mockData = {
       resources: "Surgical Masks",
       autoPurchase: "yes",
       autoPurchaseLevel: "97",
-      quantityRemaining: "337",
+
     },
     {
-      category: "health",
+      category: "Health",
       staffMember: "Simon",
       resources: "Intraoral Camera",
       autoPurchase: "yes",
       autoPurchaseLevel: "274",
-      quantityRemaining: "399",
+     
     },
     {
       category: "Admin",
@@ -175,15 +175,15 @@ export const mockData = {
       resources: "Scalpel Blades",
       autoPurchase: "no",
       autoPurchaseLevel: "405",
-      quantityRemaining: "572",
+
     },
     {
-      category: "health",
+      category: "Health",
       staffMember: "Roberto",
       resources: "Intraoral Camera",
       autoPurchase: "yes",
       autoPurchaseLevel: "274",
-      quantityRemaining: "399",
+ 
     },
     {
       category: "Admin",
@@ -191,7 +191,7 @@ export const mockData = {
       resources: "Dental Drill",
       autoPurchase: "no",
       autoPurchaseLevel: "405",
-      quantityRemaining: "572",
+      
     },
   ],
 

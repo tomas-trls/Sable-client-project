@@ -6,7 +6,7 @@ import SortIcon from "../../assets/images/functional-icons/sort-icon.png";
 import DataCard from "../../components/DataCard/DataCard";
 import EmployeeOverviewCard from "../../components/EmployeeOverviewCard/EmployeeOverviewCard.jsx";
 import UserProfile from "../../components/UserProfileCard/UserProfileCard.jsx";
-import { mockData } from "../../data/mockData";
+import { mockData } from "../../data/mockData"
 import "./StaffOverview.scss";
 const StaffOverview = ({ currentStaff }) => {
   const filteredBooking = mockData.bookings.filter(
