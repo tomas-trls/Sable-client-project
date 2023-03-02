@@ -7,7 +7,8 @@ import UserProfileCard from "../../components/UserProfileCard/UserProfileCard";
 import defaultUser from "../../assets/images/users/Ellipse.png";
 import ClientProfile from "../../assets/images/users/client-picture.png";
 
-const ClientFormContainer = ({ isEditClient }) => {
+const ClientFormContainer = ({ isEditClient, handleClick }) => {
+  
   return (
     <form className="client-form">
       <div className="client-form__mobile-thumbnail">
@@ -94,7 +95,7 @@ const ClientFormContainer = ({ isEditClient }) => {
         <div>
           <div className="client-form__form-buttons">
             <Button buttonText="Cancel" buttonStyle="isCancel--purple" />
-            <Button buttonText="Save" />
+            <Button buttonText="Save" handleClick={handleClick}/>
           </div>
           {isEditClient ? (
             <h2 className="client-form__text" href="#">
