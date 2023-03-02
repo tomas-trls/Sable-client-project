@@ -65,4 +65,29 @@
   &__edit-link:hover{
     cursor: pointer;
   }
+ 
+}
+@media screen and (max-width: 767px) {
+  .card-container {
+    width: 70vw;
+    height: 50vh;
+    &__info-container {
+      height: auto;
+      &--name{
+
+        font-size: 2rem;
+      }
+
+      &--role {
+        display: none;
+      }
+    }
+    &__image-container {
+      height: 50%;
+    }
+
+    &__edit-link{
+      display: none;
+    }
+  }
 }
