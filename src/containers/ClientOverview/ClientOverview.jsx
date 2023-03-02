@@ -89,7 +89,7 @@ const Client = () => {
       />
       <div className="client-overview__label-container">
         <p className="client-overview__label">Client Name</p>
-        <p className="client-overview__label">Email Address</p>
+        <p className="client-overview__label" id="email-label">Email Address</p>
         <p className="client-overview__label">Mobile Number</p>
         <p className="client-overview__label">Consumer/Consultancy</p>
         <p className="client-overview__label">Confirmed</p>

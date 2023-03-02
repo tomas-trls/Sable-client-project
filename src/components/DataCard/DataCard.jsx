@@ -82,7 +82,7 @@ const DataCard = (props) => {
         ? bookingCardJSX()
         : cardType === "resource"
         ? resourceCardJSX()
-        : alert("Unkown card")}
+        : alert("Unknown card")}
     </>
   );
 };

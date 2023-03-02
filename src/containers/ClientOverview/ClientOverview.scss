@@ -53,7 +53,7 @@
   }
 }
 
-@media only screen and (max-width: $tablet-breakpoint) {
+@media only screen and (max-width: 767px) {
   .client-overview {
     &__filters {
       display: none;
@@ -61,5 +61,17 @@
     &__label-container {
       display: none;
     }
+  }
+}
+
+@media screen and (min-width: $tablet-breakpoint) and (max-width: 1439px) {
+  .client-overview {
+    &__label-container {
+      grid-template: 1fr / repeat(6, 1fr);
+    }
+  }
+
+  #email-label {
+    display: none;
   }
 }
