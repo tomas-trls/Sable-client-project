@@ -1,6 +1,6 @@
 import { Route, Routes, useNavigate } from "react-router-dom";
 import { useState } from "react";
-import * as React from 'react';
+import * as React from "react";
 import Client from "./pages/Client/Client";
 import Home from "./pages/Home/Home";
 import Login from "./pages/Login/Login.jsx";
@@ -15,23 +15,25 @@ import EditClient from "./pages/EditClient/EditClient";
 import "./styles/base/_reset.scss";
 import "./styles/base/_typography.scss";
 import Error from "./pages/Error/Error";
+import BackToLogin from "./pages/BackToLogin/BackToLogin";
 
 const App = () => {
   const [user, setUser] = useState();
   const navigate = useNavigate();
   const logOut = (event) => {
-    event.preventDefault(); 
-    navigate("/");
+    event.preventDefault();
+    navigate("/backtologin");
     setUser(null);
-  }
+  };
   return (
     <>
       <Routes>
         <Route path="/" element={<Login user={user} setUser={setUser} />} />
+        <Route path="/backtologin" element={<BackToLogin />} />
       </Routes>
       {user ? (
         <Routes>
-          <Route path="/home" element={<Home />} />
+          <Route path="/home" element={<Home setUser={logOut} />} />
           <Route path="/booking" element={<NewAppointment />} />
           <Route path="/staff" element={<Staff />} />
           <Route path="/client" element={<Client />} />

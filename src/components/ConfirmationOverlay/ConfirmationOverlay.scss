@@ -1,0 +1,71 @@
+@use "../../styles/abstracts/variables" as *;
+@use "../../styles/base/typography" as *;
+
+.overlay {
+  position: fixed;
+  top: 35vh;
+  left: 2.5vw;
+  right: 0;
+  bottom: 0;
+  z-index: 5;
+}
+.overlay-content {
+  width: 95vw;
+  height: 50vw;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+  border-radius: 7px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: $color-white;
+  border: 5px solid $light-border;
+}
+.overlay-text {
+  text-align: center;
+  font-family: $font-modern;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: $page-sub-heading;
+}
+.overlay-buttons {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+@media screen and (min-width: $tablet-breakpoint) {
+  .overlay {
+    position: fixed;
+    top: 32.5vh;
+    left: 32.5vw;
+    right: 0;
+    bottom: 0;
+    z-index: 5;
+  }
+  .overlay-content {
+    height: 35vh;
+    width: 35vw;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: $color-white;
+  }
+  .overlay-text {
+    text-align: center;
+    font-family: $font-modern;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: $page-sub-heading;
+  }
+  .overlay-buttons {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+}

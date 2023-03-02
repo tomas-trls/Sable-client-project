@@ -21,6 +21,12 @@ const PageHeader = ({
     </div>
   );
 
+  const LogoOnlyJSX = () => (
+    <div className="logo-only">
+      <img src={Logo} alt="logo" className="logo-only__logo" />
+    </div>
+  );
+
   const HeadingButtonJSX = () => (
     <div className="heading-button">
       <img src={Logo} alt="logo" className="heading-button__logo" />
@@ -75,12 +81,14 @@ const PageHeader = ({
 
   return (
     <>
-      {headerType === "headingOnly"
+      {   headerType === "headingOnly"
         ? HeadingOnlyJSX()
         : headerType === "headingButton"
         ? HeadingButtonJSX()
         : headerType === "headingButtonDropdown"
         ? HeadingButtonDropdownJSX()
+        : headerType === "logoOnly"
+        ? LogoOnlyJSX()
         : alert("unknown header")}
     </>
   );

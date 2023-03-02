@@ -2,9 +2,9 @@
 
 .layout {
   min-height: 100vh;
-  height:auto;
+  height: auto;
   width: 80vw;
-  background-color:$page-background-light
+  background-color: $page-background-light;
 }
 
 @media screen and (max-width: $tablet-breakpoint) {
