@@ -1,47 +1,96 @@
-import React from "react";
-import filterIcon from "../../assets/images/functional-icons/filter-icon.png";
-import gridIcon from "../../assets/images/functional-icons/gridview-icon.png";
-import listIcon from "../../assets/images/functional-icons/listview-icon.png";
-import sortIcon from "../../assets/images/functional-icons/sort-icon.png";
+import React, { useState } from "react";
 import DataCard from "../../components/DataCard/DataCard";
-import { mockData } from "../../data/mockData"
+import FilterBar from "../../components/FilterBar/FilterBar";
+import mockData from "../../data/mockData";
 import "./ClientOverview.scss";
 const Client = () => {
-  let clients = mockData.clients
-  //Will replace with real data passed through props later
+  const [query, setQuery] = useState("");
+  const [click, setClick] = useState(0);
+  const [dataArr, setDataArr] = useState([...mockData.clients]);
+  const [filteredClients, setFilteredClients] = useState([]);
 
+  const handleSort = () => {
+    if (click == 0) {
+      setClick(1);
+      setDataArr(
+        dataArr.sort((x, y) => {
+          let a = x.lastName.toUpperCase(),
+            b = y.lastName.toUpperCase();
+          return a == b ? 0 : a < b ? 1 : -1;
+        })
+      );
+    } else if (click == 1) {
+      setClick(2);
+      setDataArr(
+        dataArr.sort((x, y) => {
+          let a = x.lastName.toUpperCase(),
+            b = y.lastName.toUpperCase();
+          return a == b ? 0 : a > b ? 1 : -1;
+        })
+      );
+    } else {
+      setDataArr([...mockData.clients]);
+      setClick(0);
+    }
+  };
+
+  const handlefilter = (event) => {
+    if (event.target.value == "Consultant") {
+      const consultants = dataArr.filter((element) => {
+        return element.query.includes("consultant");
+      });
+      setFilteredClients(consultants);
+    } else if (event.target.value == "Consumer") {
+      const consumers = dataArr.filter((element) => {
+        return element.query.includes("consumer");
+      });
+      setFilteredClients(consumers);
+    } else if (event.target.value == "Confirmed") {
+      const confirmed = dataArr.filter((element) => {
+        return element.confirmedAppoinment;
+      });
+      setFilteredClients(confirmed);
+    }
+  };
+
+  const filterArr = dataArr.filter((element) => {
+    return (
+      element.firstName.toLowerCase().includes(query.toLowerCase()) ||
+      element.lastName.toLowerCase().includes(query.toLowerCase())
+    );
+  });
+  const handleInputSearch = (event) => {
+    setFilteredClients([]);
+    setQuery(event.target.value);
+  };
+
+  const clientsListJSX = filterArr.map((client, index) => {
+    return <DataCard key={index + 1} cardType="client" cardObject={client} />;
+  });
+  const filteredClientListJSX = filteredClients.map((client, index) => {
+    return <DataCard key={index + 1} cardType="client" cardObject={client} />;
+  });
   return (
     <div className="client-overview">
-      <div className="client-overview__filters">
-        <h2 className="client-overview__filters--label">Client List</h2>
-        <div className="client-overview__filters--display">
-          <img src={listIcon} alt="listIcon" />
-          <img src={gridIcon} alt="grid icon" />
-        </div>
-        <input className="client-overview__filters--search"></input>
-        <div className="client-overview__filters--sort">
-          <img src={sortIcon} alt="sort icon" />
-          <p className="client-overview__filters--sort-label">Sort</p>
-        </div>
-        <div className="client-overview__filters--filter">
-          <img src={filterIcon} alt="filter icon" />
-          <p className="client-overview__filters--filter-label">Filter</p>
-        </div>
-      </div>
-
+      <FilterBar
+        title={"Client List"}
+        handleInputSearch={handleInputSearch}
+        handleSort={handleSort}
+        handleSelect={handlefilter}
+        optionsArr={["Consumer", "Consultant", "Confirmed"]}
+      />
       <div className="client-overview__label-container">
         <p className="client-overview__label">Client Name</p>
         <p className="client-overview__label">Email Address</p>
         <p className="client-overview__label">Mobile Number</p>
         <p className="client-overview__label">Consumer/Consultancy</p>
-        <p className="client-overview__label">RSVPd</p>
+        <p className="client-overview__label">Confirmed</p>
         <p className="client-overview__label">Staff Name</p>
       </div>
       <div className="client-overview__cards-container">
-        <DataCard cardType="student" cardObject={clients[0]} />
-        <DataCard cardType="student" cardObject={clients[1]} />
-        <DataCard cardType="student" cardObject={clients[2]} />
-        <DataCard cardType="student" cardObject={clients[3]} />
+        {filteredClientListJSX.length > 0
+          ? filteredClientListJSX
+          : clientsListJSX}
       </div>
     </div>
   );

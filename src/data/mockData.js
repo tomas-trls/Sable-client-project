@@ -1,27 +1,181 @@
 export const mockData = {
   resources: [
-    { name: "syringe", costPerUnit: "£12.99", quantity: "300",autoPurchaseLevel: "500", isAutoPurchase: true, category: "Admin", },
-    { name: "laser", costPerUnit: "£25",  quantity: "520",autoPurchaseLevel: "500", isAutoPurchase: false, category: "Health", },
-    { name: "Dental Floss", costPerUnit: "£5.50",  quantity: "560",autoPurchaseLevel: "500", isAutoPurchase: true, category: "Health", },
-    { name: "Mouthwash", costPerUnit: "£8.99" , quantity: "500",autoPurchaseLevel: "500", isAutoPurchase: true, category: "Health",},
-    { name: "Toothbrush", costPerUnit: "£4.25", quantity: "50" ,autoPurchaseLevel: "500", isAutoPurchase: true, category: "Admin",},
-    { name: "Surgical Gloves", costPerUnit: "£45.99" , quantity: "4300",autoPurchaseLevel: "500", isAutoPurchase: true, category: "Health",},
-    { name: "Scalpel", costPerUnit: "£22.75" , quantity: "60",autoPurchaseLevel: "500", isAutoPurchase: true, category: "Admin",},
-    { name: "Dental Mirror", costPerUnit: "£7.50" , quantity: "321",autoPurchaseLevel: "500", isAutoPurchase: true, category: "Admin",},
-    { name: "X-Ray Machine", costPerUnit: "£2500", quantity: "222",autoPurchaseLevel: "500", isAutoPurchase: true, category: "Admin",},
-    { name: "Filling Material", costPerUnit: "£175.25", quantity: "2600" ,autoPurchaseLevel: "500", isAutoPurchase: true, category: "Health",},
-    { name: "Dental Drill", costPerUnit: "£285", quantity: "980",autoPurchaseLevel: "500", isAutoPurchase: true, category: "Health",},
-    { name: "Anaesthesia", costPerUnit: "£75.99", quantity: "830",autoPurchaseLevel: "500", isAutoPurchase: true,category: "Admin",},
-    { name: "Toothpaste", costPerUnit: "£6.25" , quantity: "70",autoPurchaseLevel: "500", isAutoPurchase: false ,category: "Health",},
-    { name: "Implants", costPerUnit: "£1200", quantity: "210",autoPurchaseLevel: "500", isAutoPurchase: true, category: "Admin",},
-    { name: "Sutures", costPerUnit: "£12.99" , quantity: "40",autoPurchaseLevel: "500", isAutoPurchase: true,category: "Health",},
-    { name: "Surgical Mask", costPerUnit: "£15.50" , quantity: "500",autoPurchaseLevel: "500", isAutoPurchase: true,category: "Admin",},
-    { name: "Sterilization Machine", costPerUnit: "£1500", quantity: "970",autoPurchaseLevel: "500" ,isAutoPurchase: true,category: "Health",},
-    { name: "Orthodontic Pliers", costPerUnit: "£90.75" , quantity: "5430",autoPurchaseLevel: "500",isAutoPurchase: true,category: "Admin",},
-    { name: "Dental Light", costPerUnit: "£125" , quantity: "123",autoPurchaseLevel: "500",isAutoPurchase: false, category: "Health",},
-    { name: "Rubber Dam", costPerUnit: "£28.99" , quantity: "312",autoPurchaseLevel: "500",isAutoPurchase: true,category: "Admin",},
-    { name: "Periodontal Probe", costPerUnit: "£24.50" , quantity: "532",autoPurchaseLevel: "500",isAutoPurchase: true,category: "Health",},
-    { name: "Cavity Liner", costPerUnit: "£42.25" , quantity: "560",autoPurchaseLevel: "500",isAutoPurchase: false,category: "Health",},
+    {
+      name: "syringe",
+      costPerUnit: "£12.99",
+      quantity: "300",
+      autoPurchaseLevel: "500",
+      isAutoPurchase: true,
+      category: "Admin",
+    },
+    {
+      name: "laser",
+      costPerUnit: "£25",
+      quantity: "520",
+      autoPurchaseLevel: "500",
+      isAutoPurchase: false,
+      category: "Health",
+    },
+    {
+      name: "Dental Floss",
+      costPerUnit: "£5.50",
+      quantity: "560",
+      autoPurchaseLevel: "500",
+      isAutoPurchase: true,
+      category: "Health",
+    },
+    {
+      name: "Mouthwash",
+      costPerUnit: "£8.99",
+      quantity: "500",
+      autoPurchaseLevel: "500",
+      isAutoPurchase: true,
+      category: "Health",
+    },
+    {
+      name: "Toothbrush",
+      costPerUnit: "£4.25",
+      quantity: "50",
+      autoPurchaseLevel: "500",
+      isAutoPurchase: true,
+      category: "Admin",
+    },
+    {
+      name: "Surgical Gloves",
+      costPerUnit: "£45.99",
+      quantity: "4300",
+      autoPurchaseLevel: "500",
+      isAutoPurchase: true,
+      category: "Health",
+    },
+    {
+      name: "Scalpel",
+      costPerUnit: "£22.75",
+      quantity: "60",
+      autoPurchaseLevel: "500",
+      isAutoPurchase: true,
+      category: "Admin",
+    },
+    {
+      name: "Dental Mirror",
+      costPerUnit: "£7.50",
+      quantity: "321",
+      autoPurchaseLevel: "500",
+      isAutoPurchase: true,
+      category: "Admin",
+    },
+    {
+      name: "X-Ray Machine",
+      costPerUnit: "£2500",
+      quantity: "222",
+      autoPurchaseLevel: "500",
+      isAutoPurchase: true,
+      category: "Admin",
+    },
+    {
+      name: "Filling Material",
+      costPerUnit: "£175.25",
+      quantity: "2600",
+      autoPurchaseLevel: "500",
+      isAutoPurchase: true,
+      category: "Health",
+    },
+    {
+      name: "Dental Drill",
+      costPerUnit: "£285",
+      quantity: "980",
+      autoPurchaseLevel: "500",
+      isAutoPurchase: true,
+      category: "Health",
+    },
+    {
+      name: "Anaesthesia",
+      costPerUnit: "£75.99",
+      quantity: "830",
+      autoPurchaseLevel: "500",
+      isAutoPurchase: true,
+      category: "Admin",
+    },
+    {
+      name: "Toothpaste",
+      costPerUnit: "£6.25",
+      quantity: "70",
+      autoPurchaseLevel: "500",
+      isAutoPurchase: false,
+      category: "Health",
+    },
+    {
+      name: "Implants",
+      costPerUnit: "£1200",
+      quantity: "210",
+      autoPurchaseLevel: "500",
+      isAutoPurchase: true,
+      category: "Admin",
+    },
+    {
+      name: "Sutures",
+      costPerUnit: "£12.99",
+      quantity: "40",
+      autoPurchaseLevel: "500",
+      isAutoPurchase: true,
+      category: "Health",
+    },
+    {
+      name: "Surgical Mask",
+      costPerUnit: "£15.50",
+      quantity: "500",
+      autoPurchaseLevel: "500",
+      isAutoPurchase: true,
+      category: "Admin",
+    },
+    {
+      name: "Sterilization Machine",
+      costPerUnit: "£1500",
+      quantity: "970",
+      autoPurchaseLevel: "500",
+      isAutoPurchase: true,
+      category: "Health",
+    },
+    {
+      name: "Orthodontic Pliers",
+      costPerUnit: "£90.75",
+      quantity: "5430",
+      autoPurchaseLevel: "500",
+      isAutoPurchase: true,
+      category: "Admin",
+    },
+    {
+      name: "Dental Light",
+      costPerUnit: "£125",
+      quantity: "123",
+      autoPurchaseLevel: "500",
+      isAutoPurchase: false,
+      category: "Health",
+    },
+    {
+      name: "Rubber Dam",
+      costPerUnit: "£28.99",
+      quantity: "312",
+      autoPurchaseLevel: "500",
+      isAutoPurchase: true,
+      category: "Admin",
+    },
+    {
+      name: "Periodontal Probe",
+      costPerUnit: "£24.50",
+      quantity: "532",
+      autoPurchaseLevel: "500",
+      isAutoPurchase: true,
+      category: "Health",
+    },
+    {
+      name: "Cavity Liner",
+      costPerUnit: "£42.25",
+      quantity: "560",
+      autoPurchaseLevel: "500",
+      isAutoPurchase: false,
+      category: "Health",
+    },
   ],
 
   resourcesRequest: [
@@ -31,7 +185,6 @@ export const mockData = {
       resources: "Mouthwash",
       autoPurchase: "yes",
       autoPurchaseLevel: "210",
-   
     },
     {
       category: "Admin",
@@ -39,7 +192,6 @@ export const mockData = {
       resources: "Implants",
       autoPurchase: "no",
       autoPurchaseLevel: "413",
-     
     },
     {
       category: "Health",
@@ -47,7 +199,6 @@ export const mockData = {
       resources: "Dental Mirror",
       autoPurchase: "no",
       autoPurchaseLevel: "378",
-
     },
     {
       category: "Health",
@@ -55,7 +206,6 @@ export const mockData = {
       resources: "Sutures",
       autoPurchase: "no",
       autoPurchaseLevel: "219",
-   
     },
     {
       category: "Admin",
@@ -63,7 +213,6 @@ export const mockData = {
       resources: "Sterilization Machine",
       autoPurchase: "yes",
       autoPurchaseLevel: "27",
- 
     },
     {
       category: "Health",
@@ -71,7 +220,6 @@ export const mockData = {
       resources: "Dental Light",
       autoPurchase: "yes",
       autoPurchaseLevel: "171",
-
     },
     {
       category: "Admin",
@@ -79,7 +227,6 @@ export const mockData = {
       resources: "Surgical Gloves",
       autoPurchase: "yes",
       autoPurchaseLevel: "359",
-
     },
     {
       category: "Health",
@@ -87,7 +234,6 @@ export const mockData = {
       resources: "Periodontal Probe",
       autoPurchase: "yes",
       autoPurchaseLevel: "40",
-
     },
     {
       category: "Admin",
@@ -95,7 +241,6 @@ export const mockData = {
       resources: "X-Ray Machine",
       autoPurchase: "no",
       autoPurchaseLevel: "490",
-
     },
     {
       category: "Health",
@@ -103,7 +248,6 @@ export const mockData = {
       resources: "Dental Drill",
       autoPurchase: "no",
       autoPurchaseLevel: "37",
-
     },
     {
       category: "Admin",
@@ -111,7 +255,6 @@ export const mockData = {
       resources: "Orthodontic Pliers",
       autoPurchase: "yes",
       autoPurchaseLevel: "468",
- 
     },
     {
       category: "Health",
@@ -119,7 +262,6 @@ export const mockData = {
       resources: "Filling Material",
       autoPurchase: "no",
       autoPurchaseLevel: "283",
-
     },
     {
       category: "Admin",
@@ -127,7 +269,6 @@ export const mockData = {
       resources: "Rubber Dam",
       autoPurchase: "yes",
       autoPurchaseLevel: "16",
-
     },
     {
       category: "Health",
@@ -135,7 +276,6 @@ export const mockData = {
       resources: "Anaesthesia",
       autoPurchase: "no",
       autoPurchaseLevel: "325",
-
     },
     {
       category: "Admin",
@@ -143,7 +283,6 @@ export const mockData = {
       resources: "Cavity Liner",
       autoPurchase: "no",
       autoPurchaseLevel: "145",
-
     },
     {
       category: "Health",
@@ -151,7 +290,6 @@ export const mockData = {
       resources: "Toothpaste",
       autoPurchase: "yes",
       autoPurchaseLevel: "127",
-  
     },
     {
       category: "Admin",
@@ -159,7 +297,6 @@ export const mockData = {
       resources: "Surgical Masks",
       autoPurchase: "yes",
       autoPurchaseLevel: "97",
-
     },
     {
       category: "Health",
@@ -167,7 +304,6 @@ export const mockData = {
       resources: "Intraoral Camera",
       autoPurchase: "yes",
       autoPurchaseLevel: "274",
-     
     },
     {
       category: "Admin",
@@ -175,7 +311,6 @@ export const mockData = {
       resources: "Scalpel Blades",
       autoPurchase: "no",
       autoPurchaseLevel: "405",
-
     },
     {
       category: "Health",
@@ -183,7 +318,6 @@ export const mockData = {
       resources: "Intraoral Camera",
       autoPurchase: "yes",
       autoPurchaseLevel: "274",
- 
     },
     {
       category: "Admin",
@@ -191,7 +325,6 @@ export const mockData = {
       resources: "Dental Drill",
       autoPurchase: "no",
       autoPurchaseLevel: "405",
-      
     },
   ],
 
@@ -204,7 +337,8 @@ export const mockData = {
       startDate: "01.01.2020",
       contractEndDate: "01.01.2025",
       manager: "George",
-      image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+      image:
+        "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
     },
     {
       name: "David",
@@ -263,9 +397,9 @@ export const mockData = {
     },
     {
       name: "Carla",
-      role: "Receptionist",
+      role: "Dentist",
       overview:
-        "Carla is a friendly and professional receptionist who joined our team in 2020. She is always ready to greet our patients with a smile, and is dedicated to ensuring that their experience at our practice is a positive one. Carla has excellent communication skills, and is able to answer any questions or concerns our patients may have. She is a valuable member of our team, and we are grateful to have her with us.",
+        "Carla is a friendly and professional dentist who joined our team in 2020. She is always ready to greet our patients with a smile, and is dedicated to ensuring that their experience at our practice is a positive one. Carla has excellent communication skills, and is able to answer any questions or concerns our patients may have. She is a valuable member of our team, and we are grateful to have her with us.",
       startDate: "08.03.2020",
       contractEndDate: "08.03.2024",
       manager: "George",
@@ -274,9 +408,9 @@ export const mockData = {
     },
     {
       name: "Simon",
-      role: "Receptionist",
+      role: "Assistant",
       overview:
-        "Simon is a skilled and efficient receptionist who has been with our practice since 2016. He is committed to providing excellent customer service to our patients, and always goes above and beyond to ensure that their needs are met. Simon has a friendly and outgoing personality, and is always happy to help in any way he can. He is an important member of our team, and we are fortunate to have him with us.",
+        "Simon is a skilled and efficient assistant who has been with our practice since 2016. He is committed to providing excellent customer service to our patients, and always goes above and beyond to ensure that their needs are met. Simon has a friendly and outgoing personality, and is always happy to help in any way he can. He is an important member of our team, and we are fortunate to have him with us.",
       startDate: "22.09.2016",
       contractEndDate: "22.09.2025",
       manager: "Harry",
@@ -296,7 +430,7 @@ export const mockData = {
       query: "consumer",
       hasAppointment: true,
       confirmedAppoinment: true,
-      Staff: "David",
+      staff: "David",
     },
     {
       firstName: "Mark",
@@ -308,7 +442,7 @@ export const mockData = {
       query: "consultant",
       hasAppointment: true,
       confirmedAppoinment: false,
-      Staff: "Elisabeth",
+      staff: "Elisabeth",
     },
 
     {
@@ -321,7 +455,7 @@ export const mockData = {
       query: "consumer",
       hasAppointment: false,
       confirmedAppoinment: false,
-      Staff: "David",
+      staff: "David",
     },
     {
       firstName: "John",
@@ -333,7 +467,7 @@ export const mockData = {
       query: "consumer",
       hasAppointment: false,
       confirmedAppoinment: false,
-      Staff: "Julia",
+      staff: "Julia",
     },
     {
       firstName: "Karen",
@@ -345,7 +479,7 @@ export const mockData = {
       query: "consumer",
       hasAppointment: false,
       confirmedAppoinment: false,
-      Staff: "David",
+      staff: "David",
     },
     {
       firstName: "Sean",
@@ -357,7 +491,7 @@ export const mockData = {
       query: "consultant",
       hasAppointment: false,
       confirmedAppoinment: false,
-      Staff: "Roberto",
+      staff: "Roberto",
     },
     {
       firstName: "Sophie",
@@ -367,9 +501,9 @@ export const mockData = {
       image:
         "https://images.unsplash.com/photo-1541257710737-06d667133a53?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=685&q=80",
       query: "consumer",
-      hasAppointment: false,
-      confirmedAppoinment: false,
-      Staff: "Roberto",
+      hasAppointment: true,
+      confirmedAppoinment: true,
+      staff: "Roberto",
     },
     {
       firstName: "Adam",
@@ -381,7 +515,7 @@ export const mockData = {
       query: "consultant",
       hasAppointment: true,
       confirmedAppoinment: true,
-      Staff: "Marianna",
+      staff: "Marianna",
     },
     {
       firstName: "Ethan",
@@ -393,7 +527,7 @@ export const mockData = {
       query: "consumer",
       hasAppointment: true,
       confirmedAppoinment: true,
-      Staff: "David",
+      staff: "David",
     },
     {
       firstName: "Melanie",
@@ -405,7 +539,7 @@ export const mockData = {
       query: "consumer",
       hasAppointment: true,
       confirmedAppoinment: true,
-      Staff: "Julia",
+      staff: "Julia",
     },
     {
       firstName: "Peter",
@@ -417,10 +551,10 @@ export const mockData = {
       query: "consultant",
       hasAppointment: false,
       confirmedAppoinment: false,
-      Staff: "David",
+      staff: "David",
     },
     {
-      firstName: "Jasmine Wang",
+      firstName: "Jasmine",
       lastName: "Wang",
       email: "jasminewang@gmail.com",
       mobile: "+441234567903",
@@ -429,10 +563,10 @@ export const mockData = {
       query: "consumer",
       hasAppointment: false,
       confirmedAppoinment: false,
-      Staff: "Elisabeth",
+      staff: "Elisabeth",
     },
     {
-      firstName: "David Chen",
+      firstName: "David",
       lastName: "Chen",
       email: "davidchen@gmail.com",
       mobile: "+441234567904",
@@ -441,7 +575,7 @@ export const mockData = {
       query: "consumer",
       hasAppointment: false,
       confirmedAppoinment: false,
-      Staff: "Stefania",
+      staff: "Stefania",
     },
     {
       firstName: "Alice",
@@ -453,7 +587,7 @@ export const mockData = {
       query: "consultant",
       hasAppointment: true,
       confirmedAppoinment: false,
-      Staff: "Elisabeth",
+      staff: "Elisabeth",
     },
     {
       firstName: "Rachel",
@@ -465,7 +599,7 @@ export const mockData = {
       query: "consumer",
       hasAppointment: true,
       confirmedAppoinment: false,
-      Staff: "Roberto",
+      staff: "Roberto",
     },
     {
       firstName: "Alex",
@@ -477,7 +611,7 @@ export const mockData = {
       query: "consultant",
       hasAppointment: true,
       confirmedAppoinment: false,
-      Staff: "David",
+      staff: "David",
     },
     {
       firstName: "Emily",
@@ -504,7 +638,7 @@ export const mockData = {
       staff: "Roberto",
     },
     {
-      firsName: "Erica",
+      firstName: "Erica",
       lastName: "Chen",
       email: "ericachen@gmail.com",
       mobile: "+441234567910",
@@ -559,14 +693,14 @@ export const mockData = {
       bookingDate: "05/03/2023",
       bookingTime: "15:00",
       confirmed: true,
-      staff: "Mariana",
+      staff: "David",
     },
     {
       client: "Mark Wilson",
       bookingDate: "08/03/2023",
       bookingTime: "11:00",
       confirmed: false,
-      staff: "David",
+      staff: "Elisabeth",
     },
     {
       client: "Bryan Kim",
@@ -602,6 +736,41 @@ export const mockData = {
       bookingTime: "14:30",
       confirmed: true,
       staff: "Marianna",
+    },
+    {
+      client: "Sophie Kim",
+      bookingDate: "04/03/2023",
+      bookingTime: "12:30",
+      confirmed: true,
+      staff: "Roberto",
+    },
+    {
+      client: "Melanie Wong",
+      bookingDate: "05/03/2023",
+      bookingTime: "12:30",
+      confirmed: true,
+      staff: "Julia",
+    },
+    {
+      client: "Ethan Chen",
+      bookingDate: "06/03/2023",
+      bookingTime: "11:30",
+      confirmed: true,
+      staff: "David",
+    },
+    {
+      client: "Rachel Kim",
+      bookingDate: "04/03/2023",
+      bookingTime: "09:30",
+      confirmed: false,
+      staff: "Roberto",
+    },
+    {
+      client: "Daniel Lee",
+      bookingDate: "04/03/2023",
+      bookingTime: "09:30",
+      confirmed: false,
+      staff: "Julia",
     },
   ],
 };

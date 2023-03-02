@@ -1,74 +1,121 @@
-import React from "react";
-import FilterIcon from "../../assets/images/functional-icons/filter-icon.png";
-import gridview from "../../assets/images/functional-icons/gridview-icon.png";
-import listview from "../../assets/images/functional-icons/listview-icon.png";
-import SortIcon from "../../assets/images/functional-icons/sort-icon.png";
+import { React, useEffect, useState } from "react";
 import DataCard from "../../components/DataCard/DataCard";
 import EmployeeOverviewCard from "../../components/EmployeeOverviewCard/EmployeeOverviewCard.jsx";
 import UserProfile from "../../components/UserProfileCard/UserProfileCard.jsx";
-import { mockData } from "../../data/mockData"
+import FilterBar from "../../components/FilterBar/FilterBar";
+import { mockData } from "../../data/mockData";
 import "./StaffOverview.scss";
 const StaffOverview = ({ currentStaff }) => {
-  const filteredBooking = mockData.bookings.filter(
-    (booking) => booking.staff == currentStaff
+  const currentStaffBookings = mockData.bookings.filter(
+    (booking) => booking.staff === currentStaff
   );
+  const currentStaffObject = mockData.staff.filter(
+    (object) => object.name === currentStaff
+  );
+  const [query, setQuery] = useState("");
+  const [click, setClick] = useState(0);
+  const [dataArr, setDataArr] = useState(currentStaffBookings);
+  const [filteredClients, setFilteredClients] = useState([]);
+  const [SearchInUse, setSearchInUse] = useState([]);
+  useEffect(() => {
+    setDataArr(currentStaffBookings);
+    setFilteredClients([]);
+    setSearchInUse(true);
+  }, [currentStaff]);
 
-  const currentStaffObject = mockData.staff.filter((object) => object.name == currentStaff)
-  const jsx = filteredBooking.map((booking, index) => {
-    return <DataCard key={index} cardType="booking" cardObject={booking} />;
+  const handleSort = () => {
+    if (click == 0) {
+      setDataArr(
+        dataArr.sort((x, y) => {
+          let a = x.client.toUpperCase(),
+            b = y.client.toUpperCase();
+          return a == b ? 0 : a < b ? 1 : -1;
+        })
+      );
+      setClick(1);
+    } else if (click == 1) {
+      setDataArr(
+        dataArr.sort((x, y) => {
+          let a = x.client.toUpperCase(),
+            b = y.client.toUpperCase();
+          return a == b ? 0 : a > b ? 1 : -1;
+        })
+      );
+      setClick(2);
+    } else if (click == 2) {
+      setDataArr(currentStaffBookings);
+      setClick(0);
+    }
+  };
+  const handlefilter = (event) => {
+    if (event.target.value == "Confirmed") {
+      const clients = dataArr.filter((element) => {
+        return element.confirmed;
+      });
+      setFilteredClients(clients);
+      setSearchInUse(false);
+    } else if (event.target.value == "Unconfirmed") {
+      const clients = dataArr.filter((element) => {
+        return !element.confirmed;
+      });
+      setFilteredClients(clients);
+      setSearchInUse(false);
+    } else if (event.target.value == "All Clients") {
+      setFilteredClients(currentStaffBookings);
+      setSearchInUse(true);
+    }
+  };
+
+  const searchFilterArr = dataArr.filter((element) => {
+    return element.client.toLowerCase().includes(query.toLowerCase());
   });
+
+  const handleInputSearch = (event) => {
+    setFilteredClients([]);
+    setSearchInUse(true);
+    setQuery(event.target.value);
+  };
+
+  let clientsListJSX = [];
+  if (searchFilterArr.length > 0) {
+    clientsListJSX = searchFilterArr.map((booking, index) => {
+      return <DataCard key={index} cardType="booking" cardObject={booking} />;
+    });
+  } else {
+    clientsListJSX = [];
+  }
+  let filteredClientListJSX;
+  if (filteredClients.length > 0) {
+    filteredClientListJSX = filteredClients.map((booking, index) => {
+      return <DataCard key={index} cardType="booking" cardObject={booking} />;
+    });
+  } else {
+    filteredClientListJSX = [];
+  }
 
   return (
     <div className="staff-overview">
       <h2 className="staff-overview__title">Overview</h2>
       <div className="staff-overview__card-container">
-        <UserProfile image={currentStaffObject[0].image} name={currentStaff} role={currentStaffObject[0].role} />
+        <UserProfile
+          image={currentStaffObject[0].image}
+          name={currentStaff}
+          role={currentStaffObject[0].role}
+        />
         <EmployeeOverviewCard
           startDate={currentStaffObject[0].startDate}
           courseCompletion={currentStaffObject[0].contractEndDate}
           manager={currentStaffObject[0].manager}
-          description={
-            currentStaffObject[0].overview
-          }
+          description={currentStaffObject[0].overview}
         />
       </div>
-      <div className="staff-overview__display-view">
-        <h2 className="staff-overview__title">Staff bookings</h2>
-        <div className="staff-overview__display--icons">
-          <img
-            className="staff-overview__icon"
-            src={listview}
-            alt="List view icon"
-          />
-          <img
-            className="staff-overview__icon"
-            src={gridview}
-            alt="Grid view icon"
-          />
-        </div>
-        <input
-          className="staff-overview__searchbar"
-          type="text"
-          name=""
-          id=""
-        />
-        <div className="staff-overview__sort">
-          <img
-            className="staff-overview__icon"
-            src={SortIcon}
-            alt="sort icon"
-          />
-          <p className="staff-overview__subheading">Sort</p>
-        </div>
-        <div className="staff-overview__filter">
-          <img
-            className="staff-overview__icon"
-            src={FilterIcon}
-            alt="filter icon"
-          />
-          <p className="staff-overview__subheading">Filter</p>
-        </div>
-      </div>
+      <FilterBar
+        title={"Bookings List"}
+        handleInputSearch={handleInputSearch}
+        handleSort={handleSort}
+        handleSelect={handlefilter}
+        optionsArr={["All Clients", "Confirmed", "Unconfirmed"]}
+      />
       <div className="staff-overview__booking-container--labels booking-container--labels">
         <p className="booking-container__label">Client Name</p>
         <p className="booking-container__label">Email Address</p>
@@ -77,7 +124,9 @@ const StaffOverview = ({ currentStaff }) => {
         <p className="booking-container__label">Booking Time</p>
       </div>
       <div className="staff-overview__mobile-subheader">Bookings</div>
-      <div className="staff-overview__booking-container">{jsx}</div>
+      <div className="staff-overview__booking-container">
+        {SearchInUse ? clientsListJSX : filteredClientListJSX}
+      </div>
     </div>
   );
 };

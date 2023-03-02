@@ -30,7 +30,7 @@ const Staff = () => {
               optionsArr={allStaffMembers}
               handleOnChange={handleOnChange}
             />
-          <StaffOverview currentStaff={currentStaff} />
+            <StaffOverview currentStaff={currentStaff} />
           </div>
         </main>
       </div>

@@ -11,69 +11,7 @@
   &__header {
     display: flex;
   }
-  &__filters {
-    padding: 0 10%;
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    align-items: flex-end;
-    height: 63px;
 
-    &--label {
-      margin: 0;
-      font-family: $font-modern;
-      font-style: normal;
-      font-weight: 600;
-      font-size: 1rem;
-      line-height: 15px;
-      display: flex;
-      align-items: center;
-      letter-spacing: 0.03em;
-      color: $heading-text;
-      width: auto;
-      height: 32px;
-    }
-
-    &--search,
-    &--display,
-    &--sort,
-    &--filter {
-      height: 32px;
-      width: auto;
-      display: flex;
-      align-items: center;
-      & > p {
-        font-family: $font-modern;
-        font-style: normal;
-        font-weight: 400;
-        font-size: 10px;
-        line-height: 15px;
-        /* identical to box height */
-        text-align: center;
-        letter-spacing: 0.03em;
-        color: $page-text;
-      }
-    }
-
-    &--search {
-      height: 32px;
-      width: 172px;
-      background-image: url("../../assets/images/functional-icons/search-icon.png");
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: 95% 50%;
-      background-color: $search-bar-background;
-      border: none;
-      color: $page-sub-text;
-      padding-left: 10px;
-    }
-
-    &--display {
-      display: flex;
-      justify-content: space-between;
-      width: 40px;
-    }
-  }
   &__label-container {
     display: grid;
     max-width: 916px;
@@ -96,6 +34,7 @@
 
     display: flex;
     align-items: center;
+    justify-content: center;
     text-align: center;
     letter-spacing: 0.03em;
 

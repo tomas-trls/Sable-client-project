@@ -6,7 +6,9 @@ const DataCard = (props) => {
 
   const clientJSX = () => (
     <div className="user-card">
-      <h1 className="user-card__name">{cardObject.firstName + " " + cardObject.lastName}</h1>
+      <h1 className="user-card__name">
+        {cardObject.firstName + " " + cardObject.lastName}
+      </h1>
       <p className="user-card__email">{cardObject.email}</p>
       <p className="user-card__mobile">{cardObject.mobile}</p>
       {cardObject.query === "consumer" ? (
@@ -14,7 +16,7 @@ const DataCard = (props) => {
       ) : (
         <p className="user-card__job">Consultant</p>
       )}
-      {cardObject.rsvp ? (
+      {cardObject.confirmedAppoinment ? (
         <p className="user-card__rsvp">YES</p>
       ) : (
         <p className="user-card__rsvp">NO</p>
@@ -74,7 +76,7 @@ const DataCard = (props) => {
 
   return (
     <>
-      {cardType === "student"
+      {cardType === "client"
         ? clientJSX()
         : cardType === "booking"
         ? bookingCardJSX()
