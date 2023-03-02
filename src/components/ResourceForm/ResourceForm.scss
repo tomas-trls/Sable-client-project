@@ -87,6 +87,9 @@
       font-family: $font-modern;
     }
   }
+  .active {
+    opacity: 20%;
+  }
 }
 
 @media screen and (min-width: $tablet-breakpoint) {
@@ -98,12 +101,13 @@
     box-shadow: 0px 20px 40px rgba(114, 75, 203, 0.2);
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
     gap: 0px 30px;
     grid-template-areas:
       "category checkbox"
       "staff auto-purchase"
-      "resource quantity-remaining";
+      "resource quantity-remaining"
+      "button button";
 
     &__category {
       grid-area: category;
@@ -141,7 +145,10 @@
       padding: 10px;
     }
     &__button {
-      display: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      grid-area: button;
     }
   }
 }

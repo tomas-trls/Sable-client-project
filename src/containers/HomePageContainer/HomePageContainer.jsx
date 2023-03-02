@@ -3,12 +3,12 @@ import "../HomePageContainer/HomePageContainer.scss";
 import HomepageCard from "../../components/HomepageCard/HomepageCard";
 import Button from "../../components/Button/Button.jsx";
 
-const HomePageContainer = () => {
+const HomePageContainer = ({ handleClick,}) => {
   return (
     <main className="homepage-content">
       <section className="homepage-container">
         <div className="homepage-container__new-appointment">
-           <HomepageCard
+          <HomepageCard
             className="homepage-container__card"
             heading={"New Appointment"}
             link="booking"
@@ -44,7 +44,13 @@ const HomePageContainer = () => {
         </div>
       </section>
       <div className="homepage-container__button-container">
-        <Button className="homepage-container__button" buttonText={"Log Out"} />
+        <Button
+          className="homepage-container__button"
+          buttonText={"Log Out"}
+          buttonStyle="isLogout"
+          handleClick={handleClick}
+
+        />
       </div>
     </main>
   );
