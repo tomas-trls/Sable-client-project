@@ -11,30 +11,47 @@ const ResourceForm = ({
   resourceName,
   optionsArr,
   text,
+  isEditResource,
 }) => {
   const editResourceJSX = () => (
     <div className="resource-form-container">
       <div className="resource-form-container__category">
-        <InputField
-          label="Category Name"
-          placeholderText={category}
-          readOnly={true}
-          id="category"
-        />
+        {isEditResource ? (
+          <InputField
+            label="Category Name"
+            placeholderText={category}
+            id="category"
+            editValue="Health"
+          />
+        ) : (
+          <InputField
+            label="Category Name"
+            placeholderText={category}
+            id="category"
+          />
+        )}
       </div>
       <div className="resource-form-container__staff">
-        <InputField
-          label="Staff Member"
-          placeholderText={staff}
-          readOnly={true}
-        />
+        {isEditResource ? (
+          <InputField
+            label="Staff Member"
+            placeholderText={staff}
+            editValue="Mariana"
+          />
+        ) : (
+          <InputField label="Staff Member" placeholderText={staff} />
+        )}
       </div>
       <div className="resource-form-container__resource">
-        <InputField
-          label="Resource Name"
-          placeholderText={resourceName}
-          readOnly={true}
-        />
+        {isEditResource ? (
+          <InputField
+            label="Resource Name"
+            placeholderText={resourceName}
+            editValue="Syringe"
+          />
+        ) : (
+          <InputField label="Resource Name" placeholderText={resourceName} />
+        )}
       </div>
       <div className="resource-form-container__checkbox">
         <h2 className="resource-form-container__checkbox--label">
@@ -60,10 +77,18 @@ const ResourceForm = ({
         </div>
       </div>
       <div className="resource-form-container__auto-purchase">
-        <InputField label="Auto-Purchase Level" placeholderText="50" />
+        {isEditResource ? (
+          <InputField label="Auto-Purchase Level" editValue="500" />
+        ) : (
+          <InputField label="Auto-Purchase Level" />
+        )}
       </div>
       <div className="resource-form-container__quantity-remaining">
-        <InputField label="Quantity Remaining" placeholderText="500" />
+        {isEditResource ? (
+          <InputField label="Quantity Remaining" editValue="50" />
+        ) : (
+          <InputField label="Quantity Remaining" />
+        )}
       </div>
       <div className="resource-form-container__button">
         <Button buttonText={text} />
@@ -98,11 +123,7 @@ const ResourceForm = ({
         />
       </div>
       <div className="resource-form-container__staff">
-        <InputField
-          label="Staff Member"
-          placeholderText={staff}
-          readOnly={true}
-        />
+        <InputField label="Staff Member" placeholderText={staff} />
       </div>
       <div className="resource-form-container__resource">
         <DropdownField

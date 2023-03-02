@@ -16,7 +16,9 @@ const UserProfileCard = ({ image, name, role, text }) => {
       <div className="card-container__info-container">
         <h1 className="card-container__info-container--name">{name}</h1>
         <h2 className="card-container__info-container--role">{role}</h2>
-        <Button buttonText={text} />
+        <div className="card-container__button">
+          <Button buttonText={text} />
+        </div>
       </div>
     </div>
   );

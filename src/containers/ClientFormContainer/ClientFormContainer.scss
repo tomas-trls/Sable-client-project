@@ -1,0 +1,137 @@
+@use "../../styles/abstracts/variables" as *;
+@use "../../styles/base/typography" as *;
+
+.client-form {
+  margin: 5vh;
+  display: flex;
+  gap: 10%;
+  font-family: $font-modern;
+  background-color: $color-white;
+  box-shadow: 0px 30px 30px rgba(114, 75, 203, 0.06);
+  border-radius: 7px;
+  width: 66vw;
+  min-height: 70vh;
+  margin-left: 8%;
+  padding: 3.5%;
+  padding-top: 2.5%;
+
+  &__image-container {
+    border: 2px solid $light-border;
+    border-radius: 7px;
+    height: 25vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__image-text {
+    font-family: $font-modern;
+    font-size: 0.8rem;
+    font-family: $font-modern;
+    font-weight: 600;
+    color: $page-sub-heading;
+    margin-top: 0;
+  }
+  &__input-container {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 5%;
+  }
+  &__upload-button {
+    padding-top: 3%;
+  }
+  &__right-container {
+    display: flex;
+    flex-direction: column;
+    gap: 6%;
+    width: 40%;
+  }
+  &__form-buttons {
+    display: flex;
+    justify-content: space-around;
+    gap: 10%;
+  }
+  &__text {
+    color: $delete-user-text;
+    font-size: 10px;
+    text-decoration: underline;
+  }
+  &__text:hover {
+    cursor: pointer;
+  }
+
+  &__mobile-thumbnail {
+    display: none;
+  }
+
+  &__mobile-button {
+    display: none;
+  }
+
+  &__user-image {
+    height: 80%;
+  }
+
+  &__mobile-image {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .client-form {
+    width: 90%;
+    height: auto;
+    margin: 4%;
+    padding: 0;
+    flex-direction: column;
+    box-shadow: none;
+    gap: 2.5vh;
+    margin-bottom: 13vh;
+    &__image-container {
+      border: none;
+      height: auto;
+    }
+    &__thumbnail-mobile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid $light-border;
+      border-radius: 7px;
+      height: 25vh;
+    }
+    &__mobile-thumbnail {
+      display: flex;
+      justify-content: center;
+    }
+
+    &__input-container {
+      width: 100%;
+      gap: 2vh;
+    }
+    &__right-container {
+      gap: 2vh;
+      width: 100%;
+    }
+
+    &__form-buttons {
+      display: none;
+    }
+    &__mobile-button {
+      display: flex;
+    }
+    &__user-image {
+      display: none;
+    }
+    &__mobile-image {
+      display: flex;
+    }
+    &__text {
+      display: none;
+    }
+    &__image {
+      display: none;
+    }
+  }
+}

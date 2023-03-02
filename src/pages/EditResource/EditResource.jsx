@@ -6,7 +6,7 @@ import PageHeader from "../../components/PageHeader/PageHeader";
 import NavContainer from "../../containers/NavContainer/NavContainer";
 import "./EditResource.scss";
 
-const EditResource = ({ staff, category, resourceName}) => {
+const EditResource = ({ staff, category, resourceName }) => {
   return (
     <div className="edit-resource-container">
       <NavContainer />
@@ -26,6 +26,7 @@ const EditResource = ({ staff, category, resourceName}) => {
             resourceName={resourceName}
             optionsArr={[]}
             text="Save"
+            isEditResource={true}
           />
         </div>
         <HomeButton />
