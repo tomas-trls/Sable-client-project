@@ -12,6 +12,7 @@ const ResourceForm = ({
   optionsArr,
   text,
   isEditResource,
+  handleToggle,
 }) => {
   const editResourceJSX = () => (
     <div className="resource-form-container">
@@ -162,7 +163,7 @@ const ResourceForm = ({
         <InputField label="Quantity Remaining" placeholderText="500" />
       </div>
       <div className="resource-form-container__button">
-        <Button buttonText={text} />
+        <Button buttonText={text} handleClick={handleToggle} />
       </div>
     </div>
   );
