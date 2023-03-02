@@ -1,0 +1,11 @@
+.client-detail{
+    display: flex;
+
+    &__main{
+        width: 100%;
+    }
+    &__REPLACEWITHCONTAINER{
+        background-color: lightgray;
+        height: 100%;
+    }
+}

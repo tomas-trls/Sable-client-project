@@ -7,8 +7,19 @@ import DropdownField from "../../components/DropdownField/DropdownField";
 import InputField from "../../components/InputField/InputField";
 import mockData from "../../data/mockData";
 import "./BookingOverview.scss";
+import ConfirmationOverlay from "../../components/ConfirmationOverlay/ConfirmationOverlay"
+import { useNavigate } from "react-router-dom";
 const UserInfoContainer = () => {
+
+  const navigate = useNavigate();
+
+  const handleClick =(event)=>{
+    event.preventDefault();
+    navigate("/home")
+  }
+
   const [day, setDay] = useState(new Date());
+  const [showOverlay, setShowOverlay] = useState(false)
   const [time, setTime] = useState("09:00");
   const time_slots = [
     "09:00",
@@ -74,13 +85,15 @@ const UserInfoContainer = () => {
         bookingDate: day,
         bookingTime: time,
       };
-      console.log(objectToSubmit);
+      console.log(objectToSubmit)
       event.target.reset();
+      setShowOverlay(true);
     }
   };
 
   return (
     <form className="input-field-container" onSubmit={handleSubmit}>
+      {showOverlay && <ConfirmationOverlay text="Request Complete" overlayType={"overlayOneButton"} buttonTextOne={"Home"} handleClick={handleClick} />}
       <div className="input-field-container__firstName">
         <InputField id="first-name" label="First Name" />
       </div>

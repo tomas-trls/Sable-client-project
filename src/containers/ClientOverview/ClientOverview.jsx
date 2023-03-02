@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import DataCard from "../../components/DataCard/DataCard";
 import FilterBar from "../../components/FilterBar/FilterBar";
 import mockData from "../../data/mockData";
+import { useNavigate } from "react-router-dom";
 import "./ClientOverview.scss";
 const Client = () => {
   const [query, setQuery] = useState("");
@@ -64,11 +65,18 @@ const Client = () => {
     setQuery(event.target.value);
   };
 
+  const navigate =useNavigate();
+
+  const handleClick = (event) => {
+   event.preventDefault();
+   navigate("/client/detail");
+  }
+
   const clientsListJSX = filterArr.map((client, index) => {
-    return <DataCard key={index + 1} cardType="client" cardObject={client} />;
+    return <DataCard key={index + 1} cardType="client" cardObject={client} handleClick={handleClick} />;
   });
   const filteredClientListJSX = filteredClients.map((client, index) => {
-    return <DataCard key={index + 1} cardType="client" cardObject={client} />;
+    return <DataCard key={index + 1} cardType="client" cardObject={client}  handleClick={handleClick}/>;
   });
   return (
     <div className="client-overview">
