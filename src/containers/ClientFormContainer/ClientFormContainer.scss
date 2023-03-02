@@ -57,6 +57,9 @@
     font-size: 10px;
     text-decoration: underline;
   }
+  &__text:hover {
+    cursor: pointer;
+  }
 
   &__mobile-thumbnail {
     display: none;

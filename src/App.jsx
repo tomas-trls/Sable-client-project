@@ -17,7 +17,7 @@ import "./styles/base/_typography.scss";
 import Error from "./pages/Error/Error";
 
 const App = () => {
-  const [user, setUser] = useState(true);
+  const [user, setUser] = useState();
   const navigate = useNavigate();
   const logOut = (event) => {
     event.preventDefault(); 
