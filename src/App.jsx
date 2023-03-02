@@ -12,12 +12,13 @@ import EditResource from "./pages/EditResource/EditResource";
 import RequestResource from "./pages/RequestResource/RequestResource";
 import AddClient from "./pages/AddClient/AddClient";
 import EditClient from "./pages/EditClient/EditClient";
+import BookingActive from "./pages/BookingActive/BookingActive";
 import "./styles/base/_reset.scss";
 import "./styles/base/_typography.scss";
 import Error from "./pages/Error/Error";
 
 const App = () => {
-  const [user, setUser] = useState();
+  const [user, setUser] = useState(true);
   const navigate = useNavigate();
   const logOut = (event) => {
     event.preventDefault(); 
@@ -41,6 +42,7 @@ const App = () => {
           <Route path="/settings" element={<Settings setUser={logOut}/>} />
           <Route path="/client/add-client" element={<AddClient/>} />
           <Route path="/client/edit-client" element={<EditClient/>} />
+          <Route path="/staff/booking" element={<BookingActive/>} />
       </Routes>
       ) : <Routes>
       <Route path="/home" element={<Error page={"home"}/>} />
@@ -53,6 +55,7 @@ const App = () => {
       <Route path="/settings" element={<Error page={"settings"}/>} />
       <Route path="/client/add-client" element={<Error page={"client"}/>} />
       <Route path="/client/edit-client" element={<Error page={"client"}/>} />
+      <Route path="/staff/booking" element={<Error page={"staff"}/>} />
     </Routes>}
     </>
   );
