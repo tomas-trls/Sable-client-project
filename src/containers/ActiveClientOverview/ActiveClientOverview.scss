@@ -1,6 +1,47 @@
+@use "../../styles/base/typography" as *;
+@use "../../styles/abstracts/variables" as *;
+
 .active-client-overview{
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     margin-top: 10vh;
+    gap: 3.5vw;
+
+    &__mobile-heading{
+        display: none;
+    }
+    &__mobile-booking{
+        display: flex;
+        flex-direction: row;
+        width: auto;
+        gap: 3.5vw;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .active-client-overview{
+        flex-direction: column;
+
+        &__mobile-heading{
+            display: flex;
+            color: $page-sub-heading;
+            font-size: 1.25rem;
+            font-weight: 600;
+            text-decoration: underline;
+            padding-left: 4vh;
+            margin-top: 3vh;
+            margin-bottom: 2vh;
+        }
+
+        &__contact-card{
+            display: none;
+        }
+
+        &__mobile-booking{
+            width: auto;
+            flex-direction: column;
+        }
+    }
 }

@@ -2,22 +2,22 @@
 @use "../../styles/abstracts/variables" as *;
 
 .card-container {
-  width: 270px;
-  height: 310px;
-  //height: auto;
+  width: 15vw;
+  height: 35vh;
   background-color: $color-white;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  //gap: 25px;
+  box-shadow: 0px 30px 40px rgba(114, 75, 203, 0.06);
+
+
   border-radius: 7px;
-  //margin: 20px;
 
   &__image-container {
     margin-top: 10px;
     height: 50%;
-    //padding: 20px;
+    margin-top: 10%;
+
 
     &--image {
       height: 100%;
@@ -32,10 +32,9 @@
     justify-content: space-between;
     align-items: center;
     padding: 1.5vh;
-    //height: 50%;
 
     &--name {
-      font-size: 1.5rem;
+      font-size: 1.25rem;
       font-family: $font-modern;
       color: $page-sub-heading;
       font-weight: 700;
@@ -49,10 +48,8 @@
       text-align: center;
       font-weight: 400;
       text-align: center;
-      //font-family: $font-modern;
       font-family: $font-modern;
       margin: 0;
-      //padding: 5px;
     }
 
   }
@@ -63,6 +60,7 @@
     font-weight: 400;
     font-family: $font-modern;
     margin: 0;
+    margin-top: 2vh;
   }
   &__edit-link:hover{
     cursor: pointer;
@@ -71,12 +69,21 @@
 }
 @media screen and (max-width: 767px) {
   .card-container {
+    width: 70vw;
+    height: 50vh;
     &__info-container {
       height: auto;
+      &--name{
+
+        font-size: 2rem;
+      }
 
       &--role {
         display: none;
       }
+    }
+    &__image-container {
+      height: 50%;
     }
 
     &__edit-link{

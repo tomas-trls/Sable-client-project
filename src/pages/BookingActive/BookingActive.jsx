@@ -3,6 +3,7 @@ import NavContainer from '../../containers/NavContainer/NavContainer'
 import Layout from '../../components/Layout/Layout'
 import PageHeader from '../../components/PageHeader/PageHeader'
 import ActiveClientOverview from '../../containers/ActiveClientOverview/ActiveClientOverview'
+import HomeButton from "../../components/HomeButton/HomeButton"
 import './BookingActive.scss'
 import mockData from '../../data/mockData'
 
@@ -15,6 +16,7 @@ const BookingActive = () => {
       <Layout>
         <PageHeader heading={pageHeading} headerType="headingButton" text = "Edit" isPlus={true}/>
         <ActiveClientOverview/>
+        <HomeButton/>
       </Layout>
     </div>
   )

@@ -11,9 +11,14 @@ const ActiveClientOverview = () => {
   return (
     <div className='active-client-overview'>
         <UserProfileCard 
-        image={clientImage} name = "Louis Thiel" role = "student" text = "Edit Client"/>
-        <ContactDetailsCard cardObject={mockData.clients[0]}/>
-        <BookingDetailsCard cardObject={mockData.bookings[0]}/>
+        image={clientImage} name = "Mariah Chan" text = "Edit Client"/>
+        <div className='active-client-overview__mobile-booking'>
+          <h2 className='active-client-overview__mobile-heading'>Booking Details</h2>
+          <div className='active-client-overview__contact-card'>
+            <ContactDetailsCard cardObject={mockData.clients[0]}/>
+          </div>
+          <BookingDetailsCard cardObject={mockData}/>
+        </div>
     </div>
   )
 }
