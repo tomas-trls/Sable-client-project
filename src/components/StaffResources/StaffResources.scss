@@ -63,7 +63,8 @@
 
     &__cards {
       max-height: none;
-      display: none;
+      display: flex;
+      flex-direction: column;
     }
   }
 }

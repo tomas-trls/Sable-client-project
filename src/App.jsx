@@ -12,6 +12,7 @@ import EditResource from "./pages/EditResource/EditResource";
 import RequestResource from "./pages/RequestResource/RequestResource";
 import AddClient from "./pages/AddClient/AddClient";
 import EditClient from "./pages/EditClient/EditClient";
+import BookingActive from "./pages/BookingActive/BookingActive";
 import "./styles/base/_reset.scss";
 import "./styles/base/_typography.scss";
 import Error from "./pages/Error/Error";
@@ -45,6 +46,7 @@ const App = () => {
           <Route path="/client/add-client" element={<AddClient />} />
           <Route path="/client/edit-client" element={<EditClient />} />
           <Route path="/client/detail" element={<ClientDetail />}/>
+          <Route path="/staff/booking" element={<BookingActive/>} />
         </Routes>
       ) : (
         <Routes>
@@ -71,6 +73,7 @@ const App = () => {
             element={<Error page={"client"} />}
           />
           <Route path="/client/detail" element={<Error page={"client"} />}/>
+          <Route path="/staff/booking" element={<Error page={"staff"} />} />
         </Routes>
       )}
     </>
