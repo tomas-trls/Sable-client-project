@@ -1,14 +1,14 @@
 @use "../../styles/abstracts/variables.scss" as *;
 @use "../../styles/base/typography" as *;
 
-* {
-  font-family: $font-modern !important;
-}
 .settings-card-container {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
   margin-bottom: 3vh;
+  * {
+    font-family: $font-modern !important;
+  }
 }
 
 .settings-card {

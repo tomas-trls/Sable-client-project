@@ -93,7 +93,8 @@
   &__quantity,
   &__cost,
   &__auto-purchase,
-  &__level {
+  &__level,
+  &__reqQuant {
     text-align: center;
     font-family: $font-modern;
     font-style: normal;
@@ -214,7 +215,16 @@
   }
 }
 
-@media screen and (max-width: $tablet-breakpoint) {
+@media screen and (min-width: $tablet-breakpoint) and (max-width: 1439px) {
+  .user-card {
+    grid-template: 1fr / repeat(6, calc(100% / 6));
+    &__email {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
   .resource-card {
     transition: 0;
     display: flex;
