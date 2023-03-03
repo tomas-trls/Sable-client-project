@@ -1,5 +1,4 @@
 import React from "react";
-
 import sortIcon from "../../assets/images/functional-icons/sort-icon.png";
 import "./FilterBar.scss";
 

@@ -2,19 +2,17 @@ import React from "react";
 import "./StaffResourcesContainer.scss";
 import StaffResources from "../../components/StaffResources/StaffResources";
 import { mockData } from "../../data/mockData";
-const StaffResourcesContainer = ({ isAdmin }) => {
+const StaffResourcesContainer = ({ isAdmin, dataArr }) => {
   const staffResourceList = (isAdmin) => {
     let category = "";
     isAdmin ? (category = "Admin") : (category = "Health");
     const arrayOfStaff = mockData.staff.map((staff) => {
-      const staffResources = mockData.resourcesRequest.filter(
-        (resourcesRequest) => {
-          return (
-            resourcesRequest.staffMember == staff.name &&
-            resourcesRequest.category == category
-          );
-        }
-      );
+      const staffResources = dataArr.filter((resourcesRequest) => {
+        return (
+          resourcesRequest.staffMember == staff.name &&
+          resourcesRequest.category == category
+        );
+      });
       return [staff.name, staffResources];
     });
     const staffRequests = arrayOfStaff.filter((staff) => {
