@@ -21,7 +21,7 @@ const DataCard = (props) => {
       ) : (
         <p className="user-card__rsvp">NO</p>
       )}
-      <p className="user-card__staff-name">{cardObject.Staff}</p>
+      <p className="user-card__staff-name">{cardObject.staff}</p>
       <figure onClick={handleClick} className="user-card__image-container">
         <span className="user-card__circle"></span>
       </figure>
