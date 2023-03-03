@@ -6,48 +6,32 @@ import "./ResourceForm.scss";
 
 const ResourceForm = ({
   formPage,
-  resource, 
+  resource,
   optionsArr,
   text,
   handleToggle,
   staff,
   category,
-  resourceName,
 }) => {
-
-  console.log(resource)
   const editResourceJSX = () => (
     <div className="resource-form-container">
       <div className="resource-form-container__category">
-        
-          <InputField
-            label="Category Name"
-            placeholderText={resource.category}
-            id="category"
-            editValue="Health"
-          />
-     
-   
-      
+        <InputField
+          label="Category Name"
+          placeholderText={resource.category}
+          id="category"
+          editValue="Health"
+        />
       </div>
       <div className="resource-form-container__staff">
-        
-          <InputField
-            label="Staff Member"
-            placeholderText={"Mariana"}
-            editValue="Mariana"
-          />
-      
+        <InputField
+          label="Staff Member"
+          placeholderText={"Mariana"}
+          editValue="Mariana"
+        />
       </div>
       <div className="resource-form-container__resource">
-       
-          <InputField
-            label="Resource Name"
-            placeholderText={resource.name}
-           
-
-          />
-      
+        <InputField label="Resource Name" placeholderText={resource.name} />
       </div>
       <div className="resource-form-container__checkbox">
         <h2 className="resource-form-container__checkbox--label">
@@ -73,32 +57,19 @@ const ResourceForm = ({
         </div>
       </div>
       <div className="resource-form-container__auto-purchase">
-          <InputField label="Auto-Purchase Level" editValue={resource.autoPurchaseLevel} />
+        <InputField
+          label="Auto-Purchase Level"
+          editValue={resource.autoPurchaseLevel}
+        />
       </div>
       <div className="resource-form-container__quantity-remaining">
-          <InputField label="Quantity Remaining" editValue={resource.quantity} />
+        <InputField label="Quantity Remaining" editValue={resource.quantity} />
       </div>
       <div className="resource-form-container__button">
         <Button buttonText={text} />
       </div>
     </div>
   );
-
-  const optionsJSX = optionsArr.map((option, index) => {
-    return (
-      <option className="option" value={option} key={index}>
-        {option}
-      </option>
-    );
-  });
-  const healthArr = [
-    <option className="option" value="health" key="health option">
-      Health
-    </option>,
-    <option className="option" value="admin" key="admin option">
-      Admin
-    </option>,
-  ];
 
   const requestResourceJSX = () => (
     <div className="resource-form-container">
@@ -107,17 +78,21 @@ const ResourceForm = ({
           label="Category Name"
           placeholderText={category}
           id="category"
-          optionsJSX={healthArr}
+          optionsJSX={["Health", "Admin"]}
         />
       </div>
       <div className="resource-form-container__staff">
-        <InputField label="Staff Member" placeholderText={staff} />
+        <DropdownField
+          label="Staff"
+          placeholderText="Staff"
+          optionsJSX={staff.map((staff) => staff.name)}
+        />
       </div>
       <div className="resource-form-container__resource">
         <DropdownField
           label="Resource Name"
-          placeholderText={resourceName}
-          optionsJSX={optionsJSX}
+          placeholderText="Syringe"
+          optionsJSX={optionsArr.map((option) => option)}
         />
       </div>
       <div className="resource-form-container__checkbox">
