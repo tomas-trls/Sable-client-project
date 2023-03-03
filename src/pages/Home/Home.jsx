@@ -6,7 +6,6 @@ import ConfirmationOverlay from "../../components/ConfirmationOverlay/Confirmati
 import "../Home/Home.scss";
 import React, { useState } from "react";
 
-
 const Home = ({ setUser }) => {
   const [showOverlay, setShowOverlay] = useState(false);
   const [isActive, setIsActive] = useState(false);
@@ -28,7 +27,7 @@ const Home = ({ setUser }) => {
           }
         >
           <PageHeader heading="Home" headerType="headingOnly" />
-          <HomePageContainer handleClick={handleToggle}/>
+          <HomePageContainer handleClick={handleToggle} />
         </div>
         {showOverlay && (
           <ConfirmationOverlay

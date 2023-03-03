@@ -2,16 +2,16 @@
 @use "../../styles/abstracts/variables" as *;
 
 .filters {
-  padding: 0 10%;
+  margin: 0 10%;
   display: flex;
-  width: 100%;
+  width: 80%;
   justify-content: space-between;
   align-items: flex-end;
   height: 63px;
 
   &--label {
     margin: 0;
-    font-family: $font-modern;
+    font-family: $font-sortfilter;
     font-style: normal;
     font-weight: 600;
     font-size: 1rem;
@@ -19,9 +19,15 @@
     display: flex;
     align-items: center;
     letter-spacing: 0.03em;
-    color: $heading-text;
-    width: auto;
+    color: $page-sub-heading;
+    width: 58%;
     height: 32px;
+  }
+
+  &__logic {
+    display: flex;
+    width: 42%;
+    justify-content: space-between;
   }
 
   &--search,
@@ -32,55 +38,81 @@
     display: flex;
     align-items: center;
     & > p {
-      font-family: $font-modern;
+      font-family: $font-sortfilter;
       font-style: normal;
       font-weight: 400;
-      font-size: 10px;
+      font-size: 14px;
       line-height: 15px;
-      /* identical to box height */
       text-align: center;
       letter-spacing: 0.03em;
-      color: $page-text;
+      color: $page-sub-heading;
     }
     &:hover {
       cursor: pointer;
     }
   }
 
+  &--sort {
+    max-width: 60px;
+  }
+
   &--search {
     height: 32px;
-    width: 172px;
+    max-width: 172px;
     background-image: url("../../assets/images/functional-icons/search-icon.png");
-    background-size: contain;
+    background-size: 20px;
     background-repeat: no-repeat;
     background-position: 95% 50%;
     background-color: $search-bar-background;
     border: none;
     color: $page-sub-text;
-    padding-left: 10px;
+    padding: 0 30px 0 10px;
   }
 
   &__select--dropdown {
     height: 32px;
-    color: $color-black;
-    font-family: $font-modern;
-    font-size: 0.7rem;
+    color: $page-sub-heading;
+    font-family: $font-sortfilter;
+    font-size: 14px;
     background-color: transparent;
     background-image: url("../../assets/images/functional-icons/filter-icon.png");
     background-repeat: no-repeat;
     background-position: 0% 50%;
     border: none;
-    padding-left: 15px;
-    width: 150px;
+    padding: 0 20px;
+    max-width: 120px;
     appearance: none;
     z-index: 10;
+    &:focus {
+      outline: none;
+      box-shadow: 0px 4px 0px rgba(0, 0, 0, 0.2);
+    }
   }
   &__option {
-    font-family: $font-modern;
-    color: $color-black;
-    font-size: 0.7rem;
+    padding: 0;
+    border: none;
+    font-family: $font-sortfilter;
+    color: $page-sub-heading;
+    font-size: 14px;
     & * {
       width: 100px;
+    }
+  }
+}
+
+@media screen and (max-width: $tablet-breakpoint) {
+  .filters {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: $tablet-breakpoint) and (max-width: $desktop-breakpoint) {
+  .filters {
+    &--label {
+      width: 20%;
+    }
+    &__logic {
+      width: 80%;
     }
   }
 }
