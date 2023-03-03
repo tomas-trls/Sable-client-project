@@ -5,6 +5,7 @@ import ResourcesOverview from "../../containers/ResourcesOverview/ResourcesOverv
 import "./Resources.scss";
 import { useNavigate } from "react-router-dom";
 import Button from "../../components/Button/Button";
+import HomeButton from "../../components/HomeButton/HomeButton";
 
 const Resource = () => {
   const navigate = useNavigate();
@@ -43,6 +44,9 @@ const Resource = () => {
           </div>
         </main>
       </div>
+      <footer className="client-page__footer">
+        <HomeButton />
+      </footer>
     </>
   );
 };
