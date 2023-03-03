@@ -7,20 +7,28 @@ import UserProfileCard from "../../components/UserProfileCard/UserProfileCard";
 import defaultUser from "../../assets/images/users/Ellipse.png";
 import ClientProfile from "../../assets/images/users/client-picture.png";
 
-const ClientFormContainer = ({ isEditClient, handleClick }) => {
+const ClientFormContainer = ({ isEditClient, handleClick, client }) => {
   return (
     <form className="client-form">
       <div className="client-form__mobile-thumbnail">
-        <UserProfileCard image={defaultUser} name="Client 01" />
+        <UserProfileCard image={defaultUser} name={client.firstName} />
       </div>
       <section className="client-form__input-container">
         {isEditClient ? (
-          <InputField label="First Name" id="first-name" editValue={"Louis"} />
+          <InputField
+            label="First Name"
+            id="first-name"
+            editValue={client.firstName}
+          />
         ) : (
           <InputField label="First Name" id="first-name" />
         )}
         {isEditClient ? (
-          <InputField label="Last Name" id="last-name" editValue={"Thiel"} />
+          <InputField
+            label="Last Name"
+            id="last-name"
+            editValue={client.lastName}
+          />
         ) : (
           <InputField label="Last Name" id="last-name" />
         )}

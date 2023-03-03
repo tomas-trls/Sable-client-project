@@ -7,24 +7,36 @@ import ClientFormContainer from "../../containers/ClientFormContainer/ClientForm
 import HomeButton from "../../components/HomeButton/HomeButton";
 import { useState } from "react";
 import ConfirmationOverlay from "../../components/ConfirmationOverlay/ConfirmationOverlay";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
+import mockData from "../../data/mockData";
 const EditClient = () => {
+  const { clientId } = useParams();
+  const getClient = mockData.clients.find((client) => {
+    return client.id == clientId;
+  });
 
-  const [showOverlay, setShowOverlay] = useState(false)
+  const [showOverlay, setShowOverlay] = useState(false);
   const handleSubmit = (event) => {
-    event.preventDefault(); 
-    setShowOverlay(true)
-  }
-  
+    event.preventDefault();
+    setShowOverlay(true);
+  };
+
   const navigate = useNavigate();
   const handleClick = (event) => {
-      event.preventDefault(); 
-      navigate("/home");
-  }
+    event.preventDefault();
+    navigate("/home");
+  };
 
   return (
     <div className="edit-client">
-      {showOverlay && <ConfirmationOverlay  overlayType={"overlayOneButton"} text="Success" buttonTextOne={"Home"} handleClick={handleClick}/>}
+      {showOverlay && (
+        <ConfirmationOverlay
+          overlayType={"overlayOneButton"}
+          text="Success"
+          buttonTextOne={"Home"}
+          handleClick={handleClick}
+        />
+      )}
       <NavContainer />
       <Layout>
         <PageHeader
@@ -33,7 +45,11 @@ const EditClient = () => {
           text="Save"
           handleClick={handleSubmit}
         />
-        <ClientFormContainer isEditClient={true} handleClick={handleSubmit} />
+        <ClientFormContainer
+          isEditClient={true}
+          handleClick={handleSubmit}
+          client={getClient}
+        />
         <div>
           <HomeButton />
         </div>

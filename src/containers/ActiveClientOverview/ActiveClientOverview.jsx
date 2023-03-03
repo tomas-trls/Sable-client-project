@@ -3,24 +3,27 @@ import ContactDetailsCard from "../../components/ContactDetailsCard/ContactDetai
 import UserProfileCard from "../../components/UserProfileCard/UserProfileCard";
 import BookingDetailsCard from "../../components/BookingDetailsCard/BookingDetailsCard";
 import "./ActiveClientOverview.scss";
-import clientImage from "../../assets/images/users/client-picture.png";
-import { mockData } from "../../data/mockData";
 
-const ActiveClientOverview = ({ isClientDetails }) => {
+const ActiveClientOverview = ({
+  isClientDetails,
+  bookingClient,
+  bookingDetails,
+  client,
+}) => {
   return (
     <div className="active-client-overview">
       <h1 className="active-client-overview__heading">Overview</h1>
       <div className="active-client-overview__cards">
         {isClientDetails ? (
           <UserProfileCard
-            image={clientImage}
-            name="Mariah Chan"
-            role="Student"
+            image={client.image}
+            name={client.firstName + " " + client.lastName}
+            role={client.query}
           />
         ) : (
           <UserProfileCard
-            image={clientImage}
-            name="Mariah Chan"
+            image={bookingClient.image}
+            name={bookingClient.firstName + " " + bookingClient.lastName}
           />
         )}
         <div className="active-client-overview__mobile-booking">
@@ -31,24 +34,22 @@ const ActiveClientOverview = ({ isClientDetails }) => {
           )}
           {isClientDetails ? (
             <div className="active-client-overview__client-contact-card">
-              <ContactDetailsCard cardObject={mockData.clients[0]} />
+              <ContactDetailsCard cardObject={client} />
             </div>
           ) : (
             <div className="active-client-overview__booking-contact-card">
-              <ContactDetailsCard cardObject={mockData.clients[0]} />
+              <ContactDetailsCard cardObject={bookingClient} />
             </div>
           )}
           {isClientDetails ? (
             <div className="active-client-overview__client-booking-card">
-              <BookingDetailsCard
-                cardObject={mockData}
-                isClientDetails={isClientDetails}
-              />
+              <BookingDetailsCard isClientDetails={isClientDetails} />
             </div>
           ) : (
             <div className="active-client-overview__booking-booking-card">
               <BookingDetailsCard
-                cardObject={mockData}
+                clientObject={bookingClient}
+                bookingObject={bookingDetails}
                 isClientDetails={isClientDetails}
               />
             </div>
