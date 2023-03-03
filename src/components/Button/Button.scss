@@ -15,6 +15,7 @@
   align-items: center;
   color: $color-white;
   font-family: $font-modern;
+  cursor: pointer;
 }
 
 .isLogin {
@@ -33,6 +34,15 @@
   box-shadow: none;
   font-size: 16px;
   font-weight: 700;
+}
+
+.isUpload {
+  background: $button-upload;
+  width: 9.063rem;
+  height: 2.438rem;
+  font-size: 12px;
+  color: $color-black;
+  box-shadow: none;
 }
 
 .isMobilePopup {
@@ -93,6 +103,15 @@
     width: 8.125rem;
   }
 
+  .isUpload {
+    background: $button-upload;
+    width: 9.063rem;
+    height: 2.438rem;
+    font-size: 12px;
+    color: $color-black;
+    box-shadow: none;
+  }
+
   .isRequestComplete {
     width: 8.25rem;
     height: 2.375rem;
@@ -105,15 +124,6 @@
   .isResourceSave {
     width: 10.493rem;
     height: 3.65rem;
-  }
-
-  .isUpload {
-    background: $button-upload;
-    width: 9.063rem;
-    height: 2.438rem;
-    font-size: 12px;
-    color: $color-black;
-    box-shadow: none;
   }
 
   .isCancel {

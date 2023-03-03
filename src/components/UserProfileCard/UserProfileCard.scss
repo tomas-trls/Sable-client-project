@@ -19,7 +19,7 @@
     height: 300px;
     padding: 20px;
 
-    &--image{
+    &--image {
       height: 100%;
       width: 100%;
       aspect-ratio: 1;
@@ -64,5 +64,20 @@
     margin: 0;
     height: fit-content;
     cursor: pointer;
+  }
+}
+@media screen and (max-width: 767px) {
+  .card-container {
+    &__info-container {
+      height: auto;
+
+      &--role {
+        display: none;
+      }
+    }
+
+    &__button {
+      display: none;
+    }
   }
 }

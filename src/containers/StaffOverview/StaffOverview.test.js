@@ -2,7 +2,7 @@ import { render, screen } from "@testing-library/react";
 import StaffOverview from "./StaffOverview";
 
 it("should render the staff overview section", () => {
-  render(<StaffOverview />);
+  render(<StaffOverview currentStaff="Marianna"/>);
 
   const overviewCardName = screen.getByText("Overview");
 
@@ -10,9 +10,9 @@ it("should render the staff overview section", () => {
 });
 
 it("should render a booking component card", () => {
-  render(<StaffOverview />);
+  render(<StaffOverview currentStaff="Marianna"/>);
 
-  const bookingDate = screen.getByText(/12\/03\/2023/i);
+  const bookingDate = screen.getByText(/05\/03\/2023/i); 
   const price = screen.queryByText(/£12\.99/i);
   expect(bookingDate).toBeInTheDocument();
   expect(price).toBeNull();
@@ -20,17 +20,15 @@ it("should render a booking component card", () => {
 });
 
 it("should render the filter options", () => {
-  render(<StaffOverview />);
+  render(<StaffOverview currentStaff="Marianna"/>);
 
   const staffBookingsText = screen.getByRole("heading", {
-    name: /staff bookings/i,
+    name: /Bookings List/i,
   });
   const filterText = screen.getByText(/filter/i);
   const sortText = screen.getByText(/sort/i);
-  const gridOption = screen.getByRole("img", { name: /grid view icon/i });
 
   expect(staffBookingsText).toBeInTheDocument();
   expect(filterText).toBeInTheDocument();
   expect(sortText).toBeInTheDocument();
-  expect(gridOption).toBeInTheDocument();
 });

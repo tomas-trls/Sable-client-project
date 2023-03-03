@@ -1,10 +1,10 @@
-import React, { useState } from "react";
 import "./SettingsCard.scss";
 import Button from "../Button/Button";
 import Sun from "../../assets/images/lightmode/sun-light.png";
 import Moon from "../../assets/images/lightmode/moon-light.png";
+import React, { useState } from "react";
 
-const Settings = () => {
+const SettingsCard = () => {
   const [selectRadio, setSelectRadio] = useState("modern");
   const changeRadio = (e) => {
     setSelectRadio(e.target.value);
@@ -67,11 +67,11 @@ const Settings = () => {
           </section>
         </div>
         <section className="settings-card__button-container">
-          <Button buttonText={"Apply"} />
+          <Button buttonText={"Apply"}  />
         </section>
       </div>
     </main>
   );
 };
 
-export default Settings;
+export default SettingsCard;

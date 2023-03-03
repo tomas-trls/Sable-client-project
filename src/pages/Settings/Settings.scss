@@ -1,19 +1,25 @@
 @use "../../styles/abstracts/variables" as *;
 
+.active{
+  opacity:20%
+  }
+
 .settings-container {
   display: flex;
   flex-direction: row;
   background-color: $page-background-light;
 }
+
 .settings-page__content {
   display: flex;
   flex-direction: column;
   padding-top: 4.5vh;
   padding-left: 9vw;
   justify-content: space-between;
-  min-height: 50vh;
+  min-height: 42vh;
   width: 42vw;
 }
+
 .settings-page__button-container {
   display: flex;
   flex-direction: row;

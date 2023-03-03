@@ -16,9 +16,11 @@ it("should render the card labels", () => {
 
   const nameLabel = screen.getByText(/client name/i);
   const emailLabel = screen.getByText(/email address/i);
-  const RSVPd = screen.getByText(/rsvpd/i);
+  const confirmed = screen.getAllByText(/confirmed/i)[0];
 
   expect(nameLabel).toBeInTheDocument();
   expect(emailLabel).toBeInTheDocument();
-  expect(RSVPd).toBeInTheDocument();
+  expect(confirmed).toBeInTheDocument();
 });
+
+

@@ -12,11 +12,18 @@ const PageHeader = ({
   isInputIncomplete,
   optionsArr,
   handleOnChange,
+  handleClick,
 }) => {
   const HeadingOnlyJSX = () => (
     <div className="heading-only">
       <img src={Logo} alt="logo" className="heading-only__logo" />
       <h1 className="heading-only__heading">{heading}</h1>
+    </div>
+  );
+
+  const LogoOnlyJSX = () => (
+    <div className="logo-only">
+      <img src={Logo} alt="logo" className="logo-only__logo" />
     </div>
   );
 
@@ -30,6 +37,7 @@ const PageHeader = ({
           buttonStyle={buttonStyle}
           isPlus={isPlus}
           isInputIncomplete={isInputIncomplete}
+          handleClick={handleClick}
         />
       </div>
     </div>
@@ -58,6 +66,7 @@ const PageHeader = ({
               buttonStyle={buttonStyle}
               isPlus={isPlus}
               isInputIncomplete={isInputIncomplete}
+              handleClick={handleClick}
             />
           </div>
         </div>
@@ -72,12 +81,14 @@ const PageHeader = ({
 
   return (
     <>
-      {headerType === "headingOnly"
+      {   headerType === "headingOnly"
         ? HeadingOnlyJSX()
         : headerType === "headingButton"
         ? HeadingButtonJSX()
         : headerType === "headingButtonDropdown"
         ? HeadingButtonDropdownJSX()
+        : headerType === "logoOnly"
+        ? LogoOnlyJSX()
         : alert("unknown header")}
     </>
   );

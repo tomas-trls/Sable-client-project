@@ -6,9 +6,8 @@ import SortIcon from "../../assets/images/functional-icons/sort-icon.png";
 import "./ResourcesOverview.scss";
 import StaffResourcesContainer from "../StaffResourcesContainer/StaffResourcesContainer";
 import StaffResources from "../../components/StaffResources/StaffResources";
-import { resourceData } from "../../mockData.js";
+import { mockData } from "../../data/mockData"
 const ResourcesOverview = ({ isAdmin }) => {
-  let resourceDataCopy = [...resourceData];
   return (
     <div className="resources-overview">
       <div className="resources-overview__filters">
@@ -60,7 +59,7 @@ const ResourcesOverview = ({ isAdmin }) => {
 
       {isAdmin ? (
         <>
-          <StaffResources cardsArray={resourceDataCopy} />
+          <StaffResources cardsArray={mockData.resources}/>
         </>
       ) : (
         <StaffResourcesContainer />
