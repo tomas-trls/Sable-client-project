@@ -12,7 +12,6 @@ const Client = () => {
   const navigate = useNavigate();
   
   const handleClick = (event)=>{
-    console.log("hello")
     event.preventDefault();
     navigate("/client/add-client");
   } 

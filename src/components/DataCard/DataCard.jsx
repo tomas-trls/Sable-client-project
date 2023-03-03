@@ -57,7 +57,7 @@ const DataCard = (props) => {
     const currentResource = mockData.resources.filter((resource) => {
       return resource.name.toLowerCase() === cardObject.resources.toLowerCase();
     })[0];
-
+    
     return (
       <div className="resource-card">
         <h1 className="resource-card__name">{currentResource.name}</h1>
@@ -70,7 +70,7 @@ const DataCard = (props) => {
         )}
         <p className="resource-card__level">{cardObject.autoPurchaseLevel}</p>
         <p className="resource-card__reqQuant">{cardObject.requestQuantity}</p>
-        <figure className="resource-card__image-container">
+        <figure className="resource-card__image-container" onClick={() => handleClick(currentResource.id)}>
           <span className="resource-card__circle"></span>
         </figure>
       </div>

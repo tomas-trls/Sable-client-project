@@ -53,8 +53,7 @@ const Login = ({ user, setUser }) => {
       <form className="login-page__form login-form__input-container">
         <h1 className="login-form__title">Welcome back</h1>
         <p className="login-form__desc">
-          Feugiat magna viverra pellentesque habitant. Libero id amet nisl,
-          tellus cras eleifend et in.
+          Enter your email address and password to access your staff account.
         </p>
         <label htmlFor="email-input" className="login-form__label">
           Email Address

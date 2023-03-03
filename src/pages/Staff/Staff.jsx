@@ -24,9 +24,7 @@ const Staff = () => {
             <PageHeader
               heading="Staff"
               headerType="headingButtonDropdown"
-              text="Edit"
-              buttonStyle="isHeader"
-              isPlus={true}
+         
               optionsArr={allStaffMembers}
               handleOnChange={handleOnChange}
             />

@@ -17,7 +17,7 @@ const BookingActive = () => {
     return (
       booking.client.split(" ")[0].toLowerCase() ==
         client.firstName.toLowerCase() &&
-      booking.client.split(" ")[0].toLowerCase() ==
+      booking.client.split(" ")[1].toLowerCase() ==
         client.lastName.toLowerCase()
     );
   });

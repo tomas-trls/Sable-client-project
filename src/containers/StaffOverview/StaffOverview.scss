@@ -83,13 +83,13 @@
   font-size: 8px;
 }
 
-@media screen and (max-width: $tablet-breakpoint) {
+@media screen and (max-width: 767px) {
   .staff-overview {
     &__card-container {
       margin: 40px 0 24px;
       flex-direction: column;
       justify-content: center;
-      gap: 0;
+      gap: 4vh;
       align-items: center;
     }
     &__booking-container--labels {
