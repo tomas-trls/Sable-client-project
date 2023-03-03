@@ -21,7 +21,7 @@ import ClientDetail from "./pages/ClientDetail/ClientDetail";
 import mockData from "./data/mockData";
 
 const App = () => {
-  const [user, setUser] = useState();
+  const [user, setUser] = useState(true);
   const navigate = useNavigate();
   const logOut = (event) => {
     event.preventDefault();
@@ -41,8 +41,14 @@ const App = () => {
           <Route path="/staff" element={<Staff />} />
           <Route path="/client" element={<Client />} />
           <Route path="/resources" element={<Resources />} />
-          <Route path="/resources/edit/:id" element={<EditResource resources={mockData.resources}/>} />
-          <Route path="/resources/request" element={<RequestResource />} />
+          <Route
+            path="/resources/edit/:id"
+            element={<EditResource resources={mockData.resources} />}
+          />
+          <Route
+            path="/resources/request"
+            element={<RequestResource staff={mockData.staff} />}
+          />
           <Route path="/settings" element={<Settings setUser={logOut} />} />
           <Route path="/client/add-client" element={<AddClient />} />
           <Route
