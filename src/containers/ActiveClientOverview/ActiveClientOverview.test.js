@@ -10,7 +10,7 @@ it("should render user profile, booking, and contact details cards", () => {
   );
 
   const profileImage = screen.getByRole('img', {
-    name: /user\-image/i
+    name: /user-image/i
   })
 
   const contactDetailsCard = screen.getByRole('heading', {
