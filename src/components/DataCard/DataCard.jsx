@@ -46,7 +46,7 @@ const DataCard = (props) => {
         <p className="booking-card__mobile">{currentClient[0].mobile}</p>
         <p className="booking-card__date">{cardObject.bookingDate}</p>
         <p className="booking-card__time">{cardObject.bookingTime}</p>
-        <figure className="booking-card__image-container">
+        <figure onClick={handleClick} className="booking-card__image-container">
           <span className="booking-card__circle"></span>
         </figure>
       </div>

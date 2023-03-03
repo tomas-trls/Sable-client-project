@@ -79,11 +79,24 @@ const StaffOverview = ({ currentStaff }) => {
   let clientsListJSX = [];
   if (searchFilterArr.length > 0) {
     clientsListJSX = searchFilterArr.map((booking, index) => {
-      return <DataCard key={index} cardType="booking" cardObject={booking} />;
+      const handleClick = (event) => {
+        event.preventDefault();
+        console.log(booking.id);
+        navigate(`/bookings/${booking.id}`);
+      };
+      return (
+        <DataCard
+          key={index}
+          cardType="booking"
+          cardObject={booking}
+          handleClick={handleClick}
+        />
+      );
     });
   } else {
     clientsListJSX = [];
   }
+
   let filteredClientListJSX;
   if (filteredClients.length > 0) {
     filteredClientListJSX = filteredClients.map((booking, index) => {
@@ -92,7 +105,6 @@ const StaffOverview = ({ currentStaff }) => {
   } else {
     filteredClientListJSX = [];
   }
-
   return (
     <div className="staff-overview">
       <h2 className="staff-overview__title">Overview</h2>
