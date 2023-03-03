@@ -22,12 +22,21 @@
     display: flex;
     flex-direction: column;
   }
+  .resources-page__cards-container--button {
+    display: none;
+  }
 }
 
 @media screen and (max-width: $tablet-breakpoint) {
   .resources-page {
     &__main-content {
       width: 100vw;
+      .resources-page__cards-container--button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 50px;
+      }
     }
   }
 }
