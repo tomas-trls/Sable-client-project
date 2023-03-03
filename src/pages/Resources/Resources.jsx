@@ -4,14 +4,15 @@ import NavContainer from "../../containers/NavContainer/NavContainer";
 import ResourcesOverview from "../../containers/ResourcesOverview/ResourcesOverview";
 import "./Resources.scss";
 import { useNavigate } from "react-router-dom";
-const Resource = () => {
+import Button from "../../components/Button/Button";
 
+const Resource = () => {
   const navigate = useNavigate();
 
   const handleClick = (event) => {
-    event.preventDefault(); 
+    event.preventDefault();
     navigate("/resources/request");
-  }
+  };
 
   return (
     <>
@@ -31,6 +32,14 @@ const Resource = () => {
           <div className="resources-page__cards-container">
             <ResourcesOverview isAdmin={false} />
             <ResourcesOverview isAdmin={true} />
+
+            <div className="resources-page__cards-container--button">
+              <Button
+                handleClick={handleClick}
+                buttonText="Create"
+                isPlus={true}
+              />
+            </div>
           </div>
         </main>
       </div>
