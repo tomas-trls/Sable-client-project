@@ -1,6 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import ClientDetail from "./ClientDetail";
 import { BrowserRouter } from "react-router-dom";
+
 it("should render the page header and nav", () => {
     render(<BrowserRouter><ClientDetail/></BrowserRouter>)
 

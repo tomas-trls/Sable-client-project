@@ -2,43 +2,70 @@
 @use "../../styles/abstracts/variables" as *;
 
 .booking-details-card * {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 }
 
-.booking-details-card{
-    width: 295px;
-    height: 310px;
-    background-color: $color-white;
-    box-shadow: 0px 30px 40px rgba(114, 75, 203, 0.06);
-    border-radius: 7px;
-    font-family: $font-modern;    
+.booking-details-card {
+  width: 19vw;
+  height: 35vh;
+  background-color: $color-white;
+  box-shadow: 0px 30px 40px rgba(114, 75, 203, 0.06);
+  border-radius: 7px;
+  font-family: $font-modern;
+
+  &__info-container {
     display: flex;
     flex-direction: column;
-    
     gap: 5px;
-    margin-left: 100px;
+  }
 
-    &__heading{
-        font-size: 12px;
-        font-weight: 600;
-        color: $page-sub-heading;
-        margin: 26px 0 44px 25px; 
+  &__heading {
+    font-size: 12px;
+    font-weight: 600;
+    color: $page-sub-heading;
+    margin: 26px 0 44px 25px;
+  }
+
+  &__subheading {
+    font-size: 10px;
+    font-weight: 500;
+    color: $page-sub-heading;
+    margin-left: 25px;
+  }
+
+  &__data {
+    font-size: 10px;
+    font-weight: 400;
+    color: $page-text;
+    margin-bottom: 5%;
+    margin-left: 25px;
+  }
+
+  &__mobile {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .booking-details-card {
+    width: 85vw;
+    height: auto;
+    border: 1px solid $light-border;
+    padding-top: 4vh;
+    margin-bottom: 10vh;
+
+    &__mobile {
+      display: flex;
     }
-
-    &__subheading{
-        font-size: 10px;
-        font-weight: 500;
-        color: $page-sub-heading;
-        margin-left: 25px
+    &__heading {
+      display: none;
     }
-
-    &__data{
-        font-size: 10px;
-        font-weight: 400;
-        color: $page-text;
-        margin-bottom: 5%; 
-        margin-left: 25px
+    &__subheading {
+      font-size: 18px;
     }
-
+    &__data {
+      font-size: 18px;
+    }
+  }
 }

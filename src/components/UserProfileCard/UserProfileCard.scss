@@ -2,22 +2,19 @@
 @use "../../styles/abstracts/variables" as *;
 
 .card-container {
-  width: 270px;
-  min-height: 310px;
-  height: auto;
+  width: 17vw;
+  height: 35vh;
   background-color: $color-white;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  gap: 25px;
+  box-shadow: 0px 30px 40px rgba(114, 75, 203, 0.06);
   border-radius: 7px;
-  margin: 20px;
 
   &__image-container {
     margin-top: 10px;
-    height: 300px;
-    padding: 20px;
+    height: 50%;
+    margin-top: 10%;
 
     &--image {
       height: 100%;
@@ -31,11 +28,10 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
-    height: 50%;
+    padding: 1.5vh;
 
     &--name {
-      font-size: 1.5rem;
+      font-size: 1.25rem;
       font-family: $font-modern;
       color: $page-sub-heading;
       font-weight: 700;
@@ -45,39 +41,31 @@
 
     &--role {
       color: $page-text;
-      font-size: 0.9rem;
+      font-size: 0.875rem;
       text-align: center;
-      font-weight: 500;
+      font-weight: 400;
       text-align: center;
       font-family: $font-modern;
       margin: 0;
-      padding: 5px;
     }
-  }
-  .button {
-    background-color: $color-white;
-    box-shadow: none;
-    color: $page-sub-heading;
-    font-size: 0.5rem;
-    text-decoration: underline;
-    font-weight: 400;
-    margin: 0;
-    height: fit-content;
-    cursor: pointer;
   }
 }
 @media screen and (max-width: 767px) {
   .card-container {
+    width: 70vw;
+    height: 50vh;
     &__info-container {
       height: auto;
+      &--name {
+        font-size: 2rem;
+      }
 
       &--role {
         display: none;
       }
     }
-
-    &__button {
-      display: none;
+    &__image-container {
+      height: 50%;
     }
   }
 }
