@@ -9,7 +9,7 @@ const DropdownField = ({
   optionsJSX,
 }) => {
   const JSX = optionsJSX.map((option, index) => {
-    return <option key={index + 1}>{option}</option>;
+    return <option className="dropdown-field__option" key={index + 1}>{option}</option>;
   });
 
   return (

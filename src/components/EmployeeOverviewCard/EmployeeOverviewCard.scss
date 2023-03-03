@@ -2,9 +2,9 @@
 @use "../../styles/base/typography" as *;
 
 .employee-overview-card {
-  width: 295px;
-  min-height: 307px;
-  height: auto;
+  width: auto;
+  max-width: 42vw;
+  height: 35vh;
   display: flex;
   flex-direction: column;
   background-color: $color-white;
@@ -42,7 +42,9 @@
     background-color: white;
     border-bottom-right-radius: 7px;
     border-bottom-left-radius: 7px;
-    padding: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+
   }
   &__left {
     text-align: left;
@@ -66,5 +68,12 @@
       font-weight: 400;
       font-size: 0.6rem;
     }
+  }
+}
+@media screen and (max-width:767px) {
+  .employee-overview-card {
+    width: 70vw;
+    min-height: 307px;
+    height: auto;
   }
 }
