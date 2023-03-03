@@ -1,6 +1,7 @@
 export const mockData = {
   resources: [
     {
+      id: 0, 
       name: "syringe",
       costPerUnit: "£12.99",
       quantity: "300",
@@ -9,14 +10,16 @@ export const mockData = {
       category: "Admin",
     },
     {
+      id: 1, 
       name: "laser",
       costPerUnit: "£25",
       quantity: "520",
-      autoPurchaseLevel: "500",
+      autoPurchaseLevel: "400",
       isAutoPurchase: false,
       category: "Health",
     },
     {
+      id: 2, 
       name: "Dental Floss",
       costPerUnit: "£5.50",
       quantity: "560",
@@ -25,6 +28,7 @@ export const mockData = {
       category: "Health",
     },
     {
+      id: 3, 
       name: "Mouthwash",
       costPerUnit: "£8.99",
       quantity: "500",
@@ -33,6 +37,7 @@ export const mockData = {
       category: "Health",
     },
     {
+      id: 4, 
       name: "Toothbrush",
       costPerUnit: "£4.25",
       quantity: "50",
@@ -41,6 +46,7 @@ export const mockData = {
       category: "Admin",
     },
     {
+      id: 5,       
       name: "Surgical Gloves",
       costPerUnit: "£45.99",
       quantity: "4300",
@@ -49,6 +55,7 @@ export const mockData = {
       category: "Health",
     },
     {
+      id: 6, 
       name: "Scalpel",
       costPerUnit: "£22.75",
       quantity: "60",
@@ -57,6 +64,7 @@ export const mockData = {
       category: "Admin",
     },
     {
+      id: 7,
       name: "Dental Mirror",
       costPerUnit: "£7.50",
       quantity: "321",
@@ -65,6 +73,7 @@ export const mockData = {
       category: "Admin",
     },
     {
+      id: 8,
       name: "X-Ray Machine",
       costPerUnit: "£2500",
       quantity: "222",
@@ -73,6 +82,7 @@ export const mockData = {
       category: "Admin",
     },
     {
+      id: 9,
       name: "Filling Material",
       costPerUnit: "£175.25",
       quantity: "2600",
@@ -81,6 +91,7 @@ export const mockData = {
       category: "Health",
     },
     {
+      id: 10,
       name: "Dental Drill",
       costPerUnit: "£285",
       quantity: "980",
@@ -89,6 +100,7 @@ export const mockData = {
       category: "Health",
     },
     {
+      id: 11,
       name: "Anaesthesia",
       costPerUnit: "£75.99",
       quantity: "830",
@@ -97,6 +109,7 @@ export const mockData = {
       category: "Admin",
     },
     {
+      id: 12,
       name: "Toothpaste",
       costPerUnit: "£6.25",
       quantity: "70",
@@ -105,6 +118,7 @@ export const mockData = {
       category: "Health",
     },
     {
+      id: 13,
       name: "Implants",
       costPerUnit: "£1200",
       quantity: "210",
@@ -113,6 +127,7 @@ export const mockData = {
       category: "Admin",
     },
     {
+      id: 14,
       name: "Sutures",
       costPerUnit: "£12.99",
       quantity: "40",
@@ -121,6 +136,7 @@ export const mockData = {
       category: "Health",
     },
     {
+      id: 15,
       name: "Surgical Masks",
       costPerUnit: "£15.50",
       quantity: "500",
@@ -129,6 +145,7 @@ export const mockData = {
       category: "Admin",
     },
     {
+      id: 16,
       name: "Sterilization Machine",
       costPerUnit: "£1500",
       quantity: "970",
@@ -137,6 +154,7 @@ export const mockData = {
       category: "Health",
     },
     {
+      id: 17,
       name: "Orthodontic Pliers",
       costPerUnit: "£90.75",
       quantity: "5430",
@@ -145,6 +163,7 @@ export const mockData = {
       category: "Admin",
     },
     {
+      id: 18,
       name: "Dental Light",
       costPerUnit: "£125",
       quantity: "123",
@@ -153,6 +172,7 @@ export const mockData = {
       category: "Health",
     },
     {
+      id: 19,
       name: "Rubber Dam",
       costPerUnit: "£28.99",
       quantity: "312",
@@ -161,6 +181,7 @@ export const mockData = {
       category: "Admin",
     },
     {
+      id: 20,
       name: "Periodontal Probe",
       costPerUnit: "£24.50",
       quantity: "532",
@@ -169,6 +190,7 @@ export const mockData = {
       category: "Health",
     },
     {
+      id: 21,
       name: "Cavity Liner",
       costPerUnit: "£42.25",
       quantity: "560",
@@ -179,7 +201,7 @@ export const mockData = {
   ],
 
   resourcesRequest: [
-    {
+    { resourceId: 3,
       category: "Health",
       staffMember: "Marianna",
       resources: "Mouthwash",
@@ -188,6 +210,7 @@ export const mockData = {
       requestQuantity: "10",
     },
     {
+      resourceId: 13,
       category: "Admin",
       staffMember: "Stefania",
       resources: "Implants",
@@ -196,6 +219,7 @@ export const mockData = {
       requestQuantity: "50",
     },
     {
+      resourceId: 7,
       category: "Health",
       staffMember: "David",
       resources: "Dental Mirror",
@@ -204,6 +228,7 @@ export const mockData = {
       requestQuantity: "20",
     },
     {
+      id: 3,
       category: "Health",
       staffMember: "Julia",
       resources: "Sutures",
@@ -212,6 +237,7 @@ export const mockData = {
       requestQuantity: "90",
     },
     {
+      id: 4,
       category: "Admin",
       staffMember: "Elisabeth",
       resources: "Sterilization Machine",
@@ -220,6 +246,7 @@ export const mockData = {
       requestQuantity: "60",
     },
     {
+      id: 5,
       category: "Health",
       staffMember: "Roberto",
       resources: "Dental Light",
@@ -228,6 +255,7 @@ export const mockData = {
       requestQuantity: "80",
     },
     {
+      id: 6,
       category: "Admin",
       staffMember: "Carla",
       resources: "Surgical Gloves",
@@ -236,6 +264,7 @@ export const mockData = {
       requestQuantity: "100",
     },
     {
+      id: 7,
       category: "Health",
       staffMember: "Simon",
       resources: "Periodontal Probe",
@@ -244,6 +273,7 @@ export const mockData = {
       requestQuantity: "50",
     },
     {
+      id: 8,
       category: "Admin",
       staffMember: "Roberto",
       resources: "X-Ray Machine",
@@ -252,6 +282,7 @@ export const mockData = {
       requestQuantity: "2",
     },
     {
+      id: 9,
       category: "Health",
       staffMember: "Carla",
       resources: "Dental Drill",
@@ -260,6 +291,7 @@ export const mockData = {
       requestQuantity: "10",
     },
     {
+      id: 10,
       category: "Admin",
       staffMember: "Julia",
       resources: "Orthodontic Pliers",
@@ -268,6 +300,7 @@ export const mockData = {
       requestQuantity: "10",
     },
     {
+      id: 11,
       category: "Health",
       staffMember: "Stefania",
       resources: "Filling Material",
@@ -276,6 +309,7 @@ export const mockData = {
       requestQuantity: "70",
     },
     {
+      id: 12,
       category: "Admin",
       staffMember: "David",
       resources: "Rubber Dam",
@@ -284,6 +318,7 @@ export const mockData = {
       requestQuantity: "100",
     },
     {
+      id: 13,
       category: "Health",
       staffMember: "Simon",
       resources: "Anaesthesia",
@@ -292,6 +327,7 @@ export const mockData = {
       requestQuantity: "100",
     },
     {
+      id: 14,
       category: "Admin",
       staffMember: "Marianna",
       resources: "Cavity Liner",
@@ -300,6 +336,7 @@ export const mockData = {
       requestQuantity: "10",
     },
     {
+      id: 15,
       category: "Health",
       staffMember: "Simon",
       resources: "Toothpaste",
@@ -308,6 +345,7 @@ export const mockData = {
       requestQuantity: "150",
     },
     {
+      id: 16,
       category: "Admin",
       staffMember: "Carla",
       resources: "Surgical Masks",
@@ -316,6 +354,7 @@ export const mockData = {
       requestQuantity: "200",
     },
     {
+      
       category: "Admin",
       staffMember: "David",
       resources: "Dental Drill",

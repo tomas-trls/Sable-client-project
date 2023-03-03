@@ -15,16 +15,22 @@ const EditClient = () => {
     event.preventDefault(); 
     setShowOverlay(true)
   }
+
+  const handleUpload = (event) =>{
+    event.preventDefault(); 
+    console.log("Upload")
+   
+  }
   
   const navigate = useNavigate();
-  const handleClick = (event) => {
+  const handleCancel = (event) => {
       event.preventDefault(); 
       navigate("/home");
   }
 
   return (
     <div className="edit-client">
-      {showOverlay && <ConfirmationOverlay  overlayType={"overlayOneButton"} text="Success" buttonTextOne={"Home"} handleClick={handleClick}/>}
+      {showOverlay && <ConfirmationOverlay  overlayType={"overlayOneButton"} text="Success" buttonTextOne={"Home"} handleClick={handleCancel}/>}
       <NavContainer />
       <Layout>
         <PageHeader
@@ -33,7 +39,7 @@ const EditClient = () => {
           text="Save"
           handleClick={handleSubmit}
         />
-        <ClientFormContainer isEditClient={true} handleClick={handleSubmit} />
+        <ClientFormContainer isEditClient={true} handleClick={handleCancel} handleSubmit={handleSubmit} handleUpload={handleUpload} />
         <div>
           <HomeButton />
         </div>

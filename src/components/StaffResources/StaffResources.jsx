@@ -1,12 +1,18 @@
 import React from "react";
 import "./StaffResources.scss";
 import DataCard from "../DataCard/DataCard";
+import { useNavigate } from "react-router-dom";
 
 const StaffResources = ({ staffName, cardsArray, id }) => {
+    const navigate = useNavigate();
+    const handleClick = (id) => {
+      navigate(`/resources/edit/${id}`);
+    }
+  
   const cardJSX = cardsArray.map((object, index) => {
     return (
       <div key={index} className="staff-resources__cards-card">
-        <DataCard cardType="resource" cardObject={object} />
+        <DataCard cardType="resource" cardObject={object} handleClick={handleClick} />
       </div>
     );
   });

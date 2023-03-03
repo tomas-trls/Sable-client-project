@@ -5,8 +5,13 @@ import Layout from "../../components/Layout/Layout";
 import PageHeader from "../../components/PageHeader/PageHeader";
 import NavContainer from "../../containers/NavContainer/NavContainer";
 import "./EditResource.scss";
+import { useParams } from 'react-router-dom';
 
-const EditResource = ({ staff, category, resourceName }) => {
+const EditResource = ({ resources }) => {
+  let { id } = useParams();
+  const currentResource = resources.find((resource) => {
+    return resource.id == id 
+  })
   return (
     <div className="edit-resource-container">
       <NavContainer />
@@ -21,12 +26,9 @@ const EditResource = ({ staff, category, resourceName }) => {
         <div className="edit-resource-container__form">
           <ResourceForm
             formPage={"editResource"}
-            staff={staff}
-            category={category}
-            resourceName={resourceName}
+            resource={currentResource}
             optionsArr={[]}
             text="Save"
-            isEditResource={true}
           />
         </div>
         <HomeButton />

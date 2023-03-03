@@ -7,7 +7,7 @@ import UserProfileCard from "../../components/UserProfileCard/UserProfileCard";
 import defaultUser from "../../assets/images/users/Ellipse.png";
 import ClientProfile from "../../assets/images/users/client-picture.png";
 
-const ClientFormContainer = ({ isEditClient, handleClick }) => {
+const ClientFormContainer = ({ isEditClient, handleSubmit, handleClick, handleUpload }) => {
   return (
     <form className="client-form">
       <div className="client-form__mobile-thumbnail">
@@ -78,7 +78,7 @@ const ClientFormContainer = ({ isEditClient, handleClick }) => {
               />
             </div>
             <div className="client-form__upload-button">
-              <Button buttonStyle="isUpload" buttonText="Upload" />
+              <Button buttonStyle="isUpload" buttonText="Upload" handleClick={handleUpload}/>
             </div>
           </div>
         </div>
@@ -93,8 +93,8 @@ const ClientFormContainer = ({ isEditClient, handleClick }) => {
         )}
         <div>
           <div className="client-form__form-buttons">
-            <Button buttonText="Cancel" buttonStyle="isCancel--purple" />
-            <Button buttonText="Save" handleClick={handleClick} />
+            <Button buttonText="Cancel" buttonStyle="isCancel--purple" handleClick={handleClick} />
+            <Button buttonText="Save" handleClick={handleSubmit}/>
           </div>
           {isEditClient ? (
             <h2 className="client-form__text" href="#">

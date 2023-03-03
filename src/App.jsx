@@ -18,6 +18,7 @@ import "./styles/base/_typography.scss";
 import Error from "./pages/Error/Error";
 import BackToLogin from "./pages/BackToLogin/BackToLogin";
 import ClientDetail from "./pages/ClientDetail/ClientDetail";
+import mockData from "./data/mockData";
 
 const App = () => {
   const [user, setUser] = useState();
@@ -40,7 +41,7 @@ const App = () => {
           <Route path="/staff" element={<Staff />} />
           <Route path="/client" element={<Client />} />
           <Route path="/resources" element={<Resources />} />
-          <Route path="/resources/edit" element={<EditResource />} />
+          <Route path="/resources/edit/:id" element={<EditResource resources={mockData.resources}/>} />
           <Route path="/resources/request" element={<RequestResource />} />
           <Route path="/settings" element={<Settings setUser={logOut} />} />
           <Route path="/client/add-client" element={<AddClient />} />
@@ -56,7 +57,7 @@ const App = () => {
           <Route path="/client" element={<Error page={"client"} />} />
           <Route path="/resources" element={<Error page={"resources"} />} />
           <Route
-            path="/resources/edit"
+            path="/resources/edit:id"
             element={<Error page={"resources"} />}
           />
           <Route
