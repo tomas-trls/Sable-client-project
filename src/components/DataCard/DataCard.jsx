@@ -29,8 +29,7 @@ const DataCard = (props) => {
   );
 
   const bookingCardJSX = () => {
-    let names = cardObject.client.split(" ");
-
+    const names = cardObject.client.split(" ");
     const getClientDetails = (nameToSearch) => {
       const filteredObject = mockData.clients.filter(
         (client) =>
@@ -39,9 +38,7 @@ const DataCard = (props) => {
       );
       return filteredObject;
     };
-
     const currentClient = getClientDetails(names);
-
     return (
       <div className="booking-card">
         <h1 className="booking-card__name">{cardObject.client}</h1>
@@ -50,29 +47,35 @@ const DataCard = (props) => {
         <p className="booking-card__date">{cardObject.bookingDate}</p>
         <p className="booking-card__time">{cardObject.bookingTime}</p>
         <figure className="booking-card__image-container">
-          {" "}
           <span className="booking-card__circle"></span>
         </figure>
       </div>
     );
   };
 
-  const resourceCardJSX = () => (
-    <div className="resource-card">
-      <h1 className="resource-card__name">{cardObject.name}</h1>
-      <p className="resource-card__quantity">{cardObject.quantity}</p>
-      <p className="resource-card__cost">{cardObject.costPerUnit}</p>
-      {cardObject.isAutoPurchase ? (
-        <p className="resource-card__auto-purchase">YES</p>
-      ) : (
-        <p className="resource-card__auto-purchase">NO</p>
-      )}
-      <p className="resource-card__level">{cardObject.autoPurchaseLevel}</p>
-      <figure className="resource-card__image-container">
-        <span className="resource-card__circle"></span>
-      </figure>
-    </div>
-  );
+  const resourceCardJSX = () => {
+    const currentResource = mockData.resources.filter((resource) => {
+      return resource.name.toLowerCase() === cardObject.resources.toLowerCase();
+    })[0];
+
+    return (
+      <div className="resource-card">
+        <h1 className="resource-card__name">{currentResource.name}</h1>
+        <p className="resource-card__quantity">{currentResource.quantity}</p>
+        <p className="resource-card__cost">{currentResource.costPerUnit}</p>
+        {cardObject.autoPurchase == "yes" ? (
+          <p className="resource-card__auto-purchase">YES</p>
+        ) : (
+          <p className="resource-card__auto-purchase">NO</p>
+        )}
+        <p className="resource-card__level">{cardObject.autoPurchaseLevel}</p>
+        <p className="resource-card__reqQuant">{cardObject.requestQuantity}</p>
+        <figure className="resource-card__image-container">
+          <span className="resource-card__circle"></span>
+        </figure>
+      </div>
+    );
+  };
 
   return (
     <>
