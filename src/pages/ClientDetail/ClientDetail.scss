@@ -1,12 +1,29 @@
-.client-detail{
-    display: flex;
+.client-detail {
+  display: flex;
 
-    &__main{
-        height: 100vh;
-        width: 100%;
-        
+  &__main {
+    height: 100vh;
+    width: 100%;
+  }
+
+  &__mobile-button {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .client-detail {
+    &__content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20vh;
     }
-    &__REPLACEWITHCONTAINER{
-        background-color: lightgray;
+    &__mobile-button {
+      display: flex;
+      width: 85vw;
+      height: 8vh;
+      margin-bottom: 10vh;
     }
+  }
 }

@@ -44,5 +44,3 @@ const AddClient = () => {
 };
 
 export default AddClient;
-
-export default AddClient;

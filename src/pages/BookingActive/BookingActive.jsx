@@ -14,8 +14,8 @@ const BookingActive = () => {
     <div className='booking-active'>
     <NavContainer /> 
       <Layout>
-        <PageHeader heading={pageHeading} headerType="headingButton" text = "Edit" isPlus={true}/>
-        <ActiveClientOverview/>
+        <PageHeader heading={pageHeading} headerType="headingButton" text = "Edit" isPlus={true} buttonStyle= "isHeader" />
+        <ActiveClientOverview isClientDetails={false}/>
         <HomeButton/>
       </Layout>
     </div>

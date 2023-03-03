@@ -7,16 +7,18 @@
 }
 
 .booking-details-card{
-    width: 16vw;
+    width: 19vw;
     height: 35vh;
     background-color: $color-white;
     box-shadow: 0px 30px 40px rgba(114, 75, 203, 0.06);
     border-radius: 7px;
-    font-family: $font-modern;    
-    display: flex;
-    flex-direction: column;
+    font-family: $font-modern;  
     
-    gap: 5px;
+    &__info-container{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
 
     &__heading{
         font-size: 12px;
