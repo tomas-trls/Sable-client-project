@@ -16,13 +16,11 @@ const ActiveClientOverview = ({ isClientDetails }) => {
             image={clientImage}
             name="Mariah Chan"
             role="Student"
-            text="Edit Client"
           />
         ) : (
           <UserProfileCard
             image={clientImage}
             name="Mariah Chan"
-            text="Edit Client"
           />
         )}
         <div className="active-client-overview__mobile-booking">
