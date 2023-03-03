@@ -26,9 +26,11 @@ const ActiveClientOverview = ({ isClientDetails }) => {
           />
         )}
         <div className="active-client-overview__mobile-booking">
-          {isClientDetails ? null :<h2 className="active-client-overview__mobile-heading">
-            Booking Details
-          </h2>}
+          {isClientDetails ? null : (
+            <h2 className="active-client-overview__mobile-heading">
+              Booking Details
+            </h2>
+          )}
           {isClientDetails ? (
             <div className="active-client-overview__client-contact-card">
               <ContactDetailsCard cardObject={mockData.clients[0]} />
@@ -38,21 +40,21 @@ const ActiveClientOverview = ({ isClientDetails }) => {
               <ContactDetailsCard cardObject={mockData.clients[0]} />
             </div>
           )}
-          {isClientDetails ? 
-          <div className="active-client-overview__client-booking-card">
-            <BookingDetailsCard
-              cardObject={mockData}
-              isClientDetails={isClientDetails}
-            />
-          </div>
-          :
-          <div className="active-client-overview__booking-booking-card">
-          <BookingDetailsCard
-            cardObject={mockData}
-            isClientDetails={isClientDetails}
-          />
-          </div>
-          }
+          {isClientDetails ? (
+            <div className="active-client-overview__client-booking-card">
+              <BookingDetailsCard
+                cardObject={mockData}
+                isClientDetails={isClientDetails}
+              />
+            </div>
+          ) : (
+            <div className="active-client-overview__booking-booking-card">
+              <BookingDetailsCard
+                cardObject={mockData}
+                isClientDetails={isClientDetails}
+              />
+            </div>
+          )}
         </div>
       </div>
     </div>

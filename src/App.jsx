@@ -20,7 +20,7 @@ import BackToLogin from "./pages/BackToLogin/BackToLogin";
 import ClientDetail from "./pages/ClientDetail/ClientDetail";
 
 const App = () => {
-  const [user, setUser] = useState(true);
+  const [user, setUser] = useState();
   const navigate = useNavigate();
   const logOut = (event) => {
     event.preventDefault();
