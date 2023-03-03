@@ -21,7 +21,7 @@ import ClientDetail from "./pages/ClientDetail/ClientDetail";
 import mockData from "./data/mockData";
 
 const App = () => {
-  const [user, setUser] = useState(true);
+  const [user, setUser] = useState();
   const navigate = useNavigate();
   const logOut = (event) => {
     event.preventDefault();
