@@ -51,9 +51,12 @@ const App = () => {
           />
           <Route path="/settings" element={<Settings setUser={logOut} />} />
           <Route path="/client/add-client" element={<AddClient />} />
-          <Route path="/client/edit-client" element={<EditClient />} />
-          <Route path="/client/detail" element={<ClientDetail />} />
-          <Route path="/staff/booking" element={<BookingActive />} />
+          <Route
+            path="/client/:clientId/edit-client"
+            element={<EditClient />}
+          />
+          <Route path="/client/:clientId" element={<ClientDetail />} />
+          <Route path="/staff/booking/:bookingID" element={<BookingActive />} />
         </Routes>
       ) : (
         <Routes>
@@ -76,11 +79,14 @@ const App = () => {
             element={<Error page={"client"} />}
           />
           <Route
-            path="/client/edit-client"
+            path="/client/:clientId/edit-client"
             element={<Error page={"client"} />}
           />
-          <Route path="/client/detail" element={<Error page={"client"} />} />
-          <Route path="/staff/booking" element={<Error page={"staff"} />} />
+          <Route path="/client/:clientId" element={<Error page={"client"} />} />
+          <Route
+            path="/staff/booking/:bookingID"
+            element={<Error page={"staff"} />}
+          />
         </Routes>
       )}
     </>

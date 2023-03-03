@@ -6,14 +6,24 @@ import ActiveClientOverview from "../../containers/ActiveClientOverview/ActiveCl
 import HomeButton from "../../components/HomeButton/HomeButton";
 import "./BookingActive.scss";
 import mockData from "../../data/mockData";
+import { useParams } from "react-router-dom";
 
 const BookingActive = () => {
-  const pageHeading =
-    "Clients - " +
-    mockData.clients[0].firstName +
-    " " +
-    mockData.clients[0].lastName;
+  const { bookingID } = useParams();
+  const booking = mockData.bookings.find((booking) => {
+    return booking.id == bookingID;
+  });
+  const bookingsClient = mockData.clients.find((client) => {
+    return (
+      booking.client.split(" ")[0].toLowerCase() ==
+        client.firstName.toLowerCase() &&
+      booking.client.split(" ")[1].toLowerCase() ==
+        client.lastName.toLowerCase()
+    );
+  });
 
+  const pageHeading =
+    "Clients - " + bookingsClient.firstName + " " + bookingsClient.lastName;
   return (
     <div className="booking-active">
       <NavContainer />
@@ -25,7 +35,11 @@ const BookingActive = () => {
           isPlus={true}
           buttonStyle="isHeader"
         />
-        <ActiveClientOverview isClientDetails={false} />
+        <ActiveClientOverview
+          isClientDetails={false}
+          bookingClient={bookingsClient}
+          bookingDetails={booking}
+        />
         <HomeButton />
       </Layout>
     </div>

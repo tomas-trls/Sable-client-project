@@ -4,6 +4,7 @@ import EmployeeOverviewCard from "../../components/EmployeeOverviewCard/Employee
 import UserProfile from "../../components/UserProfileCard/UserProfileCard.jsx";
 import FilterBar from "../../components/FilterBar/FilterBar";
 import { mockData } from "../../data/mockData";
+import { useNavigate } from "react-router-dom";
 import "./StaffOverview.scss";
 const StaffOverview = ({ currentStaff }) => {
   const currentStaffBookings = mockData.bookings.filter(
@@ -76,23 +77,46 @@ const StaffOverview = ({ currentStaff }) => {
     setQuery(event.target.value);
   };
 
+  const navigate = useNavigate();
   let clientsListJSX = [];
   if (searchFilterArr.length > 0) {
     clientsListJSX = searchFilterArr.map((booking, index) => {
-      return <DataCard key={index} cardType="booking" cardObject={booking} />;
+      const handleClick = (event) => {
+        event.preventDefault();
+        navigate(`/staff/booking/${booking.id}`);
+      };
+      return (
+        <DataCard
+          key={index}
+          cardType="booking"
+          cardObject={booking}
+          handleClick={handleClick}
+        />
+      );
     });
   } else {
     clientsListJSX = [];
   }
+
   let filteredClientListJSX;
   if (filteredClients.length > 0) {
     filteredClientListJSX = filteredClients.map((booking, index) => {
-      return <DataCard key={index} cardType="booking" cardObject={booking} />;
+      const handleClick = (event) => {
+        event.preventDefault();
+        navigate(`/staff/booking/${booking.id}`);
+      };
+      return (
+        <DataCard
+          key={index}
+          cardType="booking"
+          cardObject={booking}
+          handleClick={handleClick}
+        />
+      );
     });
   } else {
     filteredClientListJSX = [];
   }
-
   return (
     <div className="staff-overview">
       <h2 className="staff-overview__title">Overview</h2>

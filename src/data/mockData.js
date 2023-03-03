@@ -457,6 +457,7 @@ export const mockData = {
 
   clients: [
     {
+      id: 1,
       firstName: "Mariah",
       lastName: "Chan",
       email: "mariahchan@gmail.com",
@@ -469,6 +470,7 @@ export const mockData = {
       staff: "David",
     },
     {
+      id: 2,
       firstName: "Mark",
       lastName: "Wilson",
       email: "markwilson@gmail.com",
@@ -482,6 +484,7 @@ export const mockData = {
     },
 
     {
+      id: 3,
       firstName: "Ashley",
       lastName: "Williams",
       email: "ashleywilliams@gmail.com",
@@ -494,6 +497,7 @@ export const mockData = {
       staff: "David",
     },
     {
+      id: 4,
       firstName: "John",
       lastName: "Lee",
       email: "johnlee@gmail.com",
@@ -506,6 +510,7 @@ export const mockData = {
       staff: "Julia",
     },
     {
+      id: 5,
       firstName: "Karen",
       lastName: "Chen",
       email: "karenchen@gmail.com",
@@ -518,6 +523,7 @@ export const mockData = {
       staff: "David",
     },
     {
+      id: 6,
       firstName: "Sean",
       lastName: "Baker",
       email: "seanbaker@gmail.com",
@@ -530,6 +536,7 @@ export const mockData = {
       staff: "Roberto",
     },
     {
+      id: 7,
       firstName: "Sophie",
       lastName: "Kim",
       email: "sophiekim@gmail.com",
@@ -542,6 +549,7 @@ export const mockData = {
       staff: "Roberto",
     },
     {
+      id: 8,
       firstName: "Adam",
       lastName: "Kim",
       email: "adamjohnson@gmail.com",
@@ -554,6 +562,7 @@ export const mockData = {
       staff: "Marianna",
     },
     {
+      id: 9,
       firstName: "Ethan",
       lastName: "Chen",
       email: "ethanchen@gmail.com",
@@ -566,6 +575,7 @@ export const mockData = {
       staff: "David",
     },
     {
+      id: 10,
       firstName: "Melanie",
       lastName: "Wong",
       email: "melaniewong@gmail.com",
@@ -578,6 +588,7 @@ export const mockData = {
       staff: "Julia",
     },
     {
+      id: 11,
       firstName: "Peter",
       lastName: "Brown",
       email: "peterbrown@gmail.com",
@@ -590,6 +601,7 @@ export const mockData = {
       staff: "David",
     },
     {
+      id: 12,
       firstName: "Jasmine",
       lastName: "Wang",
       email: "jasminewang@gmail.com",
@@ -602,6 +614,7 @@ export const mockData = {
       staff: "Elisabeth",
     },
     {
+      id: 13,
       firstName: "David",
       lastName: "Chen",
       email: "davidchen@gmail.com",
@@ -614,6 +627,7 @@ export const mockData = {
       staff: "Stefania",
     },
     {
+      id: 14,
       firstName: "Alice",
       lastName: "Lee",
       email: "alicelee@gmail.com",
@@ -626,6 +640,7 @@ export const mockData = {
       staff: "Elisabeth",
     },
     {
+      id: 15,
       firstName: "Rachel",
       lastName: "Kim",
       email: "rachelkim@gmail.com",
@@ -638,6 +653,7 @@ export const mockData = {
       staff: "Roberto",
     },
     {
+      id: 16,
       firstName: "Alex",
       lastName: "Nguyen",
       email: "alexnguyen@gmail.com",
@@ -650,6 +666,7 @@ export const mockData = {
       staff: "David",
     },
     {
+      id: 17,
       firstName: "Emily",
       lastName: "Brown",
       email: "emilybrown@gmail.com",
@@ -662,6 +679,7 @@ export const mockData = {
       staff: "Marianna",
     },
     {
+      id: 18,
       firstName: "Jason",
       lastName: "Lee",
       email: "jasonlee@gmail.com",
@@ -674,6 +692,7 @@ export const mockData = {
       staff: "Roberto",
     },
     {
+      id: 19,
       firstName: "Erica",
       lastName: "Chen",
       email: "ericachen@gmail.com",
@@ -686,6 +705,7 @@ export const mockData = {
       staff: "Elisabeth",
     },
     {
+      id: 20,
       firstName: "Bryan",
       lastName: "Kim",
       email: "bryankim@gmail.com",
@@ -698,6 +718,7 @@ export const mockData = {
       staff: "Julia",
     },
     {
+      id: 21,
       firstName: "Chloe",
       lastName: "Wong",
       email: "chloewong@gmail.com",
@@ -710,6 +731,7 @@ export const mockData = {
       staff: "Roberto",
     },
     {
+      id: 22,
       firstName: "Daniel",
       lastName: "Lee",
       email: "daniellee@gmail.com",
@@ -722,6 +744,7 @@ export const mockData = {
       staff: "Julia",
     },
     {
+      id: 23,
       firstName: "Brad",
       lastName: "Pitt",
       email: "bpitt@gmail.com",
@@ -734,6 +757,7 @@ export const mockData = {
       staff: "David",
     },
     {
+      id: 24,
       firstName: "Jennifer",
       lastName: "Aniston",
       email: "janiston@hotmail.com",
@@ -746,6 +770,7 @@ export const mockData = {
       staff: "Marianna",
     },
     {
+      id: 25,
       firstName: "Leonardo",
       lastName: "DiCaprio",
       email: "ldicaprio@outlook.com",
@@ -758,6 +783,7 @@ export const mockData = {
       staff: "Stefania",
     },
     {
+      id: 26,
       firstName: "Angelina",
       lastName: "Jolie",
       email: "ajolie@gmail.com",
@@ -770,6 +796,7 @@ export const mockData = {
       staff: "Carla",
     },
     {
+      id: 27,
       firstName: "Tom",
       lastName: "Hanks",
       email: "thanks@outlook.com",
@@ -782,6 +809,7 @@ export const mockData = {
       staff: "Roberto",
     },
     {
+      id: 28,
       firstName: "Meryl",
       lastName: "Streep",
       email: "mstreep@hotmail.com",
@@ -794,6 +822,7 @@ export const mockData = {
       staff: "Julia",
     },
     {
+      id: 29,
       firstName: "George",
       lastName: "Clooney",
       email: "gclooney@gmail.com",
@@ -806,6 +835,7 @@ export const mockData = {
       staff: "Elisabeth",
     },
     {
+      id: 30,
       firstName: "Oprah",
       lastName: "Winfrey",
       email: "owinfrey@hotmail.com",
@@ -818,6 +848,7 @@ export const mockData = {
       staff: "Simon",
     },
     {
+      id: 31,
       firstName: "Will",
       lastName: "Smith",
       email: "wsmith@gmail.com",
@@ -830,6 +861,7 @@ export const mockData = {
       staff: "David",
     },
     {
+      id: 32,
       firstName: "Emma",
       lastName: "Watson",
       email: "ewatson@outlook.com",
@@ -842,6 +874,7 @@ export const mockData = {
       staff: "Marianna",
     },
     {
+      id: 33,
       firstName: "Robert",
       lastName: "De Niro",
       email: "rdeniro@hotmail.com",
@@ -854,6 +887,7 @@ export const mockData = {
       staff: "Stefania",
     },
     {
+      id: 34,
       firstName: "Nicole",
       lastName: "Kidman",
       email: "nkidman@gmail.com",
@@ -866,6 +900,7 @@ export const mockData = {
       staff: "Carla",
     },
     {
+      id: 35,
       firstName: "Matt",
       lastName: "Damon",
       email: "mdamon@outlook.com",
@@ -878,6 +913,7 @@ export const mockData = {
       staff: "Roberto",
     },
     {
+      id: 36,
       firstName: "Cate",
       lastName: "Blanchett",
       email: "cblanchett@hotmail.com",
@@ -890,6 +926,7 @@ export const mockData = {
       staff: "Julia",
     },
     {
+      id: 37,
       firstName: "Denzel",
       lastName: "Washington",
       email: "dwashington@gmail.com",
@@ -902,6 +939,7 @@ export const mockData = {
       staff: "Elisabeth",
     },
     {
+      id: 38,
       firstName: "Ellen",
       lastName: "DeGeneres",
       email: "edegeneres@hotmail.com",
@@ -914,6 +952,7 @@ export const mockData = {
       staff: "Simon",
     },
     {
+      id: 39,
       firstName: "Hugh",
       lastName: "Jackman",
       email: "hjackman@gmail.com",
@@ -926,6 +965,7 @@ export const mockData = {
       staff: "David",
     },
     {
+      id: 40,
       firstName: "Natalie",
       lastName: "Portman",
       email: "nportman@outlook.com",
@@ -938,6 +978,7 @@ export const mockData = {
       staff: "Marianna",
     },
     {
+      id: 41,
       firstName: "Al",
       lastName: "Pacino",
       email: "apacino@hotmail.com",
@@ -950,6 +991,7 @@ export const mockData = {
       staff: "Stefania",
     },
     {
+      id: 42,
       firstName: "Scarlett",
       lastName: "Johansson",
       email: "sjohansson@gmail.com",
@@ -962,6 +1004,7 @@ export const mockData = {
       staff: "Carla",
     },
     {
+      id: 43,
       firstName: "Anne",
       lastName: "Hathaway",
       email: "ahathaway@hotmail.com",
@@ -974,6 +1017,7 @@ export const mockData = {
       staff: "Julia",
     },
     {
+      id: 44,
       firstName: "Johnny",
       lastName: "Depp",
       email: "jdepp@gmail.com",
@@ -986,6 +1030,7 @@ export const mockData = {
       staff: "David",
     },
     {
+      id: 45,
       firstName: "Robert",
       lastName: "Downey Jr.",
       email: "rdowneyjr@hotmail.com",
@@ -998,6 +1043,7 @@ export const mockData = {
       staff: "Stefania",
     },
     {
+      id: 46,
       firstName: "Charlize",
       lastName: "Theron",
       email: "ctheron@gmail.com",
@@ -1010,6 +1056,7 @@ export const mockData = {
       staff: "Carla",
     },
     {
+      id: 47,
       firstName: "Leonardo",
       lastName: "Da Vinci",
       email: "lda.vinci@gmail.com",
@@ -1022,6 +1069,7 @@ export const mockData = {
       staff: "Elisabeth",
     },
     {
+      id: 48,
       firstName: "Cameron",
       lastName: "Diaz",
       email: "cdiaz@outlook.com",
@@ -1034,6 +1082,7 @@ export const mockData = {
       staff: "Simon",
     },
     {
+      id: 49,
       firstName: "Jackie",
       lastName: "Chan",
       email: "jchan@hotmail.com",
@@ -1045,6 +1094,7 @@ export const mockData = {
       staff: "David",
     },
     {
+      id: 50,
       firstName: "Beyoncé",
       lastName: "Knowles",
       email: "bknowles@gmail.com",
@@ -1057,6 +1107,7 @@ export const mockData = {
       staff: "Marianna",
     },
     {
+      id: 51,
       firstName: "Daniel",
       lastName: "Radcliffe",
       email: "dradcliffe@outlook.com",
@@ -1069,6 +1120,7 @@ export const mockData = {
       staff: "Stefania",
     },
     {
+      id: 52,
       firstName: "Gwyneth",
       lastName: "Paltrow",
       email: "gpaltrow@hotmail.com",
@@ -1081,6 +1133,7 @@ export const mockData = {
       staff: "Carla",
     },
     {
+      id: 53,
       firstName: "Marilyn",
       lastName: "Monroe",
       email: "mmonroe@hotmail.com",
@@ -1093,6 +1146,7 @@ export const mockData = {
       staff: "Julia",
     },
     {
+      id: 54,
       firstName: "Tom",
       lastName: "Cruise",
       email: "tcruise@gmail.com",
@@ -1105,6 +1159,7 @@ export const mockData = {
       staff: "Elisabeth",
     },
     {
+      id: 55,
       firstName: "Audrey",
       lastName: "Hepburn",
       email: "ahepburn@outlook.com",
@@ -1117,6 +1172,7 @@ export const mockData = {
       staff: "Simon",
     },
     {
+      id: 56,
       firstName: "Harrison",
       lastName: "Ford",
       email: "hford@hotmail.com",
@@ -1129,6 +1185,7 @@ export const mockData = {
       staff: "David",
     },
     {
+      id: 57,
       firstName: "Elizabeth",
       lastName: "Taylor",
       email: "etaylor@hotmail.com",
@@ -1141,6 +1198,7 @@ export const mockData = {
       staff: "Julia",
     },
     {
+      id: 58,
       firstName: "Grace",
       lastName: "Kelly",
       email: "gkelly@outlook.com",
@@ -1153,6 +1211,7 @@ export const mockData = {
       staff: "Simon",
     },
     {
+      id: 59,
       firstName: "Reese",
       lastName: "Witherspoon",
       email: "rwitherspoon@gmail.com",
@@ -1165,6 +1224,7 @@ export const mockData = {
       staff: "Marianna",
     },
     {
+      id: 60,
       firstName: "Joaquin",
       lastName: "Phoenix",
       email: "jphoenix@outlook.com",
@@ -1177,6 +1237,7 @@ export const mockData = {
       staff: "Stefania",
     },
     {
+      id: 61,
       firstName: "Katherine",
       lastName: "Hepburn",
       email: "khepburn@hotmail.com",
@@ -1189,6 +1250,7 @@ export const mockData = {
       staff: "Julia",
     },
     {
+      id: 62,
       firstName: "Sandra",
       lastName: "Bullock",
       email: "sbullock@hotmail.com",
@@ -1201,6 +1263,7 @@ export const mockData = {
       staff: "Carla",
     },
     {
+      id: 63,
       firstName: "Emma",
       lastName: "Stone",
       email: "estone@hotmail.com",
@@ -1213,6 +1276,7 @@ export const mockData = {
       staff: "Julia",
     },
     {
+      id: 64,
       firstName: "Marlon",
       lastName: "Brando",
       email: "mbrando@gmail.com",
@@ -1228,6 +1292,7 @@ export const mockData = {
 
   bookings: [
     {
+      id: 1,
       client: "Joaquin Phoenix",
       bookingDate: "15/05/2023",
       bookingTime: "16:30",
@@ -1235,6 +1300,7 @@ export const mockData = {
       staff: "Stefania",
     },
     {
+      id: 2,
       client: "Mariah Chan",
       bookingDate: "05/03/2023",
       bookingTime: "15:00",
@@ -1242,6 +1308,7 @@ export const mockData = {
       staff: "David",
     },
     {
+      id: 3,
       client: "Mark Wilson",
       bookingDate: "08/03/2023",
       bookingTime: "11:00",
@@ -1249,6 +1316,7 @@ export const mockData = {
       staff: "Elisabeth",
     },
     {
+      id: 4,
       client: "Bryan Kim",
       bookingDate: "05/03/2023",
       bookingTime: "12:00",
@@ -1256,6 +1324,7 @@ export const mockData = {
       staff: "Julia",
     },
     {
+      id: 5,
       client: "Alex Nguyen",
       bookingDate: "10/03/2023",
       bookingTime: "14:00",
@@ -1263,6 +1332,7 @@ export const mockData = {
       staff: "David",
     },
     {
+      id: 6,
       client: "Jason Lee",
       bookingDate: "15/03/2023",
       bookingTime: "09:30",
@@ -1270,6 +1340,7 @@ export const mockData = {
       staff: "Roberto",
     },
     {
+      id: 7,
       client: "Alice Lee",
       bookingDate: "02/03/2023",
       bookingTime: "16:00",
@@ -1277,6 +1348,7 @@ export const mockData = {
       staff: "Elisabeth",
     },
     {
+      id: 8,
       client: "Adam Kim",
       bookingDate: "02/03/2023",
       bookingTime: "14:30",
@@ -1284,6 +1356,7 @@ export const mockData = {
       staff: "Marianna",
     },
     {
+      id: 9,
       client: "Angelina Jolie",
       bookingDate: "05/15/2023",
       bookingTime: "12:00",
@@ -1291,6 +1364,7 @@ export const mockData = {
       staff: "David",
     },
     {
+      id: 10,
       client: "Meryl Streep",
       bookingDate: "06/05/2023",
       bookingTime: "14:30",
@@ -1298,6 +1372,7 @@ export const mockData = {
       staff: "Elisabeth",
     },
     {
+      id: 11,
       client: "Brad Pitt",
       bookingDate: "07/10/2023",
       bookingTime: "10:00",
@@ -1305,6 +1380,7 @@ export const mockData = {
       staff: "Stefania",
     },
     {
+      id: 12,
       client: "Daniel Radcliffe",
       bookingDate: "17/11/2023",
       bookingTime: "12:00",
@@ -1312,6 +1388,7 @@ export const mockData = {
       staff: "Stefania",
     },
     {
+      id: 13,
       client: "Charlize Theron",
       bookingDate: "08/02/2023",
       bookingTime: "11:30",
@@ -1319,6 +1396,7 @@ export const mockData = {
       staff: "Marianna",
     },
     {
+      id: 14,
       client: "Sophie Kim",
       bookingDate: "04/03/2023",
       bookingTime: "12:30",
@@ -1326,6 +1404,7 @@ export const mockData = {
       staff: "Roberto",
     },
     {
+      id: 15,
       client: "Melanie Wong",
       bookingDate: "05/03/2023",
       bookingTime: "12:30",
@@ -1333,6 +1412,7 @@ export const mockData = {
       staff: "Julia",
     },
     {
+      id: 16,
       client: "Emma Stone",
       bookingDate: "28/04/2023",
       bookingTime: "16:30",
@@ -1340,6 +1420,7 @@ export const mockData = {
       staff: "Julia",
     },
     {
+      id: 17,
       client: "Cate Blanchett",
       bookingDate: "10/22/2023",
       bookingTime: "15:30",
@@ -1347,6 +1428,7 @@ export const mockData = {
       staff: "Carla",
     },
     {
+      id: 18,
       client: "Ethan Chen",
       bookingDate: "06/03/2023",
       bookingTime: "11:30",
@@ -1354,6 +1436,7 @@ export const mockData = {
       staff: "David",
     },
     {
+      id: 19,
       client: "Rachel Kim",
       bookingDate: "04/03/2023",
       bookingTime: "09:30",
@@ -1361,6 +1444,7 @@ export const mockData = {
       staff: "Roberto",
     },
     {
+      id: 20,
       client: "Scarlett Johansson",
       bookingDate: "12/10/2023",
       bookingTime: "14:00",
@@ -1368,6 +1452,7 @@ export const mockData = {
       staff: "Carla",
     },
     {
+      id: 21,
       client: "Oprah Winfrey",
       bookingDate: "03/10/2023",
       bookingTime: "14:30",
@@ -1375,6 +1460,7 @@ export const mockData = {
       staff: "Simon",
     },
     {
+      id: 22,
       client: "Grace Kelly",
       bookingDate: "10/12/2023",
       bookingTime: "11:30",
@@ -1382,6 +1468,7 @@ export const mockData = {
       staff: "Simon",
     },
     {
+      id: 23,
       client: "Tom Cruise",
       bookingDate: "12/11/2023",
       bookingTime: "14:00",
@@ -1389,6 +1476,7 @@ export const mockData = {
       staff: "Elisabeth",
     },
     {
+      id: 24,
       client: "Sandra Bullock",
       bookingDate: "15/09/2023",
       bookingTime: "11:00",
@@ -1396,6 +1484,7 @@ export const mockData = {
       staff: "Carla",
     },
     {
+      id: 25,
       client: "Matt Damon",
       bookingDate: "09/09/2023",
       bookingTime: "10:30",
@@ -1403,6 +1492,7 @@ export const mockData = {
       staff: "Roberto",
     },
     {
+      id: 26,
       client: "Tom Hanks",
       bookingDate: "09/09/2023",
       bookingTime: "10:30",

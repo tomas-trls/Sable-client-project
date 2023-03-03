@@ -7,20 +7,34 @@ import UserProfileCard from "../../components/UserProfileCard/UserProfileCard";
 import defaultUser from "../../assets/images/users/Ellipse.png";
 import ClientProfile from "../../assets/images/users/client-picture.png";
 
-const ClientFormContainer = ({ isEditClient, handleSubmit, handleClick, handleUpload }) => {
+const ClientFormContainer = ({
+  isEditClient,
+  handleSubmit,
+  handleClick,
+  handleUpload,
+  client,
+}) => {
   return (
     <form className="client-form">
       <div className="client-form__mobile-thumbnail">
-        <UserProfileCard image={defaultUser} name="Client 01" />
+        <UserProfileCard image={defaultUser} name={client.firstName} />
       </div>
       <section className="client-form__input-container">
         {isEditClient ? (
-          <InputField label="First Name" id="first-name" editValue={"Louis"} />
+          <InputField
+            label="First Name"
+            id="first-name"
+            editValue={client.firstName}
+          />
         ) : (
           <InputField label="First Name" id="first-name" />
         )}
         {isEditClient ? (
-          <InputField label="Last Name" id="last-name" editValue={"Thiel"} />
+          <InputField
+            label="Last Name"
+            id="last-name"
+            editValue={client.lastName}
+          />
         ) : (
           <InputField label="Last Name" id="last-name" />
         )}
@@ -78,7 +92,11 @@ const ClientFormContainer = ({ isEditClient, handleSubmit, handleClick, handleUp
               />
             </div>
             <div className="client-form__upload-button">
-              <Button buttonStyle="isUpload" buttonText="Upload" handleClick={handleUpload}/>
+              <Button
+                buttonStyle="isUpload"
+                buttonText="Upload"
+                handleClick={handleUpload}
+              />
             </div>
           </div>
         </div>
@@ -93,8 +111,12 @@ const ClientFormContainer = ({ isEditClient, handleSubmit, handleClick, handleUp
         )}
         <div>
           <div className="client-form__form-buttons">
-            <Button buttonText="Cancel" buttonStyle="isCancel--purple" handleClick={handleClick} />
-            <Button buttonText="Save" handleClick={handleSubmit}/>
+            <Button
+              buttonText="Cancel"
+              buttonStyle="isCancel--purple"
+              handleClick={handleClick}
+            />
+            <Button buttonText="Save" handleClick={handleSubmit} />
           </div>
           {isEditClient ? (
             <h2 className="client-form__text" href="#">

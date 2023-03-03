@@ -7,30 +7,41 @@ import ClientFormContainer from "../../containers/ClientFormContainer/ClientForm
 import HomeButton from "../../components/HomeButton/HomeButton";
 import { useState } from "react";
 import ConfirmationOverlay from "../../components/ConfirmationOverlay/ConfirmationOverlay";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
+import mockData from "../../data/mockData";
 const EditClient = () => {
+  const { clientId } = useParams();
+  const getClient = mockData.clients.find((client) => {
+    return client.id == clientId;
+  });
 
-  const [showOverlay, setShowOverlay] = useState(false)
+  const [showOverlay, setShowOverlay] = useState(false);
   const handleSubmit = (event) => {
-    event.preventDefault(); 
-    setShowOverlay(true)
-  }
+    event.preventDefault();
+    setShowOverlay(true);
+  };
 
-  const handleUpload = (event) =>{
-    event.preventDefault(); 
-    console.log("Upload")
-   
-  }
-  
+  const handleUpload = (event) => {
+    event.preventDefault();
+    console.log("Upload");
+  };
+
   const navigate = useNavigate();
   const handleCancel = (event) => {
-      event.preventDefault(); 
-      navigate("/home");
-  }
+    event.preventDefault();
+    navigate("/home");
+  };
 
   return (
     <div className="edit-client">
-      {showOverlay && <ConfirmationOverlay  overlayType={"overlayOneButton"} text="Success" buttonTextOne={"Home"} handleClick={handleCancel}/>}
+      {showOverlay && (
+        <ConfirmationOverlay
+          overlayType={"overlayOneButton"}
+          text="Success"
+          buttonTextOne={"Home"}
+          handleClick={handleCancel}
+        />
+      )}
       <NavContainer />
       <Layout>
         <PageHeader
@@ -39,7 +50,13 @@ const EditClient = () => {
           text="Save"
           handleClick={handleSubmit}
         />
-        <ClientFormContainer isEditClient={true} handleClick={handleCancel} handleSubmit={handleSubmit} handleUpload={handleUpload} />
+        <ClientFormContainer
+          isEditClient={true}
+          handleClick={handleCancel}
+          handleSubmit={handleSubmit}
+          handleUpload={handleUpload}
+          client={getClient}
+        />
         <div>
           <HomeButton />
         </div>

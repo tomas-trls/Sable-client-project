@@ -1,7 +1,11 @@
 import React from "react";
 import "./BookingDetailsCard.scss";
 
-const BookingDetailsCard = ({ cardObject, isClientDetails }) => {
+const BookingDetailsCard = ({
+  clientObject,
+  bookingObject,
+  isClientDetails,
+}) => {
   return (
     <div className="booking-details-card">
       {isClientDetails ? null : (
@@ -9,28 +13,26 @@ const BookingDetailsCard = ({ cardObject, isClientDetails }) => {
           <h1 className="booking-details-card__heading">Booking Details</h1>
           <h2 className="booking-details-card__subheading"> Date:</h2>
           <p className="booking-details-card__data">
-            {cardObject.bookings[0].bookingDate}
+            {bookingObject.bookingDate}
           </p>
           <h2 className="booking-details-card__subheading">Time:</h2>
           <p className="booking-details-card__data">
-            {cardObject.bookings[0].bookingTime}
+            {bookingObject.bookingTime}
           </p>
           <h2 className="booking-details-card__subheading booking-details-card__mobile">
             Mobile Number:
           </h2>
           <p className="booking-details-card__data booking-details-card__mobile">
-            {cardObject.clients[0].mobile}
+            {clientObject.mobile}
           </p>
           <h2 className="booking-details-card__subheading booking-details-card__mobile">
             Email Address:
           </h2>
           <p className="booking-details-card__data booking-details-card__mobile">
-            {cardObject.clients[0].email}
+            {clientObject.email}
           </p>
           <h2 className="booking-details-card__subheading">Staff Member:</h2>
-          <p className="booking-details-card__data">
-            {cardObject.bookings[0].staff}
-          </p>
+          <p className="booking-details-card__data">{bookingObject.staff}</p>
         </div>
       )}
     </div>

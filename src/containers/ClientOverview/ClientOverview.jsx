@@ -67,18 +67,35 @@ const Client = () => {
     setQuery(event.target.value);
   };
 
-  const navigate =useNavigate();
-
-  const handleClick = (event) => {
-   event.preventDefault();
-   navigate("/client/detail");
-  }
+  const navigate = useNavigate();
 
   const clientsListJSX = filterArr.map((client, index) => {
-    return <DataCard key={index + 1} cardType="client" cardObject={client} handleClick={handleClick} />;
+    const handleClick = (event) => {
+      event.preventDefault();
+      navigate(`/client/${client.id}`);
+    };
+    return (
+      <DataCard
+        key={index + 1}
+        cardType="client"
+        cardObject={client}
+        handleClick={handleClick}
+      />
+    );
   });
   const filteredClientListJSX = filteredClients.map((client, index) => {
-    return <DataCard key={index + 1} cardType="client" cardObject={client}  handleClick={handleClick}/>;
+    const handleClick = (event) => {
+      event.preventDefault();
+      navigate(`/client/${client.id}`);
+    };
+    return (
+      <DataCard
+        key={index + 1}
+        cardType="client"
+        cardObject={client}
+        handleClick={handleClick}
+      />
+    );
   });
   return (
     <div className="client-overview">
@@ -91,7 +108,9 @@ const Client = () => {
       />
       <div className="client-overview__label-container">
         <p className="client-overview__label">Client Name</p>
-        <p className="client-overview__label" id="email-label">Email Address</p>
+        <p className="client-overview__label" id="email-label">
+          Email Address
+        </p>
         <p className="client-overview__label">Mobile Number</p>
         <p className="client-overview__label">Consumer/Consultancy</p>
         <p className="client-overview__label">Confirmed</p>
