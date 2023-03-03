@@ -6,6 +6,9 @@
   justify-content: flex-start;
   align-items: flex-start;
   margin-bottom: 3vh;
+  * {
+    font-family: $font-modern !important;
+  }
 }
 
 .settings-card {
@@ -79,9 +82,7 @@
     align-items: center;
   }
 }
-.button {
-  min-height: 6.6vh;
-}
+
 
 .settings-card__toggle-switch {
   position: relative;
@@ -190,7 +191,7 @@ input:checked + .settings-card__toggle-slider:before {
     }
 
     &__button-container {
-      padding-bottom: 2.5vh;
+      padding-bottom: 1.5vh;
       min-width: 40vw;
       .button {
         min-height: 4vh;
