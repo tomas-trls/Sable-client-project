@@ -93,7 +93,8 @@
   &__quantity,
   &__cost,
   &__auto-purchase,
-  &__level {
+  &__level,
+  &__reqQuant {
     text-align: center;
     font-family: $font-modern;
     font-style: normal;

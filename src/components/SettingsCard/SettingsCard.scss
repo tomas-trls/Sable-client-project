@@ -6,6 +6,9 @@
   justify-content: flex-start;
   align-items: flex-start;
   margin-bottom: 3vh;
+  * {
+    font-family: $font-modern !important;
+  }
 }
 
 .settings-card {
