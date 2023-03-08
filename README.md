@@ -1,3 +1,5 @@
+# 🌟 Sable Client Project 🩺
+
 ## Quickstart
 
 1. Install the dependencies with `npm install`
