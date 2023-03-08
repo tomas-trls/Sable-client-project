@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "sable-client-project"
-  }
+    "default": "sable-client-project-61725",
+    "sable-client-project": "sable-client-project-61725"
+  },
+  "targets": {},
+  "etags": {}
 }
