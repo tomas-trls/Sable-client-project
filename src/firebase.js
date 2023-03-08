@@ -8,13 +8,14 @@ import { getAuth } from "firebase/auth";
 // Your web app's Firebase configuration
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDaXnJm1KRBXqWbXStcX538G7hOKkexsNY",
-  authDomain: "sable-client-project.firebaseapp.com",
-  projectId: "sable-client-project",
-  storageBucket: "sable-client-project.appspot.com",
-  messagingSenderId: "956077400948",
-  appId: "1:956077400948:web:acd3e798220cd00c5b8221",
+  apiKey: "AIzaSyBC4b-fyaikVJsS94SlFm45V6TybEUSfXw",
+  authDomain: "sable-client-project-61725.firebaseapp.com",
+  projectId: "sable-client-project-61725",
+  storageBucket: "sable-client-project-61725.appspot.com",
+  messagingSenderId: "668432328190",
+  appId: "1:668432328190:web:811c7f1142db70e0954caf",
 };
+
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
