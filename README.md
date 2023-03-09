@@ -41,7 +41,7 @@ If you would like to try the website, please log in with the following details:
   
 <div align="center">
 
-  [Live Demo](https://sable-client-project-61725.web.app/)
+  [[Live Demo]](https://sable-client-project-61725.web.app/)
   
   ![Website Demo](http://g.recordit.co/WIwfRH8vX0.gif)
 </div>
