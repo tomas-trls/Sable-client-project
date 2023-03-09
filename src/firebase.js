@@ -8,7 +8,7 @@ import { getAuth } from "firebase/auth";
 // Your web app's Firebase configuration
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBC4b-fyaikVJsS94SlFm45V6TybEUSfXw",
+  apiKey: process.env.REACT_APP_FIREBASE_API,
   authDomain: "sable-client-project-61725.firebaseapp.com",
   projectId: "sable-client-project-61725",
   storageBucket: "sable-client-project-61725.appspot.com",
