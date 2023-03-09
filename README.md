@@ -1,7 +1,10 @@
 # 🌟 Sable Client Project 🩺
 
 The Sable Client Project is a project that was completed during the training at _Nology with the Sable group. 
-Our team of 9 worked collaboratively to develop a Clinical Administrative Website. Over the course of 2 weeks, we divided our work into 3 sprints of 3 days each, with pairs of developers utilizing peer programming and switching roles every 25 minutes. We also switched partners every new sprint to ensure a fresh perspective on the project.To work on the project we have used *Agile Methodology*. Agile is a collaborative approach to software development that emphasizes iterative development, frequent feedback, and flexibility to changing requirements.
+
+Our team of 9 worked collaboratively to develop a Clinical Administrative Website. Over the course of 2 weeks, we divided our work into 3 sprints of 3 days each, with pairs of developers utilizing peer programming and switching roles every 25 minutes. We also switched partners every new sprint to ensure a fresh perspective on the project.
+
+To work on the project we have used *Agile Methodology*. Agile is a collaborative approach to software development that emphasizes iterative development, frequent feedback, and flexibility to changing requirements.
 
 The Sable Client Project provides a comprehensive platform that includes all clients and staff of the dental clinic. The Admin can book new appointments and assign them to staff members, and resources available in the clinic are visible, allowing the Admin to manage resource levels and auto-purchase if necessary. Additionally, the admin can easily add or update client and booking information.
 
