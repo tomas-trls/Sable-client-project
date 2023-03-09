@@ -81,14 +81,14 @@ To install and use the Sable Client Project, follow these steps:
 ## 💎 Contributors 💎
 The Sable Client Project was developed by the _Nology Sable Team.
 
-- [@TristanPere](https://github.com/TristanPere) | Project Owner for First Week | Buddy for last Sprint
+- [@TristanPere](https://github.com/TristanPere) | Project Owner for First Week / Buddy for last Sprint
 - [@hannahmitchell99](https://github.com/hannahmitchell99) | Project Owner for Second Week
 - [@DexterFreeman](https://github.com/DexterFreeman) | Buddy for First Sprint
 - [@bajserowiczMikolaj](https://github.com/bajserowiczMikolaj) | Buddy for Second Sprint
-- [@BeckyRushton](https://github.com/BeckyRushton)
-- [@Joshua-Tucker](https://github.com/Joshua-Tucker)
-- [@jjy0u](https://github.com/jjy0u)
-- [@navina321](https://github.com/navina321)
+- [@BeckyRushton](https://github.com/BeckyRushton) | 🐱‍👤
+- [@Joshua-Tucker](https://github.com/Joshua-Tucker) | 🐱‍👓
+- [@jjy0u](https://github.com/jjy0u) | 🐱‍💻
+- [@navina321](https://github.com/navina321) | 🐱‍🚀
 - [@tomas-trls](https://github.com/tomas-trls) | tomast25@hotmail.com
 
 
